@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeaPartyHorror_Project
+namespace TeaPartyHorror_Game
 {
     internal class Program
     {
