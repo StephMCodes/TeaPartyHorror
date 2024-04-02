@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TeaPartyHorror_Game
 {
@@ -10,6 +6,8 @@ namespace TeaPartyHorror_Game
     {
         static void Main(string[] args)
         {
+            // From Felix
+            Console.WriteLine("Hello World");
         }
     }
 }
