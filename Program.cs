@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeaPartyHorror
+namespace TeaPartyHorror_Project
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //hi bella //hi steph i got it to work online xD
-
         }
     }
 }
