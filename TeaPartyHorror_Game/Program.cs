@@ -8,7 +8,7 @@ namespace TeaPartyHorror_Game
         {
             // From Felix
             Console.WriteLine("Hello World");
-            //BELLA IS STRUGGLING 
+            //BELLA IS STRUGGLING no more
         }
     }
 }
