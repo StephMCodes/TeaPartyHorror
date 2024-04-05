@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using TeaPartyHorror_Game.Rooms;
 
 namespace TeaPartyHorror_Game
 {
@@ -22,7 +23,27 @@ namespace TeaPartyHorror_Game
         static SaveData savedata;
         static void Main(string[] args)
         {
+            var game = new Game();
+            game.Add(new Start());
+            game.Add(new Bedroom());
+            game.Add(new Hallway());
+            game.Add(new Kitchen());
+            game.Add(new Ballroom());
+            game.Add(new Garden());
+            game.Add(new Tearoom());
 
+
+            while (!game.IsGameOver())
+            {
+                Console.WriteLine("--");
+                Console.WriteLine(game.CurrentRoomDescription);
+                string choice = Console.ReadLine().ToLower() ?? "";
+                Console.Clear();
+                game.ReceiveChoice(choice);
+            }
+
+            Console.WriteLine("END");
+            Console.ReadLine();
             const string SaveFile = "Save.txt";
             if (!File.Exists(SaveFile))
             { File.CreateText(SaveFile); }

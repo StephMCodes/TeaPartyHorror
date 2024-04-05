@@ -52,6 +52,7 @@
     <Compile Include="Rooms\Garden.cs" />
     <Compile Include="Rooms\Hallway.cs" />
     <Compile Include="Rooms\Kitchen.cs" />
+    <Compile Include="Rooms\Start.cs" />
     <Compile Include="Rooms\Tearoom.cs" />
   </ItemGroup>
   <ItemGroup>
