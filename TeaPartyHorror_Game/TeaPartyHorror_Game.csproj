@@ -43,8 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Game.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Room.cs" />
+    <Compile Include="Rooms\Ballroom.cs" />
+    <Compile Include="Rooms\Bedroom.cs" />
+    <Compile Include="Rooms\Garden.cs" />
+    <Compile Include="Rooms\Hallway.cs" />
+    <Compile Include="Rooms\Kitchen.cs" />
+    <Compile Include="Rooms\Tearoom.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

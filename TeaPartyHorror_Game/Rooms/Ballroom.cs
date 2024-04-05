@@ -19,11 +19,11 @@ namespace TeaPartyHorror_Game.Rooms
             {
                 case "bedroom":
                     Console.WriteLine("You return to your bedroom.");
-                    //Game.Transition<Bedroom>();
+                    Game.Transition<Bedroom>();
                     break;
                 case "2314":
                     Console.WriteLine("The chest opens and you get a key.");
-                    //isKeyCollected = true;
+                   // isKeyCollected = true;
                     break;
                 default:
                     Console.WriteLine("Invalid command.");

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.IO;
-using
-
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace TeaPartyHorror_Game
@@ -14,9 +12,9 @@ namespace TeaPartyHorror_Game
             public int numbertToSave;
             public string stringToSave;
 
-            public SaveData(int numbertToSave, string stringToSave)
+            public SaveData(int numberToSave, string stringToSave)
             {
-                this.numbertToSave = numbertToSave;
+                this.numbertToSave = numberToSave;
                 this.stringToSave = stringToSave;
             }
         }
