@@ -23,6 +23,7 @@ namespace TeaPartyHorror_Game
         static SaveData savedata;
         static void Main(string[] args)
         {
+            
             var game = new Game();
             game.Add(new Start());
             game.Add(new Bedroom());

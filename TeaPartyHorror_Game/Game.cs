@@ -38,6 +38,20 @@ namespace TeaPartyHorror_Game
             currentRoom.ReceiveChoice(choice);
             CheckTransition();
         }
+        internal static void IncreaseFear()
+        {
+            fearLevel++;
+            Console.WriteLine($"Fear increases. Current fear level: {fearLevel}.");
+            if (fearLevel >= 5)
+            {
+                Console.WriteLine("The fear overwhelms you, leading to a game over.");
+            }
+        }
+       internal static void DecreaseFear()
+        {
+            if (fearLevel > 0) fearLevel--;
+            Console.WriteLine($"Fear decreases. Current fear level: {fearLevel}.");
+        }
 
         internal static void Transition<T>() where T : Room
         {

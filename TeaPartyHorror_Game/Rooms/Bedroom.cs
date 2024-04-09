@@ -16,7 +16,7 @@ namespace TeaPartyHorror_Game.Rooms
         internal override string CreateDescription() =>
        @"
 You wake up in your dark, cold new bedroom, shivering under your white duvet set. 
-Your plushie Mr.bunny rabbit, surprisingly, speaks, 'Are you okay? Don't worry, go back to sleep.'
+Your plushie Mr.Bunny-Rabbit, surprisingly, speaks, 'Are you okay? Don't worry, go back to sleep.'
 But sleep eludes you. You feel fearful.";
 
         internal override void ReceiveChoice(string choice)
@@ -24,22 +24,23 @@ But sleep eludes you. You feel fearful.";
             Console.WriteLine("Press 1 to clutch onto Mr.bunny rabbit\t Press 2 to force yourslef to sleep\t Press 3 to wake up");
             switch (choice.ToLower())
             {
+                case "hallway": { Game.Transition<Hallway>(); } break;
                 case "1":
 
                     Console.WriteLine("Mr. bunny rabbit reassures you, 'Everything will be okay.'");
-                    DecreaseFear();
+                    Game.DecreaseFear();
                     break;
 
                 case "2":
                     if (isHungry || isCold)
                     {
                         Console.WriteLine("You're too uncomfortable to sleep.");
-                        IncreaseFear();
+                        Game.IncreaseFear();
                     }
                     else
                     {
                         Console.WriteLine("You manage to fall asleep, but the nightmare continues.");
-                        IncreaseFear();
+                        Game.IncreaseFear();
                     }
                     break;
 
@@ -62,6 +63,7 @@ But sleep eludes you. You feel fearful.";
                         Console.WriteLine("The fear is too much, keeping you trapped in the nightmare.");
                     }
                     break;
+                
 
                     //switch (choice)
                     //{
@@ -78,20 +80,7 @@ But sleep eludes you. You feel fearful.";
                     //        break;
             }
         }
-        private void IncreaseFear()
-        {
-            fearLevel++;
-            Console.WriteLine($"Fear increases. Current fear level: {fearLevel}.");
-            if (fearLevel >= 5)
-            {
-                Console.WriteLine("The fear overwhelms you, leading to a game over.");
-            }
-        }
-        private void DecreaseFear()
-        {
-            if (fearLevel > 0) fearLevel--;
-            Console.WriteLine($"Fear decreases. Current fear level: {fearLevel}.");
-        }
+        
     }
 }
 
