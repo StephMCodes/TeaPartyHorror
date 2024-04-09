@@ -29,7 +29,7 @@ ENTER START OR QUIT";
                     Game.Transition<Bedroom>();
                     break;
                 case "QUIT":
-                    //isFinished = true;
+                    
 
                     break;
                 default:
