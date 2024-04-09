@@ -8,6 +8,7 @@ namespace TeaPartyHorror_Game.Rooms
 {
     internal class Start : Room
     {
+        static bool isFinished;
         internal override string CreateDescription() =>
         @"
 You are a young girl, adopted recently by your wealthy aunt and uncle.
@@ -18,7 +19,7 @@ WELCOME TO
 
 TEA PARTY HORROR
 
-ENTER START OR QUIT";
+ENTER START TO BEGIN";
 
         internal override void ReceiveChoice(string choice)
         {
@@ -29,11 +30,7 @@ ENTER START OR QUIT";
                         Game.Transition<BurningHouse>();
                         break;
                     }
-                case "QUIT":
-                    {  break; }
-                    //bella help
-
-                    
+                
                 default:
                     Console.WriteLine("Invalid command.");
                     break;
