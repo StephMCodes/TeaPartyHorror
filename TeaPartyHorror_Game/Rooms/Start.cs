@@ -25,13 +25,15 @@ ENTER START OR QUIT";
             switch (choice.ToUpper())
             {
                 case "START":
-                    Console.WriteLine("You begin in your new bedroom.");
-                    Game.Transition<Bedroom>();
-                    break;
+                    {
+                        Game.Transition<BurningHouse>();
+                        break;
+                    }
                 case "QUIT":
+                    {  break; }
                     //bella help
 
-                    break;
+                    
                 default:
                     Console.WriteLine("Invalid command.");
                     break;

@@ -26,6 +26,7 @@ namespace TeaPartyHorror_Game
             
             var game = new Game();
             game.Add(new Start());
+            game.Add(new BurningHouse());
             game.Add(new Bedroom());
             game.Add(new Hallway());
             game.Add(new Kitchen());

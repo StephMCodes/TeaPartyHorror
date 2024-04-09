@@ -14,6 +14,8 @@ namespace TeaPartyHorror_Game
         public static bool isHungry = true;
         public static bool isCold = true;
         public static bool isMonsterFriend = false;
+        public static bool escapedFire = false;
+        public static bool wokeUp = false;
 
         List<Room> rooms = new List<Room>();
         public static List<GameItem> Inventory = new List<GameItem>();
@@ -38,9 +40,9 @@ namespace TeaPartyHorror_Game
             currentRoom.ReceiveChoice(choice);
             CheckTransition();
         }
-        internal static void IncreaseFear()
+        internal static void IncreaseFear(int num)
         {
-            fearLevel++;
+            fearLevel+= num;
             Console.WriteLine($"Fear increases. Current fear level: {fearLevel}.");
             if (fearLevel >= 5)
             {
