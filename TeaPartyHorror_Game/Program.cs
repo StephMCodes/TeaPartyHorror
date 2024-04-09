@@ -55,9 +55,6 @@ namespace TeaPartyHorror_Game
             //bf.Serialize(File.OpenWrite(SaveFile), savedata);
             savedata=bf.Deserialize(File.OpenRead(SaveFile)) as SaveData;
 
-            // From Felix
-            Console.WriteLine("Hello World");
-            //BELLA IS STRUGGLING no more
         }
     }
 }
