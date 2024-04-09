@@ -29,7 +29,7 @@ namespace TeaPartyHorror_Game
             game.Add(new BurningHouse());
             game.Add(new Bedroom());
             game.Add(new Hallway());
-            game.Add(new Kitchen());
+            game.Add(new DiningRoom());
             game.Add(new Ballroom());
             game.Add(new Garden());
             game.Add(new Tearoom());

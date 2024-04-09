@@ -14,17 +14,13 @@ namespace TeaPartyHorror_Game.Rooms
         private bool isCold = true;
         private bool isMonsterFriend = false;
         public static bool wokeUp = false;
+        
 
         internal override string CreateDescription() =>
        @"You are in your bedroom.";
 
         internal override void ReceiveChoice(string choice)
         {
-            if (wokeUp == true)
-            {
-
-             
-            }
             Console.WriteLine("You wake up in your dark, cold new bedroom, shivering under your white duvet set.");
             Console.WriteLine("Your plushie Mr.Bunny - Rabbit, surprisingly, speaks, 'Are you okay? Don't worry, go back to sleep.'");
             Console.WriteLine("But sleep eludes you. You feel fearful.");

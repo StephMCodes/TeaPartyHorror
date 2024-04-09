@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeaPartyHorror_Game.Rooms
 {
-    internal class Kitchen : Room
+    internal class DiningRoom : Room
     {
         internal override string CreateDescription() =>
        @"In the attic, it's dark and cold.
