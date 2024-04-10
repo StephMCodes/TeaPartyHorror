@@ -49,6 +49,7 @@
     <Compile Include="Room.cs" />
     <Compile Include="Rooms\Ballroom.cs" />
     <Compile Include="Rooms\Bedroom.cs" />
+    <Compile Include="Rooms\BedroomAwake.cs" />
     <Compile Include="Rooms\BurningHouse.cs" />
     <Compile Include="Rooms\Garden.cs" />
     <Compile Include="Rooms\Hallway.cs" />

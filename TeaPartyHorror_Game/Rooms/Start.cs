@@ -13,9 +13,9 @@ namespace TeaPartyHorror_Game.Rooms
         @"
 WELCOME TO TEA PARTY HORROR
 
-You are a young girl, adopted recently by your wealthy aunt and uncle.
+You are an orphaned young girl, adopted recently by your wealthy aunt and uncle.
 They have no other children in the mansion, so you must make your own entertainment and play by yourself.
-Thankfully, the house is full of spirits only you seem to notice…
+Thankfully, the house is full of spirits only you seem to notice...
 
 ENTER START TO BEGIN";
 

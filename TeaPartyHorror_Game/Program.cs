@@ -10,12 +10,12 @@ namespace TeaPartyHorror_Game
         [Serializable]
         public class SaveData
         {
-            public int numbertToSave;
+            public int numberToSave;
             public string stringToSave;
 
             public SaveData(int numberToSave, string stringToSave)
             {
-                this.numbertToSave = numberToSave;
+                this.numberToSave = numberToSave;
                 this.stringToSave = stringToSave;
             }
         }
@@ -28,6 +28,7 @@ namespace TeaPartyHorror_Game
             game.Add(new Start());
             game.Add(new BurningHouse());
             game.Add(new Bedroom());
+            game.Add(new BedroomAwake());
             game.Add(new Hallway());
             game.Add(new DiningRoom());
             game.Add(new Ballroom());

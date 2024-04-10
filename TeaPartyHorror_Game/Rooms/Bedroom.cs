@@ -15,18 +15,53 @@ namespace TeaPartyHorror_Game.Rooms
         private bool isMonsterFriend = false;
         public static bool wokeUp = false;
         
+        
 
         internal override string CreateDescription() =>
-       @"You are in your bedroom.";
+       @"You are in your new bedroom.";
 
         internal override void ReceiveChoice(string choice)
         {
-            Console.WriteLine("You wake up in your dark, cold new bedroom, shivering under your white duvet set.");
-            Console.WriteLine("Your plushie Mr.Bunny - Rabbit, surprisingly, speaks, 'Are you okay? Don't worry, go back to sleep.'");
-            Console.WriteLine("But sleep eludes you. You feel fearful.");
+            Console.WriteLine("You jolt awake, shivering under your white duvet set.");
+            Console.WriteLine("Your plushie, Mr.Bunny-Rabbit, surprisingly, begins to speak! 'Are you okay? Don't worry, I'm here. Go back to sleep.'");
+            Console.WriteLine("But sleep eludes you... You feel fearful in this new environment.");
+            Console.WriteLine("-------------------------------------------------------------------");
+            Console.WriteLine("Press 1 to clutch onto Mr.Bunny-Rabbit\t Press 2 to force yourself to sleep");
+            switch (choice.ToLower())
+            {
+                case "1":
+
+                    Console.WriteLine("Your friend reassures you: 'Everything will be okay.'");
+                    Game.DecreaseFear();
+                    break;
+                    
+                case "2":
+                    Console.Clear();
+                    Console.WriteLine("This new house is so scary. You can't sleep..");
+                   //clear somehow???
+                    Console.WriteLine("You're hungry...");
+                    
+                    Console.WriteLine("You're so cold...");
+
+                    Console.WriteLine("You smell smoke...But you can't move!");
+
+                    Console.WriteLine("The fire inches closer and closer...");
+
+                    Console.Write("WAKE UP"); Console.Write("WAKE UP"); Console.Write("WAKE UP"); Console.Write("WAKE UP"); Console.WriteLine("");
+                    
+                    //clear somehow
+
+                    Console.WriteLine("You wake up...again. You pinch yourself. OW!");
+                    
+                    Console.WriteLine("Your plushie friend pats your back. 'Another nightmare? C'mon, cheer up, you must be hungry, let's grab a snack in the  dining room. And maybe a dance in the ballroom will warm you up!");
+                    Game.Transition<BedroomAwake>();
+                    break;
+            }
+            
+            
         }
 
-    }
+        }
 
 
 

@@ -10,25 +10,24 @@ namespace TeaPartyHorror_Game.Rooms
     {
         public static bool ownsInvitation;
         internal override string CreateDescription() =>
-       @"The dim hallway is long and filled with many picture frames of rich fellows.
-It leads to a dining room, ballroom, and tea room. You can also return to your bedroom.
-You see a ghostly butler at the end of the hall who seems to be guarding a door.
-";
+       @"The dim hallway is long and filled with many picture frames of rich fellows,
+and you see a ghostly butler at the end of the hall who seems to be guarding a door.
+It leads to a [dining room], [ballroom], and [tea room]. You can also return to your [bedroom].";
 
         internal override void ReceiveChoice(string choice)
         {
             switch (choice.ToLower())
             {
                 case "bedroom":
-                    Console.WriteLine("You return to your bedroom.");
-                    Game.Transition<Bedroom>();
+                    Console.WriteLine("You return to the bedroom your aunt and uncle gave you.");
+                    Game.Transition<BedroomAwake>();
                     break;
-                case "kitchen":
-                    Console.WriteLine("You wander to the kitchen.");
+                case "dining room":
+                    Console.WriteLine("You wander to the dining room, following the smell of sweets wafting in the air.");
                     Game.Transition<DiningRoom>();
                     break;
                 case "ballroom":
-                    Console.WriteLine("You make your way to the ballroom.");
+                    Console.WriteLine("You make your way to the ballroom, following the sound of classical music.");
                     Game.Transition<Ballroom>();
                     break;
                 case "tearoom":

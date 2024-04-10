@@ -18,15 +18,15 @@ namespace TeaPartyHorror_Game.Rooms
                 {
                     case "in":
                         {
-                            Console.Clear();
+                            
                             Console.WriteLine("You burn. AHHHHH! Scary!");
-                        Game.IncreaseFear(2);
-                        Game.Transition<Bedroom>(); break;
+                            Game.IncreaseFear(2);
+                            Game.Transition<Bedroom>(); break;
                             
                         }
                     case "out":
                         {
-                            Console.Clear();
+                            
                             Console.WriteLine("You escape. Scary!");
                             Game.IncreaseFear(1);
                             Game.Transition<Bedroom>(); break;
