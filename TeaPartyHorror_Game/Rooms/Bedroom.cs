@@ -10,29 +10,28 @@ namespace TeaPartyHorror_Game.Rooms
     internal class Bedroom : Room
     {
         private int fearLevel = 0;
-        private bool isHungry = true;
-        private bool isCold = true;
-        private bool isMonsterFriend = false;
-        public static bool wokeUp = false;
         
-        
-
         internal override string CreateDescription() =>
-       @"You are in your new bedroom.";
+       @"You are in your new bedroom. ... It's too clean.";
 
         internal override void ReceiveChoice(string choice)
         {
             Console.WriteLine("You jolt awake, shivering under your white duvet set.");
             Console.WriteLine("Your plushie, Mr.Bunny-Rabbit, surprisingly, begins to speak! 'Are you okay? Don't worry, I'm here. Go back to sleep.'");
             Console.WriteLine("But sleep eludes you... You feel fearful in this new environment.");
-            Console.WriteLine("-------------------------------------------------------------------");
-            Console.WriteLine("Press 1 to clutch onto Mr.Bunny-Rabbit\t Press 2 to force yourself to sleep");
+            Console.WriteLine(""); Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("Press 1 to clutch onto Mr.Bunny-Rabbit\t\tPress 2 to force yourself to sleep");
+            Console.ForegroundColor = ConsoleColor.White;
             switch (choice.ToLower())
             {
                 case "1":
 
+                    Console.Clear();
                     Console.WriteLine("Your friend reassures you: 'Everything will be okay.'");
                     Game.DecreaseFear();
+                    Console.WriteLine(""); Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("Press 1 to clutch onto Mr.Bunny-Rabbit\t\tPress 2 to force yourself to sleep");
+                    Console.ForegroundColor = ConsoleColor.White;
                     break;
                     
                 case "2":
@@ -47,8 +46,10 @@ namespace TeaPartyHorror_Game.Rooms
 
                     Console.WriteLine("The fire inches closer and closer...");
 
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.Write("WAKE UP"); Console.Write("WAKE UP"); Console.Write("WAKE UP"); Console.Write("WAKE UP"); Console.WriteLine("");
                     
+                    Console.ForegroundColor = ConsoleColor.White;
                     //clear somehow
 
                     Console.WriteLine("You wake up...again. You pinch yourself. OW!");

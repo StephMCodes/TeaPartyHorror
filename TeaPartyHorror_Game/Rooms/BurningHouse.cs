@@ -9,14 +9,15 @@ namespace TeaPartyHorror_Game.Rooms
     internal class BurningHouse : Room
     {
         internal override string CreateDescription() =>
-       @"You are in your old bedroom that is on fire. Your house is on fire. Out or in? ";
+       @"You are in your old bedroom, cluttered and familiar.";
 
         internal override void ReceiveChoice(string choice)
         {
+             
             
-                switch (choice.ToLower())
+            switch (choice.ToLower())
                 {
-                    case "in":
+                    case "1":
                         {
                             
                             Console.WriteLine("You burn. AHHHHH! Scary!");
@@ -24,7 +25,7 @@ namespace TeaPartyHorror_Game.Rooms
                             Game.Transition<Bedroom>(); break;
                             
                         }
-                    case "out":
+                    case "2":
                         {
                             
                             Console.WriteLine("You escape. Scary!");
