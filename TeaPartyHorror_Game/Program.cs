@@ -34,7 +34,7 @@ namespace TeaPartyHorror_Game
             game.Add(new Ballroom());
             game.Add(new Garden());
             game.Add(new Tearoom());
-            //game.Add(new Inventory));
+            game.Add(new Inventory());
 
 
             while (!game.IsGameOver())
