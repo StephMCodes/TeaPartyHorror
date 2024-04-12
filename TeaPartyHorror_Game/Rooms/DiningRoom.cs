@@ -26,7 +26,7 @@ namespace TeaPartyHorror_Game.Rooms
             {
                 Console.WriteLine("Invalid command.");
                 Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine("Press 1 to sit down");
+                Console.WriteLine("Press 1 to sit down ");
                 Console.ForegroundColor = ConsoleColor.White;
             }
 
@@ -66,7 +66,7 @@ namespace TeaPartyHorror_Game.Rooms
         private void StartMiniGame()
         {
             Console.Clear();
-            Console.WriteLine("Choice [good1] for good [bad1] for bad");
+            Console.WriteLine("Choice [good1] for good [bad1] for bad ");
             string miniGameChoice = Console.ReadLine();
 
             if (miniGameChoice == "good1")
@@ -76,7 +76,7 @@ namespace TeaPartyHorror_Game.Rooms
             else if (miniGameChoice == "bad1")
 
             {
-                Console.WriteLine("Ghost is mad! EEP!");
+                Console.WriteLine("Ghost is mad! EEP! ");
                 Game.IncreaseFear(1);
             }
             else

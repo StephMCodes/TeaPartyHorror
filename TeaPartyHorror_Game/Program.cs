@@ -34,11 +34,12 @@ namespace TeaPartyHorror_Game
             game.Add(new Ballroom());
             game.Add(new Garden());
             game.Add(new Tearoom());
+            //game.Add(new Inventory));
 
 
             while (!game.IsGameOver())
             {
-                Console.WriteLine("--");
+                Console.WriteLine("---");
                 Console.WriteLine(game.CurrentRoomDescription);
                 string choice = Console.ReadLine().ToLower() ?? "";
                 Console.Clear();
