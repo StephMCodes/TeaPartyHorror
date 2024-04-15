@@ -42,8 +42,6 @@ namespace TeaPartyHorror_Game.Rooms
                         Game.Transition<BurningHouse>();
                         break;
                     }
-
-                    //add skips to certain rooms from here
                 
                 default:
                     Console.WriteLine("Invalid command.");
