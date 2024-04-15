@@ -54,7 +54,11 @@
     <Compile Include="Rooms\Garden.cs" />
     <Compile Include="Rooms\Hallway.cs" />
     <Compile Include="Rooms\DiningRoom.cs" />
+<<<<<<< HEAD
     <Compile Include="Rooms\Inventory.cs" />
+=======
+    <Compile Include="Rooms\MinigameQuestions\DiningRoomQ1.cs" />
+>>>>>>> 94d1ab3818a130ec1f5cedcf655bb06463ccba66
     <Compile Include="Rooms\Start.cs" />
     <Compile Include="Rooms\Tearoom.cs" />
   </ItemGroup>
