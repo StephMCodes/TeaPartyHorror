@@ -20,7 +20,7 @@ namespace TeaPartyHorror_Game.Rooms
                     case "1":
                         {
                             
-                            Console.WriteLine("You burn. AHHHHH! Scary!");
+                            Console.WriteLine("You feel your skin tingle as fire starts to catch on your flesh. 'AHHHHH!', you scream in horror scared about you're awaiting fate. Scary!");
                             Game.IncreaseFear(2);
                             Game.Transition<Bedroom>(); break;
                             

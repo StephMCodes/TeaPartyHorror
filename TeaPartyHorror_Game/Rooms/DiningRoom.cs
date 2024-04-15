@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TeaPartyHorror_Game.Rooms.MinigameQuestions;
 
 namespace TeaPartyHorror_Game.Rooms
 {
@@ -15,22 +14,20 @@ namespace TeaPartyHorror_Game.Rooms
 
         internal override void ReceiveChoice(string choice)
         {
-            switch(choice.ToLower())
-            { 
-                case "1":
-                Game.Transition<DiningRoomQ1>(); break;
-
-            case "hallway":
-            
-                Game.Transition<Hallway>(); break;
-
-            default:
-            
+            if (choice == "1")
+            {
+                StartMiniGame();
+            }
+            else if (choice == "hallway")
+            {
+                Game.Transition<Hallway>();
+            }
+            else
+            {
                 Console.WriteLine("Invalid command.");
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 Console.WriteLine("Press 1 to sit down ");
                 Console.ForegroundColor = ConsoleColor.White;
-                break;
             }
 
             //switch (choice)
@@ -66,50 +63,28 @@ namespace TeaPartyHorror_Game.Rooms
             //        break;
             //}
         }
+        private void StartMiniGame()
+        {
+            Console.Clear();
+            Console.WriteLine("Choice [good1] for good [bad1] for bad ");
+            string miniGameChoice = Console.ReadLine();
 
-        //private void StartMiniGame2() {
+            if (miniGameChoice == "good1")
+            {
+                Console.WriteLine("Ghost is happy. Good! ");
+            }
+            else if (miniGameChoice == "bad1")
 
-        //    Console.Clear();
-        //    Console.WriteLine("Choice [yay] for good [naur] for bad ");
-        //    string miniGameChoice = Console.ReadLine();
+            {
+                Console.WriteLine("Ghost is mad! EEP! ");
+                Game.IncreaseFear(1);
+            }
+            else
+            {
+                Console.WriteLine("Invalid command.Try again! ");
+            }
 
-        //    if (miniGameChoice == "yay")
-        //    {
-        //        Console.WriteLine("Ghost is happy. Good! "); //StartMiniGame2();
-        //    }
-        //    else if (miniGameChoice == "naur")
-
-        //    {
-        //        Console.WriteLine("Ghost is mad! EEP! ");
-        //        Game.IncreaseFear(1); //StartMiniGame2();
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("Invalid command.Try again! "); StartMiniGame2();
-        //    }
-        //}
-        //private void StartMiniGame()
-        //{
-        //    Console.Clear();
-        //    Console.WriteLine("Choice [good1] for good [bad1] for bad ");
-        //    string miniGameChoice = Console.ReadLine();
-
-        //    if (miniGameChoice == "good1")
-        //    {
-        //        Console.WriteLine("Ghost is happy. Good! "); StartMiniGame2();
-        //    }
-        //    else if (miniGameChoice == "bad1")
-
-        //    {
-        //        Console.WriteLine("Ghost is mad! EEP! ");
-        //        Game.IncreaseFear(1); StartMiniGame2();
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("Invalid command.Try again! "); StartMiniGame();
-        //    }
-
-        //}
+        }
 
     }
 
