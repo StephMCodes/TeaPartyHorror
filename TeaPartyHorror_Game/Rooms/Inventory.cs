@@ -1,10 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-<<<<<<< HEAD
 using static TeaPartyHorror_Game.Rooms.Inventory;
 
 namespace TeaPartyHorror_Game.Rooms
@@ -33,6 +32,10 @@ namespace TeaPartyHorror_Game.Rooms
             {
                 Console.WriteLine($"Using{Name}.");
             }
+            else
+            {
+                Console.WriteLine("Item not found in inventory.");
+            }             
         }
         public class Amulet : Item
         {
@@ -71,44 +74,44 @@ namespace TeaPartyHorror_Game.Rooms
             }
         }
 
-        public class Inventory
-        {
-            private List<Item> items = new List<Item>();
-        }
-        public void AddItem(Item item)
-        {
-            items.Add(item);
-            Console.WriteLine($"{item.Name} has been added to your inventory. ");
-        }
-        public void UseItem(string itemName)
-        {
-            var item = items.FirstOrDefault(item => item.Name.Equals(itemName, StringComparison.OrdinalIgnoreCase));
+        //public class Inventory
+        //{
+        //    private List<Item> items = new List<Item>();
+        //}
+        //public void AddItem(Item item)
+        //{
+        //    items.Add(item);
+        //    Console.WriteLine($"{item.Name} has been added to your inventory. ");
+        //}
+        //public void UseItem(string itemName)
+        //{
+        //    var item = items.FirstOrDefault(item => item.Name.Equals(itemName, StringComparison.OrdinalIgnoreCase));
 
-            if (item != null)
-            {
-                items.Use();
-                items.Remove(item);
-            }
-            else
-            {
-                Console.WriteLine("Item not found in inventory.");
-            }             
-        }
-        public void ListItems()
-        {
-            if (items.Count == 0)
-            {
-                Console.WriteLine("Your inventory is empty.");
-                return;
-            }
+        //    if (item != null)
+        //    {
+        //        items.Use();
+        //        items.Remove(item);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Item not found in inventory.");
+        //    }             
+        //}
+        //public void ListItems()
+        //{
+        //    if (items.Count == 0)
+        //    {
+        //        Console.WriteLine("Your inventory is empty.");
+        //        return;
+        //    }
 
-            Console.WriteLine("Inventory Items:");
-            foreach (var item in items)
-            {
-                Console.WriteLine(item.Name);
-            }
+        //    Console.WriteLine("Inventory Items:");
+        //    foreach (var item in items)
+        //    {
+        //        Console.WriteLine(item.Name);
+        //    }
 
-        }
+        //}
 
     }
 }
