@@ -2,7 +2,6 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using TeaPartyHorror_Game.Rooms;
-using TeaPartyHorror_Game.Rooms.MinigameQuestions;
 
 namespace TeaPartyHorror_Game
 {
@@ -32,12 +31,6 @@ namespace TeaPartyHorror_Game
             game.Add(new BedroomAwake());
             game.Add(new Hallway());
             game.Add(new DiningRoom());
-<<<<<<< Updated upstream
-=======
-            game.Add(new DiningRoomQ1());
-            game.Add(new DiningRoomQ2());
-            game.Add(new DiningRoomQ3());
->>>>>>> Stashed changes
             game.Add(new Ballroom());
             game.Add(new Garden());
             game.Add(new Tearoom());

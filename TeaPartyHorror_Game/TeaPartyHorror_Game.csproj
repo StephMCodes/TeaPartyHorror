@@ -54,13 +54,7 @@
     <Compile Include="Rooms\Garden.cs" />
     <Compile Include="Rooms\Hallway.cs" />
     <Compile Include="Rooms\DiningRoom.cs" />
-<<<<<<< Updated upstream
     <Compile Include="Rooms\Inventory.cs" />
-=======
-    <Compile Include="Rooms\MinigameQuestions\DiningRoomQ3.cs" />
-    <Compile Include="Rooms\MinigameQuestions\DiningRoomQ2.cs" />
-    <Compile Include="Rooms\MinigameQuestions\DiningRoomQ1.cs" />
->>>>>>> Stashed changes
     <Compile Include="Rooms\Start.cs" />
     <Compile Include="Rooms\Tearoom.cs" />
   </ItemGroup>
