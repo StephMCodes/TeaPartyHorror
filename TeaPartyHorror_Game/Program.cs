@@ -31,7 +31,6 @@ namespace TeaPartyHorror_Game
             game.Add(new BedroomAwake());
             game.Add(new Hallway());
             game.Add(new DiningRoom());
-            game.Add(new Rooms.MinigameQuestions.DiningRoomQ1());
             game.Add(new Ballroom());
             game.Add(new Garden());
             game.Add(new Tearoom());
