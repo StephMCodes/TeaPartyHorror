@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TeaPartyHorror_Game.Rooms.MinigameQuestions;
 
 namespace TeaPartyHorror_Game.Rooms
 {
@@ -10,7 +11,7 @@ namespace TeaPartyHorror_Game.Rooms
     internal class Hallway : Room
     {
         public static bool ownsInvitation;
-        private bool SnackReceived;
+        private bool SnackReceived, HasDanced; //fix it why is it just here it should instantiate in game
 
         internal override string CreateDescription() =>
        @"The dim hallway is long and filled with many picture frames of rich fellows.
@@ -36,17 +37,28 @@ who's door is guarded by a ghostly butler.
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("Press 1 to sit down");
                         Console.ForegroundColor = ConsoleColor.White;
+                        Game.Transition<DiningRoom>();
                     }
                     else 
                     {
-                        Console.WriteLine("You wander to the dining room."); 
-                        
+                        Console.WriteLine("You wander to the dining room.");
+                        Game.Transition<DiningRoomComplete>();
+
                     }
-                    Game.Transition<DiningRoom>();
+                 
                     break;
                 case "ballroom":
-                    Console.WriteLine("You make your way to the ballroom, following the sound of classical music.");
-                    Game.Transition<Ballroom>();
+                    if (HasDanced == false)
+                    {
+                        Console.WriteLine("You make your way to the ballroom, following the sound of classical music. A pathway down it's balcony leads to the [garden].");
+                        Console.WriteLine("Ghostly figures danced together in the grandiose, open ballroom. The curtains hung low as the ghosts frolicked in pairs except for one older woman." +
+                            "Her face was sullen as loneliness befell her.");
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.WriteLine("Press 1 to invite her to dance");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Game.Transition<BallroomQu1>();
+                    } else { Console.WriteLine("You make your way to the ballroom, the one-two-three rhythm still in your head."); 
+                        Game.Transition<Ballroom>(); }
                     break;
                 case "tearoom":
                     

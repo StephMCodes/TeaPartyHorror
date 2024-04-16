@@ -56,6 +56,10 @@
     <Compile Include="Rooms\Hallway.cs" />
     <Compile Include="Rooms\DiningRoom.cs" />
     <Compile Include="Rooms\Inventory.cs" />
+    <Compile Include="Rooms\MinigameQuestions\BallroomQu1.cs" />
+    <Compile Include="Rooms\MinigameQuestions\BallroomQu2.cs" />
+    <Compile Include="Rooms\MinigameQuestions\BallroomQu3.cs" />
+    <Compile Include="Rooms\MinigameQuestions\BallroomQu4.cs" />
     <Compile Include="Rooms\MinigameQuestions\DiningRoomQu1.cs" />
     <Compile Include="Rooms\MinigameQuestions\DiningRoomQu2.cs" />
     <Compile Include="Rooms\MinigameQuestions\DiningRoomQu3.cs" />

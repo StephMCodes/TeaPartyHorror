@@ -15,6 +15,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
             switch (choice.ToLower())
             {
                 case "1":
+                    
                     Console.WriteLine("The ghost approves");
                     Game.Transition<DiningRoomQu2>();
                     Console.WriteLine("The knife should be in the right hand and the fork in the left");
