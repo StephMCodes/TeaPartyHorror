@@ -31,14 +31,27 @@ namespace TeaPartyHorror_Game.Rooms
                         "Please, take good care in bringing her these." +
                         "She will know I love her still, even if I am not there.'");
                     HasFlowers = true;
+                    Game.Transition<GardenRabbitInteraction>();
+                    break;
+                case "2":
+
+                    Console.WriteLine("'HEY! I told you to stay away from those! Oleanders are not for silly children.");
+                    Game.IncreaseFear(1);
+                    Console.WriteLine("Embarassed, you tell your story...");
+                    Console.WriteLine("The older man softens as he listens." +
+                        "'My sweet, darling Rosalind! I cannot be there with her for I am but a lowly worker, unbefitting to hold a noblewoman's hand..." +
+                        "Please, take good care in bringing her these." +
+                        "She will know I love her still, even if I am not there.'");
+                    HasFlowers = true;
+                    Game.Transition<GardenRabbitInteraction>();
                     break;
                 default:
                     Console.WriteLine("Invalid command.");
                     Console.WriteLine("You enjoy the view as you descend the marble stairs to the garden that remains colourful even in moonbathed darkness.");
-                    Console.WriteLine("There is a gardener ghost, a sullen man tending to pink flowers that smell of peaches. You approach him, and he tells you to back away from his oleanders. ");
+                    Console.WriteLine("There is a gardener ghost, a sullen man tending to pink flowers that smell of peaches. You approach him, and he grumbles at you to back away from his oleanders. ");
 
                     Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Press 1 to explain the problem and ask for flowers");
+                    Console.WriteLine("Press 1 to explain the problem and ask for flowers\t\tPress 2 to steal some when he is not looking");
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
             }

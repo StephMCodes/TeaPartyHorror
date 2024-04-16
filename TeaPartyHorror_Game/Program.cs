@@ -40,7 +40,10 @@ namespace TeaPartyHorror_Game
             game.Add(new BallroomQu1());
             game.Add(new BallroomQu2());
             game.Add(new BallroomQu3());
+            game.Add(new BallroomQu4());
             game.Add(new Garden());
+            game.Add(new GardenRabbitInteraction());
+            game.Add(new GardenComplete());
             game.Add(new Tearoom());
             //game.Add(new Inventory());
 

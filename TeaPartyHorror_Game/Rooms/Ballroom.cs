@@ -16,7 +16,6 @@ namespace TeaPartyHorror_Game.Rooms
             switch (choice)
             {
                 case "hallway":
-                    Console.WriteLine("You return to your bedroom.");
                     Game.Transition<Hallway>();
                     break;
                 case "garden":

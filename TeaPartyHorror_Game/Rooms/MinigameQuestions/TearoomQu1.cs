@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace TeaPartyHorror_Game.Rooms
 {
-    internal class Tearoom : Room
+    internal class TearoomQu1 : Room
     {
         internal override string CreateDescription() =>
-       @"In the attic, it's dark and cold.
-        A chest is locked with the code [????].
-        You can return to your [bedroom].";
+       @"";
 
         internal override void ReceiveChoice(string choice)
         {
+            Console.WriteLine("AHHH HE IS EVIL");
             switch (choice)
             {
+                
                 case "bedroom":
                     Console.WriteLine("You return to your bedroom.");
                     Game.Transition<Bedroom>();

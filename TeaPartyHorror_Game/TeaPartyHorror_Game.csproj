@@ -54,6 +54,7 @@
     <Compile Include="Rooms\DiningRoomComplete.cs" />
     <Compile Include="Rooms\Garden.cs" />
     <Compile Include="Rooms\GardenComplete.cs" />
+    <Compile Include="Rooms\GardenRabbitInteraction.cs" />
     <Compile Include="Rooms\Hallway.cs" />
     <Compile Include="Rooms\DiningRoom.cs" />
     <Compile Include="Rooms\Inventory.cs" />
