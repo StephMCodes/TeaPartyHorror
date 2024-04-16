@@ -65,7 +65,13 @@ who's door is guarded by a ghostly butler.
                         if (ownsInvitation == true)
                         {
                             Console.WriteLine("The butler lets you in.");
-                            Game.Transition<Tearoom>();
+                        Console.WriteLine("When you enter the room, the table is set for you." +
+                            "There are only two seats empty, the rest are occupied by teddy bears, dolls," +
+                            "etc that all turn to look at you and invite you. ");
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.WriteLine("Press 1 to place Mr Bunny-Rabbit down on a seat and sit down yourself");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Game.Transition<TearoomQu1>();
                             break;
                         }
                     Console.WriteLine("The butler stops you.");

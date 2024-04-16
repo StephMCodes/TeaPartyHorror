@@ -44,7 +44,7 @@ namespace TeaPartyHorror_Game
             game.Add(new Garden());
             game.Add(new GardenRabbitInteraction());
             game.Add(new GardenComplete());
-            game.Add(new Tearoom());
+            game.Add(new TearoomQu1());
             //game.Add(new Inventory());
 
 
