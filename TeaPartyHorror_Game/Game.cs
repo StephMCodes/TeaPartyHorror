@@ -15,7 +15,7 @@ namespace TeaPartyHorror_Game
         public static bool isCold = true;
         public static bool isMonsterFriend;
         public static bool escapedFire;
-        public static bool wokeUp;
+        public static bool DiningRoomComplete;
         public static bool ownsInvitation; //change to become inventory item
 
         List<Room> rooms = new List<Room>();
