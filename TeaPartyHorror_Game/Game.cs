@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace TeaPartyHorror_Game
 {
-    public enum GameItem { }
+    public enum GameItem //we need 5 values for the grade
+    {
+        MrBunnyRabbit, //If i write the dash and space it gets confused so I smushed his name
+        Snack,
+        Flowers,
+        Amulet,
+        Invitation
+    }
     internal class Game
     {
 
@@ -37,9 +44,13 @@ namespace TeaPartyHorror_Game
         //}
         internal void ReceiveChoice(string choice) 
         {
-            if(choice =="inventory")
+            if(choice == "inventory")
             {
                 Console.WriteLine("You have: (...)");
+                foreach (GameItem Item in Inventory)
+                {
+                    Console.WriteLine(Item);
+                }
             }
             else
             {

@@ -10,6 +10,12 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 
     {
         internal static bool SnackReceived;
+
+        public override void OnRoomEnter()
+        {
+            Game.Inventory.Add(GameItem.Snack);
+        }
+
         internal override string CreateDescription() => @"";
         internal override void ReceiveChoice(string choice)
         {

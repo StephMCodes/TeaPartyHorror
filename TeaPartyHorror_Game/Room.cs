@@ -11,7 +11,7 @@ namespace TeaPartyHorror_Game
         internal abstract string CreateDescription();
         internal abstract void ReceiveChoice(string choice);
         ////these abstract methods get overridden in each room.
-
+        public virtual void OnRoomEnter() { }
         //internal abstract void RoomEnter(string choice);
 
         ////each room needs a text desc.
