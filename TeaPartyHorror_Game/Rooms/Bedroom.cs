@@ -11,11 +11,13 @@ namespace TeaPartyHorror_Game.Rooms
     {
         private int fearLevel = 0;
         
+
         internal override string CreateDescription() =>
        @"You are in your new bedroom. ... It's too clean.";
 
         internal override void ReceiveChoice(string choice)
         {
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("You jolt awake, shivering under your white duvet set.");
             Console.WriteLine("Your plushie, Mr.Bunny-Rabbit, surprisingly, begins to speak! 'Are you okay? Don't worry, I'm here. Go back to sleep.'");
             Console.WriteLine("But sleep eludes you... You feel fearful in this new environment.");

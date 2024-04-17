@@ -20,7 +20,7 @@ namespace TeaPartyHorror_Game.Rooms
                     break;
                 case "garden":
                     Console.WriteLine("You go to the garden.");
-                    Game.Transition<Garden>();
+                    Game.Transition<GardenComplete>();
                     break;
                 default:
                     Console.WriteLine("Invalid command.");

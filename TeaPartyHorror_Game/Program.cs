@@ -30,6 +30,7 @@ namespace TeaPartyHorror_Game
             game.Add(new BurningHouse());
             game.Add(new Bedroom());
             game.Add(new BedroomAwake());
+            game.Add(new MUTBSnackInteraction());
             game.Add(new Hallway());
             game.Add(new DiningRoom());
             game.Add(new DiningRoomQu1());
@@ -56,7 +57,7 @@ namespace TeaPartyHorror_Game
                 string choice = Console.ReadLine().ToLower() ?? "";
                 Console.Clear();
                 game.ReceiveChoice(choice);
-                Console.WriteLine("Checkout your current [inventory]! ");
+                Console.WriteLine("Check out your current [inventory]! ");
                 Console.ForegroundColor = ConsoleColor.Magenta;
             }
 

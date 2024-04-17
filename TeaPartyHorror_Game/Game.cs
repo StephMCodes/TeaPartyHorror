@@ -10,16 +10,8 @@ namespace TeaPartyHorror_Game
     internal class Game
     {
 
-        public static int fearLevel = 0;
-        public static bool isHungry = true;
-        public static bool isCold = true;
-        public static bool isMonsterFriend;
-        public static bool escapedFire;
-        public static bool SnackReceived;
-        public static bool HasDanced;
-        public static bool HasFlower;
-        public static bool ownsInvitation; //change to become inventory item
-
+        internal static int fearLevel = 0; //or public?
+        
         List<Room> rooms = new List<Room>();
         public static List<GameItem> Inventory = new List<GameItem>();
         Room currentRoom;
@@ -62,6 +54,7 @@ namespace TeaPartyHorror_Game
             if (fearLevel >= 5)
             {
                 Console.WriteLine("The fear overwhelms you, leading to a game over.");
+                Finish();
             }
         }
        internal static void DecreaseFear()

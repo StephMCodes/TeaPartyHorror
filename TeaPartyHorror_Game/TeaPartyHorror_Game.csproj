@@ -65,6 +65,7 @@
     <Compile Include="Rooms\MinigameQuestions\DiningRoomQu1.cs" />
     <Compile Include="Rooms\MinigameQuestions\DiningRoomQu2.cs" />
     <Compile Include="Rooms\MinigameQuestions\DiningRoomQu3.cs" />
+    <Compile Include="Rooms\MUTBSnackInteraction.cs" />
     <Compile Include="Rooms\Start.cs" />
     <Compile Include="Rooms\MinigameQuestions\TearoomQu1.cs" />
   </ItemGroup>

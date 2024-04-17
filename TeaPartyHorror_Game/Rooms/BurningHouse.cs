@@ -22,7 +22,9 @@ namespace TeaPartyHorror_Game.Rooms
                             
                             Console.WriteLine("You feel your skin tingle as fire starts to catch on your flesh. 'AHHHHH!', " + "you scream in horror scared about you're awa-iting fate. Scary!");
                             Game.IncreaseFear(2);
-                            Game.Transition<Bedroom>(); break;
+                        Console.WriteLine("Press enter to continue.");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Game.Transition<Bedroom>(); break;
                             
                         }
                     case "2":
@@ -30,7 +32,9 @@ namespace TeaPartyHorror_Game.Rooms
                             
                             Console.WriteLine("You escape. Scary!");
                             Game.IncreaseFear(1);
-                            Game.Transition<Bedroom>(); break;
+                        Console.WriteLine("Press enter to continue.");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Game.Transition<Bedroom>(); break;
                         }
                 }
             }

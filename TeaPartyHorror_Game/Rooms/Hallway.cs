@@ -10,8 +10,8 @@ namespace TeaPartyHorror_Game.Rooms
 
     internal class Hallway : Room
     {
-        public static bool ownsInvitation;
-        private bool SnackReceived, HasDanced; //fix it why is it just here it should instantiate in game
+        internal static bool OwnsInvitation;
+        
 
         internal override string CreateDescription() =>
        @"The dim hallway is long and filled with many picture frames of rich fellows.
@@ -21,16 +21,29 @@ who's door is guarded by a ghostly butler.
 
         internal override void ReceiveChoice(string choice)
         {
+            if (BallroomQu4.HasDanced == true && DiningRoomQu3.SnackReceived == true)
+            {
+                Console.WriteLine("'CAW, CAW!'");
+                Console.WriteLine("You are about to scream when a crow appears out of nowhere, heading straight for you.");
+                Console.WriteLine("Your plushie jumps to hug you and calms you down. 'Dont worry, he is a friend!'");
+                Console.WriteLine("The bird gently alights on your shoulders, claws careful not to poke you. There is a letter in his beak!");
+                Console.WriteLine("INVITATION RECEIVED");
+                OwnsInvitation = true;
+
+            }
+
             switch (choice.ToLower())
             {
+                
                 case "bedroom":
                     Console.WriteLine("You return to the bedroom your aunt and uncle gave you.");
                     Game.Transition<BedroomAwake>();
 
                     break;
                 case "dining room":
-                    if (SnackReceived == false)
+                    if (DiningRoomQu3.SnackReceived == false)
                     {
+                        Console.ForegroundColor = ConsoleColor.White;
                         Console.WriteLine("You wander to the dining room, following the smell of sweets wafting in the air." +
                         "You are impressed by the very long table that takes up most of the room, and the table already seems to be set for two." +
                         "A woman in an apron with a strict face looks you up and down. 'There's always food for hungry children here! Even at midnight.'" +
@@ -49,7 +62,7 @@ who's door is guarded by a ghostly butler.
                     break;
 
                 case "ballroom":
-                    if (HasDanced == false)
+                    if (BallroomQu4.HasDanced == false)
                     {
                         Console.WriteLine("You make your way to the ballroom, following the sound of classical music. A pathway down it's balcony leads to the [garden].");
                         Console.WriteLine("Ghostly figures danced together in the grandiose, open ballroom.");
@@ -70,12 +83,12 @@ who's door is guarded by a ghostly butler.
 
                 case "tearoom":
 
-                    if (ownsInvitation == true)
+                    if (OwnsInvitation == true)
                     {
                         Console.WriteLine("The butler lets you in.");
                         Console.WriteLine("When you enter the room, the table is set for you." +
-                            "There are only two seats empty, the rest are occupied by teddy bears, dolls," +
-                            "etc that all turn to look at you and invite you. ");
+                            "There are only two seats empty, the rest are occupied by teddy bears and dolls " +
+                            "that all turn to look at you and invite you. ");
                         Console.ForegroundColor = ConsoleColor.Magenta;
 
                         Console.WriteLine("Press 1 to place Mr Bunny-Rabbit down on a seat and sit down yourself");

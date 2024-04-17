@@ -16,7 +16,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
             switch (choice.ToLower())
             {
                 case "1":
-                    if (HasFlowers == true)
+                    if (Garden.HasFlowers == true)
                     {
                         Console.WriteLine("The ghost happily takes your hand along with the flowers. How I love these deadly oleanders!");
                         Game.Transition<BallroomQu2>();

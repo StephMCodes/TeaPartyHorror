@@ -22,6 +22,7 @@ namespace TeaPartyHorror_Game.Rooms
                     break;
 
                 case "1":
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("The cook will feed you gross stuff that initially looks good, that you have to pretend to like when you bite into it and realise its gross");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to pretend to like\t\tPress 2 to spit it out");
