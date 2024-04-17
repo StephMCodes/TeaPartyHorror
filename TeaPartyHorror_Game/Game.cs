@@ -38,10 +38,22 @@ namespace TeaPartyHorror_Game
 
         internal string CurrentRoomDescription => currentRoom.CreateDescription();
 
-        internal void ReceiveChoice(string choice)
+        //internal void ReceiveChoice(string choice)
+        //{
+        //    currentRoom.ReceiveChoice(choice);
+        //    CheckTransition();
+        //}
+        internal void ReceiveChoice(string choice) 
         {
-            currentRoom.ReceiveChoice(choice);
-            CheckTransition();
+            if(choice =="inventory")
+            {
+                Console.WriteLine("You have: (...)");
+            }
+            else
+            {
+                currentRoom.ReceiveChoice(choice);
+                CheckTransition();
+            }
         }
         internal static void IncreaseFear(int num)
         {

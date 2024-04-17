@@ -56,6 +56,8 @@ namespace TeaPartyHorror_Game
                 string choice = Console.ReadLine().ToLower() ?? "";
                 Console.Clear();
                 game.ReceiveChoice(choice);
+                Console.WriteLine("Checkout your current [inventory]! ");
+                Console.ForegroundColor = ConsoleColor.Magenta;
             }
 
             Console.WriteLine("END");

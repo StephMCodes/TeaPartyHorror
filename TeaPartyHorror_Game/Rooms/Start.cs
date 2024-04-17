@@ -17,7 +17,7 @@ namespace TeaPartyHorror_Game.Rooms
                 "\r\n\r\nYou are an orphaned young girl, adopted recently by your wealthy aunt and uncle." +
                 "\r\nThey have no other children in the mansion, so you must make your own entertainment and play by yourself." +
                 "\r\nThankfully, the house is full of spirits only you seem to notice..." + 
-                "\r\n\r\nENTER START TO BEGIN"; 
+                "\r\n\r\nWRITE START TO BEGIN"; 
         }
        
 

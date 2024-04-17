@@ -7,7 +7,7 @@ using TeaPartyHorror_Game.Rooms.MinigameQuestions;
 
 namespace TeaPartyHorror_Game.Rooms
 {
-    
+
     internal class Hallway : Room
     {
         public static bool ownsInvitation;
@@ -26,6 +26,7 @@ who's door is guarded by a ghostly butler.
                 case "bedroom":
                     Console.WriteLine("You return to the bedroom your aunt and uncle gave you.");
                     Game.Transition<BedroomAwake>();
+
                     break;
                 case "dining room":
                     if (SnackReceived == false)
@@ -36,44 +37,52 @@ who's door is guarded by a ghostly butler.
                         "Her form glistens and fades... A ghost!"); //text to fix by stephanie later
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("Press 1 to sit down");
+
                         Console.ForegroundColor = ConsoleColor.White;
                         Game.Transition<DiningRoom>();
                     }
-                    else 
+                    else
                     {
                         Console.WriteLine("You wander to the dining room.");
                         Game.Transition<DiningRoomComplete>();
-
                     }
-                 
                     break;
+
                 case "ballroom":
                     if (HasDanced == false)
                     {
                         Console.WriteLine("You make your way to the ballroom, following the sound of classical music. A pathway down it's balcony leads to the [garden].");
-                        Console.WriteLine("Ghostly figures danced together in the grandiose, open ballroom. The curtains hung low as the ghosts frolicked in pairs except for one older woman." +
-                            "Her face was sullen as loneliness befell her.");
+                        Console.WriteLine("Ghostly figures danced together in the grandiose, open ballroom.");
+                        Console.WriteLine("The curtains hung low as the ghosts frolicked in pairs except for one older woman.");
+                        Console.WriteLine("Her face was sullen as loneliness befell her.");
                         Console.ForegroundColor = ConsoleColor.Magenta;
+
                         Console.WriteLine("Press 1 to invite her to dance");
                         Console.ForegroundColor = ConsoleColor.White;
                         Game.Transition<BallroomQu1>();
-                    } else { Console.WriteLine("You make your way to the ballroom, the one-two-three rhythm still in your head."); 
-                        Game.Transition<Ballroom>(); }
+                    }
+                    else
+                    {
+                        Console.WriteLine("You make your way to the ballroom, the one-two-three rhythm still playing in your head.");
+                        Game.Transition<Ballroom>();
+                    }
                     break;
+
                 case "tearoom":
-                    
-                        if (ownsInvitation == true)
-                        {
-                            Console.WriteLine("The butler lets you in.");
+
+                    if (ownsInvitation == true)
+                    {
+                        Console.WriteLine("The butler lets you in.");
                         Console.WriteLine("When you enter the room, the table is set for you." +
                             "There are only two seats empty, the rest are occupied by teddy bears, dolls," +
                             "etc that all turn to look at you and invite you. ");
                         Console.ForegroundColor = ConsoleColor.Magenta;
+
                         Console.WriteLine("Press 1 to place Mr Bunny-Rabbit down on a seat and sit down yourself");
                         Console.ForegroundColor = ConsoleColor.White;
                         Game.Transition<TearoomQu1>();
-                            break;
-                        }
+                        break;
+                    }
                     Console.WriteLine("The butler stops you.");
                     break;
 
@@ -90,4 +99,5 @@ who's door is guarded by a ghostly butler.
     }
 
 }
+
 
