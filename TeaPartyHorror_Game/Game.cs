@@ -66,8 +66,8 @@ namespace TeaPartyHorror_Game
         {
             Console.ForegroundColor = ConsoleColor.Red; 
             fearLevel += num;
-            Console.WriteLine($"Fear increases. Current fear level: {fearLevel}.");
-            if (fearLevel >= 5)
+            Console.WriteLine($"Fear increases. Current fear level: {fearLevel}..");
+            if (fearLevel >= 10)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("The fear overwhelms you, leading to a game over.");
@@ -106,7 +106,8 @@ namespace TeaPartyHorror_Game
                 {
                     case GameItem.Amulet:
                         DecreaseFear();
-                        Console.WriteLine("The amulet glows softly, and you feel your fear diminish.");
+                        Console.WriteLine("The amulet glows powerfully, and you feel your fear diminish. Mr Bunny-Rabbit puts his paw out and destroys it with his magic, sending shards everywhere.");
+                        Inventory.items.Remove(GameItem.Amulet);
                         break;
                     case GameItem.Snack:
                         Console.WriteLine("You eat the snack, feeling a bit better and less fearful.");
@@ -115,10 +116,11 @@ namespace TeaPartyHorror_Game
                         break;
                     case GameItem.Flowers:
                         Console.WriteLine("You admire the flowers, feeling a moment of peace.");
-                        DecreaseFear();
+                        //DecreaseFear();
                         break;
                     case GameItem.MrBunnyRabbit:
-                        Console.WriteLine("Mr. Bunny-Rabbit doesn't seem to do much. Maybe someone else wants it?");
+                        Console.WriteLine("He has been with you a long time, but only began to move and speak recently. You smile at your plushie friend, and he smiles back.");
+                        //Console.WriteLine("Mr. Bunny-Rabbit doesn't seem to do much. Maybe someone else wants it?");
                         break;
                     case GameItem.Invitation:
                         Console.WriteLine("You ponder the invitation. There must be a use for this somewhere.");

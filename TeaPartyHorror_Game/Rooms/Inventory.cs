@@ -23,17 +23,20 @@ namespace TeaPartyHorror_Game.Rooms
 
         public void ListItems()
         {
+            Console.ForegroundColor = ConsoleColor.Magenta;
             if (items.Count == 0)
             {
-                Console.WriteLine("Your inventory is empty.");
+                Console.WriteLine("Your inventory is empty. Press enter to continue.");
                 return;
             }
-
+            
             Console.WriteLine("Inventory Items:");
             foreach (var item in items)
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine("Press enter to continue.");
+            Console.ForegroundColor = ConsoleColor.White;
         }
         public bool UseItem(GameItem item)
         {

@@ -63,7 +63,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 
                   
                 default:
-                    Console.WriteLine("Invalid command.");
+                    
                     Console.WriteLine("You can look around"); //maybe keep these now to remind them the description
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to look at her dress\t\tPress 2 to check out the other dancers\t\tPress 3 to look her in the eyes\t\tPress 4 to catch glimpses of the room");

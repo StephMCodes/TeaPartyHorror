@@ -21,7 +21,6 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     Console.WriteLine("Then you don't forget the two magic words.");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to say thank you\t\tPress 2 to say screw you");
-                    //CHANGE TO A CONSOLE READLINE I DONT HAVE THE TIME FOR...
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
                 case "2":
@@ -34,7 +33,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
                 default:
-                    Console.WriteLine("Invalid command.");
+                    
                     Console.WriteLine("The knife should be in the right hand and the fork in the left");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to do it wrong\t\tPress 2 to do it right");

@@ -19,13 +19,14 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
         internal override string CreateDescription() => @"";
         internal override void ReceiveChoice(string choice)
         {
-            Inventory.items.Add(GameItem.Snack);
+            
             //Console.WriteLine("Question text");
             switch (choice.ToLower())
             {
                 case "1":
                     Console.WriteLine("The ghost approves");
                     Console.WriteLine("The ghost gives you the snack");
+                    Inventory.items.Add(GameItem.Snack);
                     Game.Transition<DiningRoomComplete>();
                     SnackReceived=true;
                     break;
@@ -33,11 +34,12 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     Console.WriteLine("The ghost does NOT approve");
                     Game.IncreaseFear(1);
                     Console.WriteLine("The ghost gives you the snack...begrudgingly");
+                    Inventory.items.Add(GameItem.Snack);
                     Game.Transition<DiningRoomComplete>();
                     SnackReceived=true;
                     break;
                 default:
-                    Console.WriteLine("Invalid command.");
+                    
                     
                     break;
 

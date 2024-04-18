@@ -55,8 +55,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 
 
                 default:
-                    Console.WriteLine("Invalid command.");
-                    Console.WriteLine("");
+                   
                     Console.WriteLine("When you enter the room, the table is set for you." +
                             "There are only two seats empty, the rest are occupied by teddy bears and dolls " +
                             "that all turn to look at you and invite you. ");

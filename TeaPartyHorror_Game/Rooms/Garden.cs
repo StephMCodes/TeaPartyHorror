@@ -10,11 +10,13 @@ namespace TeaPartyHorror_Game.Rooms
     internal class Garden : Room
     {
         internal static bool HasFlowers;
+        
         internal override string CreateDescription() =>
        @"You can go back to the [ballroom] from here.";
 
         internal override void ReceiveChoice(string choice)
         {
+            
             switch (choice)
             {
                 case "ballroom":
@@ -33,6 +35,7 @@ namespace TeaPartyHorror_Game.Rooms
                         "She will know my love persists, even if I am not there beside her.'");
                     Console.WriteLine("You receive a lovely bouquet.");
                     HasFlowers = true;
+                    Inventory.items.Add(GameItem.Flowers);
                     Game.Transition<GardenRabbitInteraction>();
                     break;
                 case "2":
@@ -49,7 +52,7 @@ namespace TeaPartyHorror_Game.Rooms
                     Game.Transition<GardenRabbitInteraction>();
                     break;
                 default:
-                    Console.WriteLine("Invalid command.");
+                    //Console.WriteLine("Invalid command.");
                     Console.WriteLine("You enjoy the view as you descend the marble stairs to the garden that remains colourful even in moonbathed darkness.");
                     Console.WriteLine("There is a gardener ghost, a sullen man tending to pink flowers that smell of peaches. You approach him, and he grumbles at you to back away from his oleanders. ");
 

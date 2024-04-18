@@ -15,9 +15,10 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 
         internal override void ReceiveChoice(string choice)
         {
-            Console.WriteLine("");
+            
             Console.WriteLine("Bunny is evil, he casts a red light that gives you a headache.");
             Game.IncreaseFear(2);
+           // Game.UseItem(GameItem.Amulet);
             Console.WriteLine("The rabbit attempts to puppet you with evil strings.");
             Game.Transition<TearoomQu3>();
             if (GardenRabbitInteraction.Poisoned==true) { Console.WriteLine("But you feel weak... Your stomach hurts."); }

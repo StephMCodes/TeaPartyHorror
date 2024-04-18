@@ -30,15 +30,15 @@ namespace TeaPartyHorror_Game.Rooms
                     case "2":
                         {
                             
-                            Console.WriteLine("You crawl out your window, hurting yourself on the way down. But Papa and Mama are nowhere to be seen!");
-                            Game.IncreaseFear(1);
+                        Console.WriteLine("You crawl out your window, hurting yourself on the way down. But Papa and Mama are nowhere to be seen!");
+                        Game.IncreaseFear(1);
                         Console.WriteLine("Press enter to continue.");
                         Console.ForegroundColor = ConsoleColor.White;
                         Game.Transition<Bedroom>(); break;
                         }
 
                 default:
-                    Console.WriteLine("Invalid command.");
+                    Console.WriteLine("You jump out your bed, startled by the smell of smoke. The door handle is warm to the touch, but you need to warn your parents.");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to run inside and look for your parents\t\tPress 2 to climb out your window");
                     Console.ForegroundColor = ConsoleColor.White;

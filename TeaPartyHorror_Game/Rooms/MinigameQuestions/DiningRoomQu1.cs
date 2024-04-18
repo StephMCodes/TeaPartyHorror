@@ -34,7 +34,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     break;
 
                 default:
-                    Console.WriteLine("Invalid command.");
+                    
                     Console.WriteLine("The cook will feed you gross stuff that initially looks good, that you have to pretend to like when you bite into it and realise its gross");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to pretend to like\t\tPress 2 to spit it out");

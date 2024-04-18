@@ -44,7 +44,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                         Game.Transition<Garden>();
                     break;
                 default:
-                    Console.WriteLine("Invalid command.");
+                    
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to invite her to dance");
                     Console.ForegroundColor = ConsoleColor.White;
