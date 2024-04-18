@@ -13,7 +13,7 @@ namespace TeaPartyHorror_Game.Rooms
     internal class Inventory
     {
 
-        private List<GameItem> items = new List<GameItem>();
+        public static List<GameItem> items = new List<GameItem>();
 
         public void AddItem(GameItem item)
         {

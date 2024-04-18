@@ -64,19 +64,25 @@ namespace TeaPartyHorror_Game
 
         internal static void IncreaseFear(int num)
         {
+            Console.ForegroundColor = ConsoleColor.Red; 
             fearLevel += num;
             Console.WriteLine($"Fear increases. Current fear level: {fearLevel}.");
             if (fearLevel >= 5)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("The fear overwhelms you, leading to a game over.");
+               
                 Finish();
             }
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
         internal static void DecreaseFear()
         {
+            Console.ForegroundColor= ConsoleColor.Red;
             if (fearLevel > 0) fearLevel--;
             Console.WriteLine($"Fear decreases. Current fear level: {fearLevel}.");
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
         internal void CheckTransition()
@@ -105,19 +111,22 @@ namespace TeaPartyHorror_Game
                     case GameItem.Snack:
                         Console.WriteLine("You eat the snack, feeling a bit better and less fearful.");
                         DecreaseFear();
+                        Inventory.items.Remove(GameItem.Snack);
                         break;
                     case GameItem.Flowers:
                         Console.WriteLine("You admire the flowers, feeling a moment of peace.");
                         DecreaseFear();
                         break;
                     case GameItem.MrBunnyRabbit:
-                        Console.WriteLine("Mr. Bunny Rabbit doesn't seem to do much. Maybe someone else wants it?");
+                        Console.WriteLine("Mr. Bunny-Rabbit doesn't seem to do much. Maybe someone else wants it?");
                         break;
                     case GameItem.Invitation:
                         Console.WriteLine("You ponder the invitation. There must be a use for this somewhere.");
+                        //ADD RANDOM CODE!
                         break;
                     default:
-                        Console.WriteLine("This item doesn't seem to do anything...");
+                        Console.WriteLine("Invalid command.");
+                        //Console.WriteLine("This item doesn't seem to do anything...");
                         break;
                 }
             }

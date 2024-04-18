@@ -14,7 +14,7 @@ namespace TeaPartyHorror_Game.Rooms
 
         internal override void ReceiveChoice(string choice)
         {
-            Console.WriteLine("Question text");
+            //Console.WriteLine("Question text");
             switch (choice.ToLower())
             {
                 case "1":

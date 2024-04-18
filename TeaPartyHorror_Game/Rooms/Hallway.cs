@@ -96,7 +96,7 @@ who's door is guarded by a ghostly butler.
                         Game.Transition<TearoomQu1>();
                         break;
                     }
-                    Console.WriteLine("The butler stops you.");
+                    else { Console.WriteLine("The butler stops you."); }
                     break;
 
                 case "fear":

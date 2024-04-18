@@ -36,6 +36,10 @@ namespace TeaPartyHorror_Game.Rooms
                         Game.Transition<MUTBSnackInteraction>(); break;
                     }
                         break;
+
+                default:
+                    Console.WriteLine("Invalid command.");
+                    break;
             }
 
 

@@ -57,9 +57,12 @@ namespace TeaPartyHorror_Game
                 string choice = Console.ReadLine().ToLower() ?? "";
                 Console.Clear();
                 game.ReceiveChoice(choice);
+                Console.ForegroundColor = ConsoleColor.Magenta;
                 Console.WriteLine("Check out your current [inventory]! ");
+                Console.ForegroundColor = ConsoleColor.White;
             }
 
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("END");
             Console.ReadLine();
             const string SaveFile = "Save.txt";

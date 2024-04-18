@@ -11,7 +11,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
         internal override string CreateDescription() => @"";
         internal override void ReceiveChoice(string choice)
         {
-            Console.WriteLine("Question text");
+            //Console.WriteLine("Question text");
             switch (choice.ToLower())
             {
                 case "1":
