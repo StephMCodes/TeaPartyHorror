@@ -5,10 +5,11 @@ using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeaPartyHorror_Game.Rooms
+namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 {
     internal class TearoomQu1 : Room
     {
+        public static bool HasInvitaion;
         internal override string CreateDescription() =>
        @"You enter a room, and there is a table perfecly set with small dainty teacups.
 There are only two seats empty, the rest are occupied by teddy bears, dolls, etc 
@@ -16,7 +17,7 @@ that all turn to look at you and invite you.";
 
         internal override void ReceiveChoice(string choice)
         {
-            Console.WriteLine("AHHH HE IS EVIL");
+            Console.WriteLine("");
             switch (choice)
             {
                 //Room 5: Tearoom/Final boss: When you enter the room, the table is set for you. There are only two seats empty, the rest are occupied by teddy bears, dolls, etc that all turn to look at you and invite you. You must place the bunny rabbit down and sit down for the encounter to begin. You get access to this room by completing all the quests, because you receive an invitation from a crow with a letter. The letter contains a random code.
@@ -30,38 +31,44 @@ that all turn to look at you and invite you.";
 
                 //PHASE 3
                 //He casts a spell on you with red tendrils that seem to attach to you like puppet strings. If you ate the oleander, you become sick and more Afraid.
-    
 
-                 case "1":
-                    Console.WriteLine("The ghost does NOT approve");
-                    Game.IncreaseFear(1);
-                    //Game.Transition<DiningRoomQu3>();
-                    Console.WriteLine("Then you don't forget the two magic words.");
-                    Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Press 1 to say thank you\t\tPress 2 to say screw you");
-                    //CHANGE TO A CONSOLE READLINE I DONT HAVE THE TIME FOR...
-                    Console.ForegroundColor = ConsoleColor.White;
+
+                case "1":
+                    if (TearoomQu1.HasInvitaion == true)
+                    {
+                        Console.WriteLine("@\"You enter a room, and there is a table perfecly set with small dainty teacups.\r\nThere are only two seats empty, the rest are occupied by teddy bears, dolls, etc \r\nthat all turn to look at you and invite you.\"");
+                        Game.Transition<TearoomQu2>();
+                        Console.WriteLine("");
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.WriteLine("Press 1 to do it wrong\t\tPress 2 to do it right");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    else
+                    {
+                        Console.WriteLine("A lady needs flowers first");
+
+                    }
                     break;
+
                 case "2":
                     Console.WriteLine("The ghost approves");
-                    //Game.Transition<DiningRoomQu3>();
+                    //Game.Transition<TearoomQu2>();
                     Console.WriteLine("Then you don't forget the two magic words.");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to say thank you\t\tPress 2 to say screw you");
                     //CHANGE TO A CONSOLE READLINE I DONT HAVE THE TIME FOR...
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
+
                 default:
                     Console.WriteLine("Invalid command.");
-                    Console.WriteLine("The knife should be in the right hand and the fork in the left");
+                    Console.WriteLine("");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to do it wrong\t\tPress 2 to do it right");
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
             }
         }
-
     }
-
 }
 
