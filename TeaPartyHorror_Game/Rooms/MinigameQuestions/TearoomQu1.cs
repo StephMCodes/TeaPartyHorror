@@ -11,9 +11,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
     {
         public static bool HasInvitaion;
         internal override string CreateDescription() =>
-       @"You enter a room, and there is a table perfecly set with small dainty teacups.
-There are only two seats empty, the rest are occupied by teddy bears, dolls, etc 
-that all turn to look at you and invite you.";
+       @"You are in the tearoom.";
 
         internal override void ReceiveChoice(string choice)
         {
@@ -34,37 +32,37 @@ that all turn to look at you and invite you.";
 
 
                 case "1":
-                    if (TearoomQu1.HasInvitaion == true)
+                   
+                 
+                    Console.WriteLine("You set your plush down and he begins floating and being evil. He casts a nightmare on you.");
+                    if (MUTBSnackInteraction.isMonsterFriend==true)
                     {
-                        Console.WriteLine("@\"You enter a room, and there is a table perfecly set with small dainty teacups.\r\nThere are only two seats empty, the rest are occupied by teddy bears, dolls, etc \r\nthat all turn to look at you and invite you.\"");
-                        Game.Transition<TearoomQu2>();
-                        Console.WriteLine("");
-                        Console.ForegroundColor = ConsoleColor.Magenta;
-                        Console.WriteLine("Press 1 to do it wrong\t\tPress 2 to do it right");
-                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine("You are safe, Monster helps");
                     }
                     else
                     {
-                        Console.WriteLine("A lady needs flowers first");
-
+                        Console.WriteLine("You are sent into a nightmare.");
+                        Game.IncreaseFear(1);
                     }
+                    Game.Transition<TearoomQu2>();
+                    //Console.WriteLine("");
+                    //Console.ForegroundColor = ConsoleColor.Magenta;
+                    //Console.WriteLine("Press 1 to do it wrong\t\tPress 2 to do it right");
+                    //Console.ForegroundColor = ConsoleColor.White;
+
+
                     break;
 
-                case "2":
-                    Console.WriteLine("The ghost approves");
-                    //Game.Transition<TearoomQu2>();
-                    Console.WriteLine("Then you don't forget the two magic words.");
-                    Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Press 1 to say thank you\t\tPress 2 to say screw you");
-                    //CHANGE TO A CONSOLE READLINE I DONT HAVE THE TIME FOR...
-                    Console.ForegroundColor = ConsoleColor.White;
-                    break;
 
                 default:
                     Console.WriteLine("Invalid command.");
                     Console.WriteLine("");
+                    Console.WriteLine("When you enter the room, the table is set for you." +
+                            "There are only two seats empty, the rest are occupied by teddy bears and dolls " +
+                            "that all turn to look at you and invite you. ");
                     Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Press 1 to do it wrong\t\tPress 2 to do it right");
+
+                    Console.WriteLine("Press 1 to place Mr Bunny-Rabbit down on a seat and sit down yourself");
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
             }

@@ -52,6 +52,7 @@
     <Compile Include="Rooms\BedroomAwake.cs" />
     <Compile Include="Rooms\BurningHouse.cs" />
     <Compile Include="Rooms\DiningRoomComplete.cs" />
+    <Compile Include="Rooms\End.cs" />
     <Compile Include="Rooms\Garden.cs" />
     <Compile Include="Rooms\GardenComplete.cs" />
     <Compile Include="Rooms\GardenRabbitInteraction.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Rooms\MUTBSnackInteraction.cs" />
     <Compile Include="Rooms\Start.cs" />
     <Compile Include="Rooms\MinigameQuestions\TearoomQu1.cs" />
+    <Compile Include="Rooms\TearoomComplete.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

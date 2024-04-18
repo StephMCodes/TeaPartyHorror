@@ -9,13 +9,12 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
     internal class TearoomQu3: Room
     {
         internal override string CreateDescription() =>
- @"You enter a room, and there is a table perfecly set with small dainty teacups.
-There are only two seats empty, the rest are occupied by teddy bears, dolls, etc 
-that all turn to look at you and invite you.";
+ @"You are in the tearoom.";
 
         internal override void ReceiveChoice(string choice)
         {
             Console.WriteLine("");
+            
             switch (choice)
             {
                 //Room 5: Tearoom/Final boss: When you enter the room, the table is set for you. There are only two seats empty, the rest are occupied by teddy bears, dolls, etc that all turn to look at you and invite you. You must place the bunny rabbit down and sit down for the encounter to begin. You get access to this room by completing all the quests, because you receive an invitation from a crow with a letter. The letter contains a random code.
@@ -32,29 +31,27 @@ that all turn to look at you and invite you.";
 
 
                 case "1":
-                    Console.WriteLine("Mrbunnyrabbit approves");
-                    Game.IncreaseFear(1);
-                    //Game.Transition<DiningRoomQu3>();
-                    Console.WriteLine("");
+                    Console.WriteLine("You try to push and tear through the strings while the tea guests laugh at you.");
+                    if (GardenRabbitInteraction.Poisoned == true)
+                    {
+                        Console.WriteLine("You feel as if you're about to faint...");
+                        Console.WriteLine("Your plush laughs and tells you you got poisoned");
+                        Game.IncreaseFear(2);
+                    }
+                    else
+                    {
+                        Console.WriteLine("You succeed.");
+                    }
+                    Console.WriteLine("The plushie is laughing a lot, he is not paying attention. Now is your chance!");
                     Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Press 1 to sit \t\tPress 2 to say screw you");
-                    //CHANGE TO A CONSOLE READLINE I DONT HAVE THE TIME FOR...
+                    Console.WriteLine("Press 1 to tear your plushie up \t\tPress 2 to hug him and tell him everything is going to be okay");
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
-                case "2":
-                    Console.WriteLine("The ghost approves");
-                    //Game.Transition<DiningRoomQu3>();
-                    Console.WriteLine("Then you don't forget the two magic words.");
-                    Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Press 1 to say thank you\t\tPress 2 to say screw you");
-                    //CHANGE TO A CONSOLE READLINE I DONT HAVE THE TIME FOR...
-                    Console.ForegroundColor = ConsoleColor.White;
-                    break;
+               
                 default:
                     Console.WriteLine("Invalid command.");
-                    Console.WriteLine("The knife should be in the right hand and the fork in the left");
                     Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Press 1 to do it wrong\t\tPress 2 to do it right");
+                    Console.WriteLine("Press 1 to fight back");
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
             }

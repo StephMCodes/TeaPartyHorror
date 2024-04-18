@@ -9,6 +9,7 @@ namespace TeaPartyHorror_Game.Rooms
 {
     internal class GardenRabbitInteraction : Room
     {
+        internal static bool Poisoned;
         internal override string CreateDescription() => @"You are on your way back to the ballroom.";
         internal override void ReceiveChoice(string choice)
         {
@@ -22,7 +23,7 @@ namespace TeaPartyHorror_Game.Rooms
                 case "1":
                     Console.Clear();
                     Console.WriteLine("Mmm, yummy! Hopefully the lady will not notice a few petals missing. The rabbit comments he wishes he could just have some too!");
-                    //ADD IS POISONED BOOL VALUE SECRETLY HERE
+                    Poisoned = true;
                     Console.WriteLine("You return to the ballroom, enjoying the sound of classical music. A pathway down it's balcony leads to the [garden].");
                     Console.WriteLine("Rosalind is still alone.");
                     Console.ForegroundColor = ConsoleColor.Magenta;
