@@ -62,7 +62,7 @@ namespace TeaPartyHorror_Game
             }
         }
 
-        internal void IncreaseFear(int num)
+        internal static void IncreaseFear(int num)
         {
             fearLevel += num;
             Console.WriteLine($"Fear increases. Current fear level: {fearLevel}.");
@@ -73,7 +73,7 @@ namespace TeaPartyHorror_Game
             }
         }
 
-        internal void DecreaseFear()
+        internal static void DecreaseFear()
         {
             if (fearLevel > 0) fearLevel--;
             Console.WriteLine($"Fear decreases. Current fear level: {fearLevel}.");
