@@ -45,11 +45,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                         Game.IncreaseFear(1);
                     }
                     Game.Transition<TearoomQu2>();
-                    //Console.WriteLine("");
-                    //Console.ForegroundColor = ConsoleColor.Magenta;
-                    //Console.WriteLine("Press 1 to do it wrong\t\tPress 2 to do it right");
-                    //Console.ForegroundColor = ConsoleColor.White;
-
+                    
 
                     break;
 

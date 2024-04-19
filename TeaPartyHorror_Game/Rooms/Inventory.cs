@@ -15,7 +15,7 @@ namespace TeaPartyHorror_Game.Rooms
 
         public static List<GameItem> items = new List<GameItem>();
 
-        public void AddItem(GameItem item)
+        public static void AddItem(GameItem item)
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
             items.Add(item);
@@ -23,7 +23,7 @@ namespace TeaPartyHorror_Game.Rooms
             Console.ForegroundColor = ConsoleColor.White;
         }
 
-        public void ListItems()
+        public static void ListItems()
         {
            Console.ForegroundColor = ConsoleColor.Magenta;
             if (items.Count == 0)
@@ -40,7 +40,7 @@ namespace TeaPartyHorror_Game.Rooms
             Console.WriteLine("Press enter to continue.");
             Console.ForegroundColor = ConsoleColor.White;
         }
-        public bool UseItem(GameItem item)
+        public static bool UseItem(GameItem item)
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
             if (items.Contains(item))
