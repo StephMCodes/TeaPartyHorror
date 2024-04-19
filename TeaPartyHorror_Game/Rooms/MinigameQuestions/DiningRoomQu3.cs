@@ -9,7 +9,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
     internal class DiningRoomQu3 : Room
 
     {
-        internal static bool SnackReceived;
+        internal static bool snackReceived;
 
         //public override void OnRoomEnter()
         //{
@@ -28,7 +28,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     Console.WriteLine("The ghost gives you the snack");
                     Inventory.items.Add(GameItem.Snack);
                     Game.Transition<DiningRoomComplete>();
-                    SnackReceived=true;
+                    snackReceived=true;
                     break;
                 case "2":
                     Console.WriteLine("The ghost does NOT approve");
@@ -36,7 +36,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     Console.WriteLine("The ghost gives you the snack...begrudgingly");
                     Inventory.items.Add(GameItem.Snack);
                     Game.Transition<DiningRoomComplete>();
-                    SnackReceived=true;
+                    snackReceived=true;
                     break;
                 default:
                     

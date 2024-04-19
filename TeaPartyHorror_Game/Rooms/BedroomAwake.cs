@@ -20,7 +20,7 @@ namespace TeaPartyHorror_Game.Rooms
                     Game.Transition<Hallway>(); break;
 
                 case "bed":
-                    if (!DiningRoomQu3.SnackReceived)
+                    if (!DiningRoomQu3.snackReceived)
                     {
                         Console.WriteLine("Ahh! When you peek underneath, long, shadowy hands swipe at you!");
                         Console.WriteLine("Mr Bunny-Rabbit frowns. 'A monster under the bed! He's probably been eating your good dreams! Don't trust him.");

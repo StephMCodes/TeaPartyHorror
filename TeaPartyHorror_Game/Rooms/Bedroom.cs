@@ -17,6 +17,7 @@ namespace TeaPartyHorror_Game.Rooms
 
         internal override void ReceiveChoice(string choice)
         {
+            Inventory.items.Add(GameItem.MrBunnyRabbit);
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("You jolt awake, shivering under your white duvet set.");
             Console.WriteLine("Your plushie, Mr.Bunny-Rabbit, surprisingly, begins to speak! 'Are you okay? Don't worry, I'm here. Go back to sleep.'");

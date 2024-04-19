@@ -66,7 +66,7 @@ namespace TeaPartyHorror_Game
         {
             Console.ForegroundColor = ConsoleColor.Red; 
             fearLevel += num;
-            Console.WriteLine($"Fear increases. Current fear level: {fearLevel}..");
+            Console.WriteLine($"Fear increases. Current fear level: {fearLevel}/10");
             if (fearLevel >= 10)
             {
                 Console.ForegroundColor = ConsoleColor.Red;

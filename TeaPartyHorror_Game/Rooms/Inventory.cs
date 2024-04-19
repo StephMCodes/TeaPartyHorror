@@ -17,13 +17,15 @@ namespace TeaPartyHorror_Game.Rooms
 
         public void AddItem(GameItem item)
         {
+            Console.ForegroundColor = ConsoleColor.Magenta;
             items.Add(item);
             Console.WriteLine($"{item} has been added to your inventory.");
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
         public void ListItems()
         {
-            Console.ForegroundColor = ConsoleColor.Magenta;
+           Console.ForegroundColor = ConsoleColor.Magenta;
             if (items.Count == 0)
             {
                 Console.WriteLine("Your inventory is empty. Press enter to continue.");
@@ -40,17 +42,21 @@ namespace TeaPartyHorror_Game.Rooms
         }
         public bool UseItem(GameItem item)
         {
+            Console.ForegroundColor = ConsoleColor.Magenta;
             if (items.Contains(item))
             {
                 items.Remove(item);
                 Console.WriteLine($"{item} has been used.");
+                Console.ForegroundColor = ConsoleColor.White;
                 return true; 
             }
             else
             {
                 Console.WriteLine("Item not found in inventory.");
+                Console.ForegroundColor = ConsoleColor.White;
                 return false;
             }
+
         }
     }
 }

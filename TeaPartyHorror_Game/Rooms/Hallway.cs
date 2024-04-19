@@ -10,25 +10,25 @@ namespace TeaPartyHorror_Game.Rooms
 
     internal class Hallway : Room
     {
-        internal static bool OwnsInvitation;
+        internal static bool ownsInvitation;
         
 
         internal override string CreateDescription() =>
        @"The dim hallway is long and filled with many picture frames of rich fellows.
-It leads to a [dining room], [ballroom], and [tea room],
+It leads to a [dining room], [ballroom], and [tearoom],
 who's door is guarded by a ghostly butler.
 You can also return to your [bedroom].";
 
         internal override void ReceiveChoice(string choice)
         {
-            if (BallroomQu4.HasDanced == true && DiningRoomQu3.SnackReceived == true)
+            if (ownsInvitation == false && BallroomQu4.hasDanced == true && DiningRoomQu3.snackReceived == true)
             {
                 Console.WriteLine("'CAW, CAW!'");
                 Console.WriteLine("You are about to scream when a crow appears out of nowhere, heading straight for you.");
                 Console.WriteLine("Your plushie jumps to hug you and calms you down. 'Dont worry, he is a friend!'");
-                Console.WriteLine("The bird gently alights on your shoulders, claws careful not to poke you. There is a letter in his beak!");
-                Console.WriteLine("INVITATION RECEIVED");
-                OwnsInvitation = true;
+                Console.WriteLine("The bird gently alights on your shoulder, claws careful not to poke you. There is a letter in his beak!");
+                Inventory.items.Add(GameItem.Invitation);
+                ownsInvitation = true;
 
             }
 
@@ -41,7 +41,7 @@ You can also return to your [bedroom].";
 
                     break;
                 case "dining room":
-                    if (DiningRoomQu3.SnackReceived == false)
+                    if (DiningRoomQu3.snackReceived == false)
                     {
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.WriteLine("You wander to the dining room, following the smell of sweets wafting in the air. " +
@@ -62,7 +62,7 @@ You can also return to your [bedroom].";
                     break;
 
                 case "ballroom":
-                    if (BallroomQu4.HasDanced == false)
+                    if (BallroomQu4.hasDanced == false)
                     {
                         Console.WriteLine("You make your way to the ballroom, following the sound of classical music.");
                         Console.Write("Ghostly figures dance together in the grandiose, open ballroom. ");
@@ -83,7 +83,7 @@ You can also return to your [bedroom].";
 
                 case "tearoom":
 
-                    if (OwnsInvitation == true)
+                    if (ownsInvitation == true)
                     {
                         Console.WriteLine("The butler lets you in.");
                         Console.WriteLine("When you enter the room, the table is set for you." +

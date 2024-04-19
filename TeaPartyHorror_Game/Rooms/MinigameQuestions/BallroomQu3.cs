@@ -24,6 +24,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     Console.WriteLine("Press 1 to spin dramatically\t\tPress 2 to exageratedly bow down");
                     Console.WriteLine("Press 3 to try and pick her up\t\tPress 4 to hold out your hand for her");
                     Console.ForegroundColor = ConsoleColor.White;
+                    Game.Transition<BallroomQu4>();
 
                     break;
 

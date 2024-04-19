@@ -40,17 +40,18 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     }
                     else
                     {
-                        Console.WriteLine("You succeed.");
+                        Console.WriteLine("You succeed, finding strength within.");
                     }
                     Console.WriteLine("The plushie is laughing a lot, he is not paying attention. Now is your chance!");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to tear your plushie up \t\tPress 2 to hug him and tell him everything is going to be okay");
                     Console.ForegroundColor = ConsoleColor.White;
+                    Game.Transition<TearoomComplete>();
                     break;
                
                 default:
                     Console.WriteLine("The rabbit attempts to puppet you with evil strings.");
-                    Game.Transition<TearoomQu3>();
+                    
                     if (GardenRabbitInteraction.Poisoned == true) { Console.WriteLine("But you feel weak... Your stomach hurts."); }
                     
                     Console.ForegroundColor = ConsoleColor.Magenta;

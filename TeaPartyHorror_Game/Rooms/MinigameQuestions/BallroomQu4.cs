@@ -10,7 +10,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
     internal class BallroomQu4 : Room
     {
 
-        internal static bool HasDanced;
+        internal static bool hasDanced;
         internal override string CreateDescription() => @"";
         internal override void ReceiveChoice(string choice)
         {
@@ -22,11 +22,8 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     Console.WriteLine("The ghost does NOT approve");
                     Game.IncreaseFear(1);
                     Console.WriteLine("The dance is about to end, how do you finish it?");
-                    Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Press 1 to spin dramatically\t\tPress 2 to exageratedly bow down\t\tPress 3 to try and pick her up\t\tPress 4 to hold out your hand for her");
-                    Console.ForegroundColor = ConsoleColor.White;
                     Inventory.items.Add(GameItem.Amulet);
-                    HasDanced = true;
+                    hasDanced = true;
                     Game.Transition<Ballroom>();
 
                     break;
@@ -36,11 +33,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     Console.WriteLine("The ghost does NOT approve");
                     Game.IncreaseFear(1);
                     Console.WriteLine("The dance is about to end, how do you finish it?");
-                    Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Press 1 to spin dramatically\t\tPress 2 to exageratedly bow down\t\tPress 3 to try and pick her up\t\tPress 4 to hold out your hand for her");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Inventory.items.Add(GameItem.Amulet);
-                    HasDanced = true;
+                    hasDanced = true;
                     Game.Transition<Ballroom>();
                     break;
 
@@ -49,11 +42,8 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     Console.WriteLine("The ghost does NOT approve");
                     Game.IncreaseFear(1);
                     Console.WriteLine("The dance is about to end, how do you finish it?");
-                    Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Press 1 to spin dramatically\t\tPress 2 to exageratedly bow down\t\tPress 3 to try and pick her up\t\tPress 4 to hold out your hand for her");
-                    Console.ForegroundColor = ConsoleColor.White;
                     Inventory.items.Add(GameItem.Amulet);
-                    HasDanced = true;
+                    hasDanced = true;
                     Game.Transition<Ballroom>();
 
                     break;
@@ -63,9 +53,8 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     Console.WriteLine("The ghost does indeed approve");
                     Console.WriteLine("You are nice and warm now. Thanks for the dance. Here is an amulet."); //GET AMULET
                     Inventory.items.Add(GameItem.Amulet);
-                    HasDanced = true;
+                    hasDanced = true;
                     Game.Transition<Ballroom>();
-
                     break;
 
 
