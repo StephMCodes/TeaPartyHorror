@@ -20,7 +20,8 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     Game.Transition<BallroomQu3>();
                     Console.WriteLine("You can look around");
                     Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Press 1 to look at her dress\t\tPress 2 to check out the other dancers\t\tPress 3 to look her in the eyes\t\tPress 4 to catch glimpses of the room");
+                    Console.WriteLine("Press 1 to look at her dress\t\tPress 2 to check out the other dancers");
+                    Console.WriteLine("Press 3 to look her in the eyes\t\tPress 4 to catch glimpses of the room");
                     Console.ForegroundColor = ConsoleColor.White;
                    
                     break;
@@ -29,7 +30,8 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     Game.Transition<BallroomQu3>();
                     Console.WriteLine("You can look around");
                     Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Press 1 to look at her dress\t\tPress 2 to check out the other dancers\t\tPress 3 to look her in the eyes\t\tPress 4 to catch glimpses of the room");
+                    Console.WriteLine("Press 1 to look at her dress\t\tPress 2 to check out the other dancers");
+                    Console.WriteLine("Press 3 to look her in the eyes\t\tPress 4 to catch glimpses of the room");
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
 

@@ -9,9 +9,9 @@ namespace TeaPartyHorror_Game.Rooms
 {
     internal class DiningRoomComplete : Room
     {
-        //private string diningChoice1; //check if private is necessary here
+        
         internal override string CreateDescription() =>
-       @"There is a smell of sweet treats, waiting to be eaten by hungry children. From the dining room, you can leave to the [hallway].";
+       @"There is a smell of sweet treats, waiting to be eaten by hungry children. From the dining room, you can leave to the    [hallway].";
 
         internal override void ReceiveChoice(string choice)
         {
@@ -29,13 +29,13 @@ namespace TeaPartyHorror_Game.Rooms
                 //    Game.Transition<DiningRoomQu1>();
                 //    break;
 
-                default:
-                    Console.WriteLine("Invalid command.");
+                //default:
+                    //Console.WriteLine("Invalid command.");
                     //Console.ForegroundColor = ConsoleColor.Magenta;
                     //Console.WriteLine("Press 1 to sit down ");
                     //Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("There is a smell of sweet treats, waiting to be eaten by hungry children. From the dining room, you can leave to the [hallway].");
-                    break;
+                    //Console.WriteLine("There is a smell of sweet treats, waiting to be eaten by hungry children. From the dining room, you can leave to the [hallway].");
+                    //break;
             }
         }
     }

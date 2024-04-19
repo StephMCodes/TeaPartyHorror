@@ -24,8 +24,8 @@ namespace TeaPartyHorror_Game.Rooms
                     Console.Clear();
                     Console.WriteLine("Mmm, yummy! Hopefully the lady will not notice a few petals missing. The rabbit comments he wishes he could just have some too!");
                     Poisoned = true;
-                    Console.WriteLine("You return to the ballroom, enjoying the sound of classical music. A pathway down it's balcony leads to the [garden].");
-                    Console.WriteLine("Rosalind is still alone.");
+                    Console.Write("You return to the ballroom, you see a piano strike the keys by a seemingly invisible force along with floating violins  being played.");
+                    Console.WriteLine(" The lady resembled your late mother. She lowered her gaze, yearning for a waltz.");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to invite her to dance");
                     Console.ForegroundColor = ConsoleColor.White;
@@ -34,8 +34,8 @@ namespace TeaPartyHorror_Game.Rooms
                 case "2":
                     Console.Clear();
                     Console.WriteLine("The rabbit comments he wishes he could just have some too! Your loss...");
-                    Console.WriteLine("You return to the ballroom, enjoying the sound of classical music. A pathway down it's balcony leads to the [garden].");
-                    Console.WriteLine("Rosalind is still alone.");
+                    Console.Write("You return to the ballroom, you see a piano strike the keys by a seemingly invisible force along with floating violins  being played.");
+                    Console.WriteLine(" The lady resembled your late mother. She lowered her gaze, yearning for a waltz."); ;
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to invite her to dance");
                     Console.ForegroundColor = ConsoleColor.White;

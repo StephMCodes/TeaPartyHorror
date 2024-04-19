@@ -34,9 +34,9 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                 case "hallway":
                     Game.Transition<Hallway>();
                     break;
-                case "garden":
+                case "garden": //no changing text
                     Console.WriteLine("You enjoy the view as you descend the marble stairs to the garden that remains colourful even in moonbathed darkness.");
-                    Console.WriteLine("There is a gardener ghost, a sullen man tending to pink flowers that smell of peaches. You approach him, and he grumbles at you to back away from his oleanders. ");
+                    Console.WriteLine("There is a gardener ghost, a sullen man tending to pink flowers that smell of peaches. You approach him, and he grumblesat you to back away from his oleanders. ");
 
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to explain the problem and ask for flowers\t\tPress 2 to steal some when he is not looking");
@@ -44,7 +44,10 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                         Game.Transition<Garden>();
                     break;
                 default:
-                    
+                    Console.WriteLine("You make your way to the ballroom, following the sound of classical music.");
+                    Console.Write("Ghostly figures dance together in the grandiose, open ballroom. ");
+                    Console.Write("The curtains hung low as the ghosts frolicked in pairs, except for one older woman.");
+                    Console.WriteLine(" Her face was sullen as loneliness befell her.");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to invite her to dance");
                     Console.ForegroundColor = ConsoleColor.White;

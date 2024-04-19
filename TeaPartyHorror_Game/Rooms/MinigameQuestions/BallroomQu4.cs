@@ -73,7 +73,8 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     
                     Console.WriteLine("The dance is about to end, how do you finish it?");
                     Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Press 1 to spin dramatically\t\tPress 2 to exageratedly bow down\t\tPress 3 to try and pick her up\t\tPress 4 to hold out your hand for her");
+                    Console.WriteLine("Press 1 to spin dramatically\t\tPress 2 to exageratedly bow down");
+                    Console.WriteLine("Press 3 to try and pick her up\t\tPress 4 to hold out your hand for her");
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
 

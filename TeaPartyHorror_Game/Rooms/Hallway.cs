@@ -17,7 +17,7 @@ namespace TeaPartyHorror_Game.Rooms
        @"The dim hallway is long and filled with many picture frames of rich fellows.
 It leads to a [dining room], [ballroom], and [tea room],
 who's door is guarded by a ghostly butler.
- You can also return to your [bedroom].";
+You can also return to your [bedroom].";
 
         internal override void ReceiveChoice(string choice)
         {
@@ -44,10 +44,10 @@ who's door is guarded by a ghostly butler.
                     if (DiningRoomQu3.SnackReceived == false)
                     {
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("You wander to the dining room, following the smell of sweets wafting in the air." +
-                        "You are impressed by the very long table that takes up most of the room, and the table already seems to be set for two." +
-                        "A woman in an apron with a strict face looks you up and down. 'There's always food for hungry children here! Even at midnight.'" +
-                        "Her form glistens and fades... A ghost!"); //text to fix by stephanie later
+                        Console.WriteLine("You wander to the dining room, following the smell of sweets wafting in the air. " +
+                        "You are impressed by the very long     table that takes up most of the room, already set for two. " +
+                        "A woman in an apron with a strict face looks you up and down.'There's always food for hungry children here! Even at midnight.'" +
+                        "Her form glistens and fades... A ghost!"); //text fixed, do not change
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("Press 1 to sit down");
 
@@ -64,10 +64,10 @@ who's door is guarded by a ghostly butler.
                 case "ballroom":
                     if (BallroomQu4.HasDanced == false)
                     {
-                        Console.WriteLine("You make your way to the ballroom, following the sound of classical music. A pathway down it's balcony leads to the [garden].");
-                        Console.WriteLine("Ghostly figures danced together in the grandiose, open ballroom.");
-                        Console.WriteLine("The curtains hung low as the ghosts frolicked in pairs except for one older woman.");
-                        Console.WriteLine("Her face was sullen as loneliness befell her.");
+                        Console.WriteLine("You make your way to the ballroom, following the sound of classical music.");
+                        Console.Write("Ghostly figures dance together in the grandiose, open ballroom. ");
+                        Console.Write("The curtains hung low as the ghosts frolicked in pairs, except for one older woman.");
+                        Console.WriteLine(" Her face was sullen as loneliness befell her."); //text fixed, do not change
                         Console.ForegroundColor = ConsoleColor.Magenta;
 
                         Console.WriteLine("Press 1 to invite her to dance");
@@ -87,8 +87,8 @@ who's door is guarded by a ghostly butler.
                     {
                         Console.WriteLine("The butler lets you in.");
                         Console.WriteLine("When you enter the room, the table is set for you." +
-                            "There are only two seats empty, the rest are occupied by teddy bears and dolls " +
-                            "that all turn to look at you and invite you. ");
+                            "There are only two seats empty, the rest occupied by teddy bears and dolls " +
+                            "that all turn to look at you in sync and invite you. ");
                         Console.ForegroundColor = ConsoleColor.Magenta;
 
                         Console.WriteLine("Press 1 to place Mr Bunny-Rabbit down on a seat and sit down yourself");
@@ -96,16 +96,16 @@ who's door is guarded by a ghostly butler.
                         Game.Transition<TearoomQu1>();
                         break;
                     }
-                    else { Console.WriteLine("The butler stops you."); }
+                    else { Console.WriteLine("The butler stops you. It seems an invitation and a code are necessary..."); }
                     break;
 
-                case "fear":
-                    Console.WriteLine($"Current fear level: {Game.fearLevel}.");
+                //case "fear":
+                //    Console.WriteLine($"Current fear level: {Game.fearLevel}.");
 
-                    break;
-                default:
-                    Console.WriteLine("Invalid command.");
-                    break;
+                //    break;
+                //default:
+                //    Console.WriteLine("Invalid command.");
+                //    break;
             }
         }
 

@@ -16,13 +16,12 @@ namespace TeaPartyHorror_Game.Rooms
 
         internal override void ReceiveChoice(string choice)
         {
-            
+            //no change text
             switch (choice)
             {
                 case "ballroom":
-                        Console.WriteLine("You return to the ballroom, you see a piano strike the keys by a seemingly invisible force along with floating violins being played." +
-                          " \tA pathway down it's balcony leads to the [garden].");
-                        Console.WriteLine(" The lady resembled your late mother. She lowered her gaze yearning for a waltz");
+                        Console.WriteLine("You return to the ballroom, you see a piano strike the keys by a seemingly invisible force along with floating violins being played.");
+                        Console.WriteLine(" The lady resembled your late mother. She lowered her gaze, yearning for a waltz.");
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("Press 1 to invite her to dance");
                         Console.ForegroundColor = ConsoleColor.White;
@@ -30,9 +29,9 @@ namespace TeaPartyHorror_Game.Rooms
                     break;
                 case "1":
                     Console.WriteLine("The older man softens as he hears your story." +
-                        "'My sweet, darling Rosalind! I cannot be there with her for I am but a lowly worker, unbefitting to hold a noblewoman's hand..." +
+                        "'My sweet, darling Rosalind! I cannot be there with her for I am but a     lowly worker,unbefitting to hold a noblewoman's hand..." +
                         "Please, take good care in bringing her these." +
-                        "She will know my love persists, even if I am not there beside her.'");
+                        " She will know my   love persists, even if I am not there beside her.'");
                     Console.WriteLine("You receive a lovely bouquet.");
                     HasFlowers = true;
                     Inventory.items.Add(GameItem.Flowers);
@@ -44,17 +43,18 @@ namespace TeaPartyHorror_Game.Rooms
                     Game.IncreaseFear(1);
                     Console.WriteLine("Embarassed, you tell your story...");
                     Console.WriteLine("The older man softens as he listens." +
-                        "'My sweet, darling Rosalind! I cannot be there with her for I am but a lowly worker, unbefitting to hold a noblewoman's hand..." +
+                        "'My sweet, darling Rosalind! I cannot be there with her for I am but a lowly worker,unbefitting to hold a noblewoman's hand..." +
                         "Please, take good care in bringing her these." +
-                        "She will know I love her still, even if I am not there.'");
+                        " She will know I love her still, even if I am not there.'");
                     Console.WriteLine("You receive a lovely bouquet.");
                     HasFlowers = true;
                     Game.Transition<GardenRabbitInteraction>();
                     break;
                 default:
                     //Console.WriteLine("Invalid command.");
+                    //text is fixed do not change
                     Console.WriteLine("You enjoy the view as you descend the marble stairs to the garden that remains colourful even in moonbathed darkness.");
-                    Console.WriteLine("There is a gardener ghost, a sullen man tending to pink flowers that smell of peaches. You approach him, and he grumbles at you to back away from his oleanders. ");
+                    Console.WriteLine("There is a gardener ghost, a sullen man tending to pink flowers that smell of peaches. You approach him, and he grumblesat you to back away from his oleanders. ");
 
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to explain the problem and ask for flowers\t\tPress 2 to steal some when he is not looking");
