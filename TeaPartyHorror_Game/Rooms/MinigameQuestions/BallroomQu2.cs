@@ -15,10 +15,10 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
             switch (choice.ToLower())
             {
                 case "1":
-                    Console.WriteLine("The ghost does NOT approve");
+                    Console.WriteLine("You see dissapointment flare in the older woman's eyes as she corrects you, and shame mixes with fear in your stomach.  But she softens at the sight of your embarassment.");
                     Game.IncreaseFear(1);
                     Game.Transition<BallroomQu3>();
-                    Console.WriteLine("You can look around");
+                    Console.WriteLine("You find yourself becoming distracted from your dance partner, distracted by all the sounds and sights around you...");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to look at her dress\t\tPress 2 to check out the other dancers");
                     Console.WriteLine("Press 3 to look her in the eyes\t\tPress 4 to catch glimpses of the room");
@@ -26,9 +26,9 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                    
                     break;
                 case "2":
-                    Console.WriteLine("The ghost approves");
+                    Console.WriteLine("The ghost approves, smiling at you.");
                     Game.Transition<BallroomQu3>();
-                    Console.WriteLine("You can look around");
+                    Console.WriteLine("You find yourself becoming distracted from your dance partner, distracted by all the sounds and sights around you...");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to look at her dress\t\tPress 2 to check out the other dancers");
                     Console.WriteLine("Press 3 to look her in the eyes\t\tPress 4 to catch glimpses of the room");

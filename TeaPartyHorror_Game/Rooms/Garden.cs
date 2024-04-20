@@ -16,16 +16,7 @@ namespace TeaPartyHorror_Game.Rooms
 
         internal override void ReceiveChoice(string choice)
         {
-            if (Hallway.ownsInvitation == false && BallroomQu4.hasDanced == true && DiningRoomQu3.snackReceived == true)
-            {
-                Console.WriteLine("'CAW, CAW!'");
-                Console.WriteLine("You are about to scream when a crow appears out of nowhere, heading straight for you.");
-                Console.WriteLine("Your plushie jumps to hug you and calms you down. 'Dont worry, he is a friend!'");
-                Console.WriteLine("The bird gently alights on your shoulder, claws careful not to poke you. There is a letter in his beak!");
-                Inventory.items.Add(GameItem.Invitation);
-                Hallway.ownsInvitation = true;
-
-            }
+            
             //no change text
             switch (choice)
             {
@@ -56,7 +47,7 @@ namespace TeaPartyHorror_Game.Rooms
                         "'My sweet, darling Rosalind! I cannot be there with her for I am but a lowly worker,unbefitting to hold a noblewoman's hand..." +
                         "Please, take good care in bringing her these." +
                         " She will know I love her still, even if I am not there.'");
-                    Console.WriteLine("You receive a lovely bouquet.");
+                    Console.WriteLine("You receive a lovely bouquet. Press enter to continue.");
                     HasFlowers = true;
                     Game.Transition<GardenRabbitInteraction>();
                     break;

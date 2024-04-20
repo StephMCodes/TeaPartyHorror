@@ -66,8 +66,10 @@ namespace TeaPartyHorror_Game
                 Console.ForegroundColor = ConsoleColor.White;
             }
 
+            
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("END");
+            //Console.Clear();
             Console.ReadLine();
             const string SaveFile = "Save.txt";
             if (!File.Exists(SaveFile))

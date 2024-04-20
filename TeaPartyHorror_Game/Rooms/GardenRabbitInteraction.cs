@@ -22,7 +22,7 @@ namespace TeaPartyHorror_Game.Rooms
             {
                 case "1":
                     Console.Clear();
-                    Console.WriteLine("Mmm, yummy! Hopefully the lady will not notice a few petals missing. The rabbit comments he wishes he could just have some too!");
+                    Console.WriteLine("Your bunny friend giggles. 'Mmm, yummy! Hopefully that lady will not notice a few petals missing. Wish I could have some too!");
                     Poisoned = true;
                     Console.Write("You return to the ballroom, you see a piano strike the keys by a seemingly invisible force along with floating violins  being played.");
                     Console.WriteLine(" The lady resembled your late mother. She lowered her gaze, yearning for a waltz.");
@@ -33,7 +33,7 @@ namespace TeaPartyHorror_Game.Rooms
                     break;
                 case "2":
                     Console.Clear();
-                    Console.WriteLine("The rabbit comments he wishes he could just have some too! Your loss...");
+                    Console.WriteLine("Your bunny friend comments that he wishes he could just have some too! Your loss...");
                     Console.Write("You return to the ballroom, you see a piano strike the keys by a seemingly invisible force along with floating violins  being played.");
                     Console.WriteLine(" The lady resembled your late mother. She lowered her gaze, yearning for a waltz."); ;
                     Console.ForegroundColor = ConsoleColor.Magenta;

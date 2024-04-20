@@ -24,16 +24,17 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
             switch (choice.ToLower())
             {
                 case "1":
-                    Console.WriteLine("The ghost approves");
+                    Console.WriteLine("'No problem, dearie,' replies the dining room's ghost.");
                     Console.WriteLine("The ghost gives you the snack");
                     Inventory.items.Add(GameItem.Snack);
                     Game.Transition<DiningRoomComplete>();
                     snackReceived=true;
                     break;
                 case "2":
-                    Console.WriteLine("The ghost does NOT approve");
+                    Console.WriteLine("The dining room's ghost regards you angrily, moving a finger.Before you know it, a knife wooshes past you, narrowly     missing your face.");
                     Game.IncreaseFear(1);
                     Console.WriteLine("The ghost gives you the snack...begrudgingly");
+                    //Inventory.AddItem(GameItem.Snack);
                     Inventory.items.Add(GameItem.Snack);
                     Game.Transition<DiningRoomComplete>();
                     snackReceived=true;

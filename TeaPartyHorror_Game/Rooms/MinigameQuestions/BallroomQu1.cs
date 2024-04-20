@@ -18,11 +18,13 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                 case "1":
                     if (Garden.HasFlowers == true)
                     {
-                        Console.WriteLine("The ghost happily takes your hand along with the flowers. How I love these deadly oleanders!");
+                        Console.WriteLine("The ghost happily takes your hand along with the flowers. 'How I love these oleanders, as deadly as they are beautiful!'");
+                        Console.WriteLine("You take your places on the dance floor. 'You lead, little one. I trust you know how?'");
                         Game.Transition<BallroomQu2>();
-                        Console.WriteLine("First, you need the right position of the hands.");
+                        Console.WriteLine("You remember your strict dance instructors words, but not what you were supposed to do...");
+                        Console.WriteLine("First, you need the right position of the hands... But which one?");
                         Console.ForegroundColor = ConsoleColor.Magenta;
-                        Console.WriteLine("Press 1 to do it wrong\t\tPress 2 to do it right");
+                        Console.WriteLine("Press 1 to place your left hand on her shoulder\t\tPress 2 to place your left hand on her back");
                         Console.ForegroundColor = ConsoleColor.White;
                     }
                     else

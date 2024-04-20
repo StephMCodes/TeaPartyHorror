@@ -16,9 +16,8 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
             switch (choice.ToLower())
             {
                 case "1":
-
                     //changed to approval, seems like looking at her dress should be nice
-                    Console.WriteLine("The ghost does indeed approve");
+                    Console.WriteLine("The ghost does indeed approve of you admiring her dress.");
                     Console.WriteLine("The dance is about to end, how do you finish it?");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to spin dramatically\t\tPress 2 to exageratedly bow down");
@@ -29,10 +28,9 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     break;
 
                 case "2":
-
-                    Console.WriteLine("The ghost does NOT approve");
+                    Console.WriteLine("Your dance partner looks at you with scorn for not paying attention. It's like being scolded by Mama..."); ;
                     Game.IncreaseFear(1);
-                    Console.WriteLine("The dance is about to end, how do you finish it?");
+                    Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to spin dramatically\t\tPress 2 to exageratedly bow down");
                     Console.WriteLine("Press 3 to try and pick her up\t\tPress 4 to hold out your hand for her");
                     Console.ForegroundColor = ConsoleColor.White;
@@ -40,8 +38,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     break;
 
                     case "3":
-
-                    Console.WriteLine("The ghost does indeed approve");
+                    Console.WriteLine("The ghost smiles at you, glad to have such an attent dance partner.");
                     Console.WriteLine("The dance is about to end, how do you finish it?");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to spin dramatically\t\tPress 2 to exageratedly bow down");
@@ -52,8 +49,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     break;
 
                 case "4":
-
-                    Console.WriteLine("The ghost does NOT approve");
+                    Console.WriteLine("your dance partner looks at you with scorn for not paying attention. It's like being scolded by Mama..."); ;
                     Game.IncreaseFear(1);
                     Console.WriteLine("The dance is about to end, how do you finish it?");
                     Console.ForegroundColor = ConsoleColor.Magenta;
@@ -67,7 +63,8 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                   
                 default:
                     
-                    Console.WriteLine("You can look around"); //maybe keep these now to remind them the description
+                    Console.WriteLine("You find yourself becoming distracted from your dance partner, distracted by all the sounds and sights around you...");
+                    //maybe keep these now to remind them the description
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to look at her dress\t\tPress 2 to check out the other dancers");
                     Console.WriteLine("Press 3 to look her in the eyes\t\tPress 4 to catch glimpses of the room");
