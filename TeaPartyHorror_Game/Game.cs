@@ -29,7 +29,7 @@ namespace TeaPartyHorror_Game
         {
 
         }
-        internal static int fearLevel = 0; //or public?
+        internal static int fearLevel = 0; 
 
         internal void Add(Room room)
         {
@@ -69,10 +69,11 @@ namespace TeaPartyHorror_Game
             Console.WriteLine($"Fear increases. Current fear level: {fearLevel}/10");
             if (fearLevel >= 10)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("The fear overwhelms you, leading to a game over.");
-               
-                Finish();
+                Console.WriteLine("*");
+                Console.WriteLine("BAD ENDING - [Press enter to quit.]");
+                Game.Finish();
+
             }
             Console.ForegroundColor = ConsoleColor.White;
         }

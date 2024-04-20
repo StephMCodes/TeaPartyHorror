@@ -30,9 +30,7 @@ namespace TeaPartyHorror_Game.Rooms
                     Console.WriteLine("You make your way to the ballroom, the one-two-three rhythm still playing in your head.");
                     Game.Transition<Ballroom>();
                     break;
-                default:
-                    Console.WriteLine("Invalid command.");
-                    break;
+                
             }
         }
     }

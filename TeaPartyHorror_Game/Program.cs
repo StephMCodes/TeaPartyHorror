@@ -24,6 +24,15 @@ namespace TeaPartyHorror_Game
         static SaveData savedata;
         static void Main(string[] args)
         {
+            const string SaveFile = "Save.txt";
+            if (!File.Exists(SaveFile))
+            { File.CreateText(SaveFile); }
+            var bf = new BinaryFormatter();
+            //savedata = new SaveData(200, "Felix");
+            //bf.Serialize(File.OpenWrite(SaveFile), savedata);
+            savedata = bf.Deserialize(File.OpenRead(SaveFile)) as SaveData;
+
+            
             
             var game = new Game();
             game.Add(new Start());
@@ -48,6 +57,10 @@ namespace TeaPartyHorror_Game
             game.Add(new TearoomQu1());
             game.Add(new TearoomQu2());
             game.Add(new TearoomQu3());
+            game.Add(new TearoomComplete());
+            game.Add(new End());
+            
+
 
 
             //game.Add(new Inventory());
@@ -66,19 +79,21 @@ namespace TeaPartyHorror_Game
                 Console.ForegroundColor = ConsoleColor.White;
             }
 
-            
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("END");
+            Console.WriteLine("The fear overwhelms you, leading to a game over.");
+            Console.WriteLine("*");
+            Console.WriteLine("BAD ENDING - [Press enter to quit.]");
+            Game.Transition<End>();
+
             //Console.Clear();
             Console.ReadLine();
-            const string SaveFile = "Save.txt";
-            if (!File.Exists(SaveFile))
-            { File.CreateText(SaveFile); }
+            //const string SaveFile = "Save.txt";
+            //if (!File.Exists(SaveFile))
+            //{ File.CreateText(SaveFile); }
+            // File.WriteAllText("Save.txt", "Hello world");
 
-            //savedata = new SaveData(200, "Felix");
-            var bf = new BinaryFormatter();
-            //bf.Serialize(File.OpenWrite(SaveFile), savedata);
-            savedata=bf.Deserialize(File.OpenRead(SaveFile)) as SaveData;
+         
 
         }
     }

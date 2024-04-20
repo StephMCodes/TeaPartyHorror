@@ -86,7 +86,7 @@ You can also return to your [bedroom].";
                     if (ownsInvitation == true)
                     {
                         Console.WriteLine("The butler lets you in.");
-                        Console.WriteLine("When you enter the room, the table is set for you." +
+                        Console.WriteLine("When you enter the room, the table is set for you. " +
                             "There are only two seats empty, the rest occupied by teddy bears and dolls " +
                             "that all turn to look at you in sync and invite you. ");
                         Console.ForegroundColor = ConsoleColor.Magenta;
@@ -96,7 +96,7 @@ You can also return to your [bedroom].";
                         Game.Transition<TearoomQu1>();
                         break;
                     }
-                    else { Console.WriteLine("The butler stops you. It seems an invitation and a code are necessary..."); }
+                    else { Console.WriteLine("The butler stops you. It seems an invitation is necessary..."); }
                     break;
 
                 //case "fear":

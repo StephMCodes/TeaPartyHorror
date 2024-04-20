@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 
         internal override void ReceiveChoice(string choice)
         {
-            Console.WriteLine("");
+            
             
             switch (choice)
             {
@@ -31,31 +32,38 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 
 
                 case "1":
-                    Console.WriteLine("You try to push and tear through the strings while the tea guests laugh at you.");
+                    Console.WriteLine("You try to push and tear through the strings while the teatime guests all laugh at you in sync.");
                     if (GardenRabbitInteraction.Poisoned == true)
                     {
-                        Console.WriteLine("You feel as if you're about to faint...");
-                        Console.WriteLine("Your plush laughs and tells you you got poisoned");
+                        Console.WriteLine("You feel as if though you are about to faint...");
+                        Console.WriteLine("Your plushie laughs maniacally, but there is a hint of bitterness. 'Oleanders! Poisonous! I did not know, either. Else I would reduced to this!'");
                         Game.IncreaseFear(2);
                     }
                     else
                     {
                         Console.WriteLine("You succeed, finding strength within.");
+                        Console.WriteLine("Your plushie laughs maniacally, but there is a hint of bitterness. 'Oleanders! Poisonous! Shame you did not fall for it like I did. Reduced to this..!'");
                     }
-                    Console.WriteLine("The plushie is laughing a lot, he is not paying attention. Now is your chance!");
+                    Console.WriteLine("You recall a past child of this family that died of sickness... Ophelia.");
+                    Console.WriteLine("When you call her by that name, the spirit loses focus. Now is your chance!");
                     Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Press 1 to tear your plushie up \t\tPress 2 to hug him and tell him everything is going to be okay");
+                    Console.WriteLine("Press 1 to tear your plushie up \t\tPress 2 to hug her and tell her everything is going to be okay");
                     Console.ForegroundColor = ConsoleColor.White;
                     Game.Transition<TearoomComplete>();
                     break;
-               
+
                 default:
-                    Console.WriteLine("The rabbit attempts to puppet you with evil strings.");
+                    Console.WriteLine("The voice of your rabbit distorts, beginning to sound almost like a fellow little girl, her accent reminding you of youraunt and uncle.'That necklace they gave you! It belongs to ME!'");
+
+                    Console.WriteLine("The possessed plush casts a vicious red light that gives you a headache.");
+                   
+                    Console.WriteLine("The rabbit attempts to puppet you with red strings that appear from its paws.");
+                    Console.WriteLine("You feel as though you are about to become only a guest in your body. The plushie continues its barrage: 'You are in MY PLACE!'");
                     
-                    if (GardenRabbitInteraction.Poisoned == true) { Console.WriteLine("But you feel weak... Your stomach hurts."); }
-                    
+                    if (GardenRabbitInteraction.Poisoned == true) { Console.WriteLine("You feel weak... Your stomach..."); }
+
                     Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Press 1 to fight back");
+                    Console.WriteLine("Press 1 to fight for control");
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
             }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TeaPartyHorror_Game.Rooms.MinigameQuestions;
 
 namespace TeaPartyHorror_Game.Rooms
 {
@@ -35,7 +36,7 @@ namespace TeaPartyHorror_Game.Rooms
                 case "START":
                     {
                         //ask calvin + 4squad if press or enter
-                        Console.WriteLine("You jump out your bed, startled by the smell of smoke. The door handle is warm to the touch, but you need to warn your parents.");
+                        Console.WriteLine("You jump out your bed, startled by the smell of smoke. The door handle is warm to the touch, but you need to warn your  parents.");
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("Press 1 to run inside and look for your parents\t\tPress 2 to climb out your window");
                         Console.ForegroundColor = ConsoleColor.White;

@@ -47,7 +47,7 @@ namespace TeaPartyHorror_Game.Rooms
                         "'My sweet, darling Rosalind! I cannot be there with her for I am but a lowly worker,unbefitting to hold a noblewoman's hand..." +
                         "Please, take good care in bringing her these." +
                         " She will know I love her still, even if I am not there.'");
-                    Console.WriteLine("You receive a lovely bouquet. Press enter to continue.");
+                    Console.WriteLine("You receive a lovely bouquet. [Press enter to continue.]");
                     HasFlowers = true;
                     Game.Transition<GardenRabbitInteraction>();
                     break;

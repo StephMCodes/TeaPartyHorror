@@ -21,7 +21,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 
                     Console.WriteLine("The ghost does NOT approve");
                     Game.IncreaseFear(1);
-                    Console.WriteLine("The dance is about to end, how do you finish it?");
+                    Console.WriteLine("Amulet received");
                     Inventory.items.Add(GameItem.Amulet);
                     hasDanced = true;
                     Game.Transition<Ballroom>();
@@ -32,7 +32,8 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 
                     Console.WriteLine("The ghost does NOT approve");
                     Game.IncreaseFear(1);
-                    Console.WriteLine("The dance is about to end, how do you finish it?");
+                    Console.WriteLine("Amulet received");
+                    Inventory.items.Add(GameItem.Amulet);
                     hasDanced = true;
                     Game.Transition<Ballroom>();
                     break;
@@ -41,7 +42,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 
                     Console.WriteLine("The ghost does NOT approve");
                     Game.IncreaseFear(1);
-                    Console.WriteLine("The dance is about to end, how do you finish it?");
+                    Console.WriteLine("Amulet received");
                     Inventory.items.Add(GameItem.Amulet);
                     hasDanced = true;
                     Game.Transition<Ballroom>();

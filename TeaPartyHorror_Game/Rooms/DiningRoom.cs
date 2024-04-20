@@ -24,6 +24,20 @@ namespace TeaPartyHorror_Game.Rooms
                 case "1":
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("The cook waves a hand and a porcelain plate, and cutlery float over to your place at the table! It smells divine...");
+                    Random randomValueForMeal = new Random();
+                    int mealValue = randomValueForMeal.Next(1, 4);
+                    if (mealValue==1)
+                    {
+                        Console.WriteLine("Wow...You are presented with an omelet that seems incredibly delicious.");
+                    }
+                    else if (mealValue == 2)
+                    {
+                        Console.WriteLine("The chicken pie before you makes you feel like you're going to float.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("The spaghetti seems like the most appetizing thing in the world.");
+                    }
                     Console.WriteLine("But when you bite into it... It tastes like bugs and dirt!");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to pretend to like\t\tPress 2 to spit it out");

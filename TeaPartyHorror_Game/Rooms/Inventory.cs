@@ -28,7 +28,7 @@ namespace TeaPartyHorror_Game.Rooms
            Console.ForegroundColor = ConsoleColor.Magenta;
             if (items.Count == 0)
             {
-                Console.WriteLine("Your inventory is empty. Press enter to continue.");
+                Console.WriteLine("Your inventory is empty. [Press enter to continue.]");
                 return;
             }
             
@@ -37,7 +37,7 @@ namespace TeaPartyHorror_Game.Rooms
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine("Press enter to continue.");
+            Console.WriteLine("[Press enter to continue.]");
             Console.ForegroundColor = ConsoleColor.White;
         }
         public static bool UseItem(GameItem item)
