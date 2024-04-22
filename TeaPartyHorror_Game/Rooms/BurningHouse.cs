@@ -39,7 +39,7 @@ namespace TeaPartyHorror_Game.Rooms
                 
 
                 default:
-                    Console.WriteLine("You jump out your bed, startled by the smell of smoke.The door handle is warm to the touch, but you need to warn your parents.");
+                    Console.WriteLine("You jump out your bed, startled by the smell of smoke.\n\nThe door handle is warm to the touch, but you need to warn your parents.\n\n");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to run inside and look for your parents\t\tPress 2 to climb out your window");
                     Console.ForegroundColor = ConsoleColor.White;

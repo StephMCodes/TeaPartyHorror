@@ -9,7 +9,7 @@ namespace TeaPartyHorror_Game.Rooms
     internal class Ballroom : Room
     {
         internal override string CreateDescription() =>
-        @"You can go to [hallway] or the [garden].";
+        @"You can go to [hallway] or the [garden] from this luxurious ballroom, where spirits chat after a lovely dance.";
 
         internal override void ReceiveChoice(string choice)
         {

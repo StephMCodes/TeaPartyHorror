@@ -30,7 +30,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     }
                     else
                     {
-                        Console.WriteLine("A lady needs flowers first");
+                        Console.WriteLine("She kindly refuses, saying she is waiting for something, but her eyes tell another story as she looks wistfully to the  gardens beyond.");
                         
                     }
                     break;

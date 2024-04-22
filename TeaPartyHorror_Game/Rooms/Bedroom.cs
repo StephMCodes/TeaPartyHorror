@@ -60,9 +60,9 @@ namespace TeaPartyHorror_Game.Rooms
                     Console.ForegroundColor = ConsoleColor.White;
                     //clear somehow
                     Console.WriteLine();
-                    Console.WriteLine("You wake up...again. You555 pinch yourself. OW!");
+                    Console.WriteLine("You wake up...again. You pinch yourself. OW!");
                     Console.WriteLine();
-                    Console.WriteLine("Your plushie friend pats your back. 'Another nightmare? C'mon, cheer up, you must be hungry, let's grab a snack in the  dining room. And maybe a dance in the ballroom will warm you up!");
+                    Console.WriteLine("Your plushie friend pats your back. 'Another nightmare? C'mon, cheer up, you must be hungry, let's grab a snack in the  dining room. And maybe a dance in the ballroom will warm you up!'");
                     Game.Transition<BedroomAwake>();
                     break;
             }

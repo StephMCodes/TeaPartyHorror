@@ -19,9 +19,12 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
             {
                 case "1":
 
-                    Console.WriteLine("The ghost does NOT approve");
+                    Console.WriteLine("The ghost says she should be pulling your ear for those manners! Nevertheless, you end the dance together.");
+                    Console.WriteLine("'You've put me in a right good mood, dearie. If you see the gardener, thank him for me.'");
+                    Console.WriteLine("The woman hands you an amulet, the gesture feeling very motherly. You smile shyly in thanks.");
+                    Console.WriteLine("You feel nice and warm now, reinvigorated by the dance.");
                     Game.IncreaseFear(1);
-                    Console.WriteLine("Amulet received");
+                    
                     Inventory.AddItem(GameItem.Amulet);
                     hasDanced = true;
                     Game.Transition<Ballroom>();
@@ -30,9 +33,12 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 
                 case "2":
 
-                    Console.WriteLine("The ghost does NOT approve");
+                    Console.WriteLine("The ghost says she should be pulling your ear for those manners! Nevertheless, you end the dance together.");
+                    Console.WriteLine("'You've put me in a right good mood, dearie. If you see the gardener, thank him for me.'");
+                    Console.WriteLine("The woman hands you an amulet, the gesture feeling very motherly. You smile shyly in thanks.");
+                    Console.WriteLine("You feel nice and warm now, reinvigorated by the dance.");
                     Game.IncreaseFear(1);
-                    Console.WriteLine("Amulet received");
+                    
                     Inventory.AddItem(GameItem.Amulet);
                     hasDanced = true;
                     Game.Transition<Ballroom>();
@@ -40,9 +46,13 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 
                 case "3":
 
-                    Console.WriteLine("The ghost does NOT approve");
+                    Console.WriteLine("The ghost says she should be pulling your ear for those manners! Nevertheless, you end the dance together.");
+                    Console.WriteLine("'You've put me in a right good mood, dearie. If you see the gardener, thank him for me.'");
+                    Console.WriteLine("The woman hands you an amulet, the gesture feeling very motherly. You smile shyly in thanks.");
+                    Console.WriteLine("You feel nice and warm now, reinvigorated by the dance."); //GET AMULET
+
                     Game.IncreaseFear(1);
-                    Console.WriteLine("Amulet received");
+                    
                     Inventory.AddItem(GameItem.Amulet);
                     hasDanced = true;
                     Game.Transition<Ballroom>();
@@ -51,9 +61,10 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 
                 case "4":
 
-                    Console.WriteLine("The ghost does indeed approve");
-                    Console.WriteLine("You are nice and warm now. Thanks for the dance. Here is an amulet."); //GET AMULET
-                    //Inventory.items.Add(GameItem.Amulet);
+                    Console.WriteLine("'You've put me in a right good mood, dearie. If you see the gardener, thank him for me.'");
+                    Console.WriteLine("The woman hands you an amulet, the gesture feeling very motherly. You smile shyly in thanks.");
+                    Console.WriteLine("You feel nice and warm now, reinvigorated by the dance."); //GET AMULET
+                    
                     Inventory.AddItem(GameItem.Amulet);
                     hasDanced = true;
                     Game.Transition<Ballroom>();
