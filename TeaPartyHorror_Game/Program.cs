@@ -24,16 +24,18 @@ namespace TeaPartyHorror_Game
         static SaveData savedata;
         static void Main(string[] args)
         {
-            const string SaveFile = "Save.txt";
-            if (!File.Exists(SaveFile))
-            { File.CreateText(SaveFile); }
-            var bf = new BinaryFormatter();
-            //savedata = new SaveData(200, "Felix");
-            //bf.Serialize(File.OpenWrite(SaveFile), savedata);
-            savedata = bf.Deserialize(File.OpenRead(SaveFile)) as SaveData;
+            //this part of the code is interfering with the game ;-;
 
-            
-            
+            //const string SaveFile = "Save.txt";
+            //if (!File.Exists(SaveFile))
+            //{ File.CreateText(SaveFile); }
+            //var bf = new BinaryFormatter();
+            ////savedata = new SaveData(200, "Felix");
+            ////bf.Serialize(File.OpenWrite(SaveFile), savedata);
+            //savedata = bf.Deserialize(File.OpenRead(SaveFile)) as SaveData;
+
+
+
             var game = new Game();
             game.Add(new Start());
             game.Add(new BurningHouse());
@@ -59,10 +61,6 @@ namespace TeaPartyHorror_Game
             game.Add(new TearoomQu3());
             game.Add(new TearoomComplete());
             game.Add(new End());
-            
-
-
-
             //game.Add(new Inventory());
 
 
@@ -75,7 +73,7 @@ namespace TeaPartyHorror_Game
                 Console.Clear();
                 game.ReceiveChoice(choice);
                 Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine("Check out your current [inventory]! ");
+                Console.WriteLine("\nCheck out your current [inventory]! ");
                 Console.ForegroundColor = ConsoleColor.White;
             }
 
@@ -93,7 +91,7 @@ namespace TeaPartyHorror_Game
             //{ File.CreateText(SaveFile); }
             // File.WriteAllText("Save.txt", "Hello world");
 
-         
+
 
         }
     }

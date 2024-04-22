@@ -19,7 +19,6 @@ namespace TeaPartyHorror_Game
     internal class Game
     {
         List<Room> rooms = new List<Room>();
-        //public Inventory Inventory { get; private set; } = new Inventory();
         Room currentRoom;
         internal bool IsGameOver() => isFinished;
         static bool isFinished;
