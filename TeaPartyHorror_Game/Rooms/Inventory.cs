@@ -1,13 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using TeaPartyHorror_Game;
-using static TeaPartyHorror_Game.Rooms.Inventory;
+using TeaPartyHorror_Game.Rooms;
 
-namespace TeaPartyHorror_Game.Rooms
+namespace TeaPartyHorror_Game
 {
 
     internal class Inventory
@@ -60,6 +58,3 @@ namespace TeaPartyHorror_Game.Rooms
         }
     }
 }
-//steph girlie write this in order to call an item in this method for the game xD
-//game.UseItem(GameItem.Amulet);
-//i made some changes if you have any questions call or text me 

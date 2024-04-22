@@ -9,13 +9,62 @@ namespace TeaPartyHorror_Game
 {
     public enum GameItem
     {
-        MrBunnyRabbit,
+        MrBunnyRabbit = 0,
         Snack,
         Flowers,
         Amulet,
         Invitation
     }
+    internal class Inventory
 
+    {
+
+        public static List<GameItem> items = new List<GameItem>();
+
+        public static void AddItem(GameItem item)
+        {
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            items.Add(item);
+            Console.WriteLine($"{item} has been added to your inventory.");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        public static void ListItems()
+        {
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            if (items.Count == 0)
+            {
+                Console.WriteLine("Your inventory is empty. Press enter to continue.");
+                return;
+            }
+
+            Console.WriteLine("Inventory Items:");
+            foreach (var item in items)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("Press enter to continue.");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+        public static bool UseItem(GameItem item)
+        {
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            if (items.Contains(item))
+            {
+                items.Remove(item);
+                Console.WriteLine($"{item} has been used.");
+                Console.ForegroundColor = ConsoleColor.White;
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Item not found in inventory.");
+                Console.ForegroundColor = ConsoleColor.White;
+                return false;
+            }
+
+        }
+    }
     internal class Game
     {
         List<Room> rooms = new List<Room>();
@@ -101,40 +150,44 @@ namespace TeaPartyHorror_Game
 
         public void UseItem(GameItem item)
         {
-            if (Inventory.UseItem(item))
+            // Check if the inventory has the item before using it
+            if (Inventory.HasItem(item)) // Assuming you have a HasItem method in Inventory
             {
                 switch (item)
                 {
                     case GameItem.Amulet:
                         DecreaseFear();
                         Console.WriteLine("The amulet glows powerfully, and you feel your fear diminish. Mr Bunny-Rabbit puts his paw out and destroys it with his magic, sending shards everywhere.");
-                        Inventory.items.Remove(GameItem.Amulet);
+                        Inventory.RemoveItem(GameItem.Amulet); // Use Inventory's method to remove the item
                         break;
                     case GameItem.Snack:
                         Console.WriteLine("You eat the snack, feeling a bit better and less fearful.");
                         DecreaseFear();
-                        Inventory.items.Remove(GameItem.Snack);
+                        Inventory.RemoveItem(GameItem.Snack); // Use Inventory's method to remove the item
                         break;
                     case GameItem.Flowers:
                         Console.WriteLine("You admire the flowers, feeling a moment of peace.");
-                        //DecreaseFear();
+                        Inventory.RemoveItem(GameItem.Flowers);
                         break;
                     case GameItem.MrBunnyRabbit:
                         Console.WriteLine("He has been with you a long time, but only began to move and speak recently. You smile at your plushie friend, and he smiles back.");
-                        //Console.WriteLine("Mr. Bunny-Rabbit doesn't seem to do much. Maybe someone else wants it?");
+                        // No need to remove the item if it's not consumable
                         break;
                     case GameItem.Invitation:
                         Console.WriteLine("You ponder the invitation. There must be a use for this somewhere.");
-                        //ADD RANDOM CODE!
+                        // No need to remove the item if it's not consumable
                         break;
                     default:
                         Console.WriteLine("Invalid command.");
-                        //Console.WriteLine("This item doesn't seem to do anything...");
                         break;
                 }
             }
-        }
+            else
+            {
+                Console.WriteLine("You don't have that item in your inventory.");
+            }
 
+        }
         internal static void Finish()
         {
             isFinished = true;

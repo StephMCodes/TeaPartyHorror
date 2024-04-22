@@ -10,14 +10,19 @@ namespace TeaPartyHorror_Game.Rooms
     internal class Bedroom : Room
     {
         private int fearLevel = 0;
-        
+        private int addMrBunnyRabbit = 0;
+
 
         internal override string CreateDescription() =>
        @"You are in your new bedroom. ... It's too clean.";
 
         internal override void ReceiveChoice(string choice)
         {
-            Inventory.items.Add(GameItem.MrBunnyRabbit);
+            if(addMrBunnyRabbit == 0 )
+            {
+                Inventory.items.Add(GameItem.MrBunnyRabbit);
+                addMrBunnyRabbit++;
+            }
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("You jolt awake, shivering under your white duvet set.");
             Console.WriteLine("Your plushie, Mr.Bunny-Rabbit, surprisingly, begins to speak! 'Are you okay? Don't worry, I'm here. Go back to sleep.'");
@@ -36,7 +41,7 @@ namespace TeaPartyHorror_Game.Rooms
                     Console.WriteLine("Press 1 to clutch onto Mr.Bunny-Rabbit\t\tPress 2 to force yourself to sleep");
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
-                    
+
                 case "2":
                     Console.Clear();
                     Console.WriteLine("This new house is so scary. You can't sleep...");
@@ -51,7 +56,7 @@ namespace TeaPartyHorror_Game.Rooms
 
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.Write("WAKE UP"); Console.Write("WAKE UP"); Console.Write("WAKE UP"); Console.Write("WAKE UP"); Console.WriteLine("");
-                    
+
                     Console.ForegroundColor = ConsoleColor.White;
                     //clear somehow
                     Console.WriteLine();
@@ -60,16 +65,10 @@ namespace TeaPartyHorror_Game.Rooms
                     Console.WriteLine("Your plushie friend pats your back. 'Another nightmare? C'mon, cheer up, you must be hungry, let's grab a snack in the  dining room. And maybe a dance in the ballroom will warm you up!");
                     Game.Transition<BedroomAwake>();
                     break;
-
-                   
             }
-
-
-            
-            
         }
 
-        }
+    }
 
 
 
@@ -134,11 +133,11 @@ namespace TeaPartyHorror_Game.Rooms
     //        Console.WriteLine("Invalid command.");
     //        break;
 
-} 
-    
-        
-    
+}
 
 
-    
+
+
+
+
 
