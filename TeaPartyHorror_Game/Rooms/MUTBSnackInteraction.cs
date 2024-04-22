@@ -23,7 +23,7 @@ namespace TeaPartyHorror_Game.Rooms
                     Console.WriteLine("Mr Bunny-Rabbit makes a face. 'And now what do we say..?'");
                     Console.WriteLine("'Excuse me.' The monster pokes his head from under his hiding place, and you can discern a smile from the darkness.     'Thaaaaank youuuuu... I promise only to eat your bad dreams from now on.");
                     isMonsterFriend = true;
-                    //Inventory.items.UseItem(GameItem.Snack);
+                    Inventory.UseItem(GameItem.Snack);
                     Game.Transition<BedroomAwake>();
                     break;
                 case "2":

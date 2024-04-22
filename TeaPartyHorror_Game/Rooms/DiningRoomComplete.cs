@@ -21,7 +21,7 @@ namespace TeaPartyHorror_Game.Rooms
                 Console.WriteLine("You are about to scream when a crow appears out of nowhere, heading straight for you.");
                 Console.WriteLine("Your plushie jumps to hug you and calms you down. 'Dont worry, he is a friend!'");
                 Console.WriteLine("The bird gently alights on your shoulder, claws careful not to poke you. There is a letter in his beak!");
-                Inventory.items.Add(GameItem.Invitation);
+                Inventory.AddItem(GameItem.Invitation);
                 Hallway.ownsInvitation = true;
 
             }

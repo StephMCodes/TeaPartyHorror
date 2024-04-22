@@ -31,6 +31,7 @@ namespace TeaPartyHorror_Game.Rooms
             //Console.ForegroundColor
             // = ConsoleColor.Blue; 
             Console.ForegroundColor = ConsoleColor.White;
+            
             switch (choice.ToUpper())
             {
                 case "START":

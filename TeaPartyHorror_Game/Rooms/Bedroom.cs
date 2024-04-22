@@ -20,7 +20,7 @@ namespace TeaPartyHorror_Game.Rooms
         {
             if(addMrBunnyRabbit == 0 )
             {
-                Inventory.items.Add(GameItem.MrBunnyRabbit);
+                Inventory.AddItem(GameItem.MrBunnyRabbit);
                 addMrBunnyRabbit++;
             }
             Console.ForegroundColor = ConsoleColor.White;

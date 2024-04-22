@@ -18,6 +18,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                 case "1":
                     if (Garden.HasFlowers == true)
                     {
+                        Inventory.UseItem(GameItem.Flowers);
                         Console.WriteLine("The ghost happily takes your hand along with the flowers. 'How I love these oleanders, as deadly as they are beautiful!'");
                         Console.WriteLine("You take your places on the dance floor. 'You lead, little one. I trust you know how?'");
                         Game.Transition<BallroomQu2>();

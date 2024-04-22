@@ -20,6 +20,8 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
             Console.WriteLine("The possessed plush casts a vicious red light that gives you a headache.");
             Game.IncreaseFear(2);
             Inventory.UseItem(GameItem.Amulet);
+            Console.WriteLine("The amulet's light fights back agaisnt the darkness.");
+            Game.DecreaseFear();
             Console.WriteLine("The rabbit attempts to puppet you with red strings that appear from its paws.");
             Console.WriteLine("You feel as though you are about to become only a guest in your body. The plushie continues its barrage: 'You are in MY PLACE!'");
             Game.Transition<TearoomQu3>();
