@@ -16,7 +16,7 @@ namespace TeaPartyHorror_Game.Rooms
 
         }
 
-
+        //file.delete or file.remove
         internal override void ReceiveChoice(string choice)
         {
             Game.Finish();

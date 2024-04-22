@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using static TeaPartyHorror_Game.Program;
 
 namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 {
@@ -27,6 +30,11 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     Console.WriteLine("'No problem, dearie,' replies the dining room's ghost.");
                     
                     Inventory.AddItem(GameItem.Snack);
+                    var bf = new BinaryFormatter();
+                    bf.Serialize(File.OpenWrite(Program.SaveFile), savedata);
+
+                    
+                    savedata.snackReceived = true;
                     Game.Transition<DiningRoomComplete>();
                     snackReceived=true;
                     break;

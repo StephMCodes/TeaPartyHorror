@@ -11,29 +11,34 @@ namespace TeaPartyHorror_Game
         [Serializable]
         public class SaveData
         {
-            public int numberToSave;
-            public string stringToSave;
+            
+            
+            public string saveRoom;
+            public bool snackReceived;
 
-            public SaveData(int numberToSave, string stringToSave)
-            {
-                this.numberToSave = numberToSave;
-                this.stringToSave = stringToSave;
-            }
+            //public SaveData(int numberToSave, string stringToSave, string saveRoom bool boolToSave)
+            //{
+            //    this.numberToSave = numberToSave;
+            //    this.stringToSave = stringToSave;
+            //    this.saveRoom = saveRoom;
+            //}
         }
 
-        static SaveData savedata;
+        public static SaveData savedata;
+        public const string SaveFile = "Save.txt";
         static void Main(string[] args)
         {
-            //this part of the code is interfering with the game ;-;
+
 
             //const string SaveFile = "Save.txt";
-            //if (!File.Exists(SaveFile))
-            //{ File.CreateText(SaveFile); }
-            //var bf = new BinaryFormatter();
-            ////savedata = new SaveData(200, "Felix");
-            ////bf.Serialize(File.OpenWrite(SaveFile), savedata);
-            //savedata = bf.Deserialize(File.OpenRead(SaveFile)) as SaveData;
-
+            {
+                if (!File.Exists(SaveFile))
+                { File.CreateText(SaveFile); }
+                var bf = new BinaryFormatter();
+                savedata = new SaveData();
+                //bf.Serialize(File.OpenWrite(SaveFile), savedata); //save file
+                savedata = bf.Deserialize(File.OpenRead(SaveFile)) as SaveData; //load file
+            }
 
 
             var game = new Game();
