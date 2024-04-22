@@ -20,7 +20,8 @@ namespace TeaPartyHorror_Game.Rooms
                     case "1":
                         {
 
-                        Console.WriteLine("You feel your skin tingle as fire starts to catch on your flesh. 'AHHHHH!', " + "you scream in horror scared about your awaiting fate!");
+                        Console.WriteLine("\nYou feel your skin tingle as fire starts to catch on your flesh. ");
+                        Console.WriteLine("\n'AHHHHH!'you scream in horror, scared of your awaiting fate!");
                             Game.IncreaseFear(2);
                         Console.WriteLine("[Press enter to continue.]");
                         Console.ForegroundColor = ConsoleColor.White;

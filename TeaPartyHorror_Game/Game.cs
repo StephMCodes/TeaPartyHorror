@@ -65,7 +65,7 @@ namespace TeaPartyHorror_Game
         {
             Console.ForegroundColor = ConsoleColor.Red; 
             fearLevel += num;
-            Console.WriteLine($"Fear increases. Current fear level: {fearLevel}/10");
+            Console.WriteLine($"\nFear increases. Current fear level: {fearLevel}/10");
             if (fearLevel >= 10)
             {
                 Console.WriteLine("The fear overwhelms you, leading to a game over.");
