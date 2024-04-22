@@ -41,7 +41,14 @@ namespace TeaPartyHorror_Game
                     var bf = new BinaryFormatter();
                     //bf.Serialize(File.OpenWrite(SaveFile), savedata); //save file
                     FileStream stream = File.OpenRead(SaveFile);
-                    savedata = bf.Deserialize(stream) as SaveData; //load file
+                    if (stream.Length > 0)
+                    {
+                        savedata = bf.Deserialize(stream) as SaveData; //load file
+                    }
+                    else
+                    {
+                        savedata = new SaveData();
+                    }
                     stream.Close();
                 }
             }
