@@ -31,10 +31,11 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     
                     Inventory.AddItem(GameItem.Snack);
                     var bf = new BinaryFormatter();
-                    bf.Serialize(File.OpenWrite(Program.SaveFile), savedata);
-
-                    
+                    FileStream stream = File.OpenWrite(Program.SaveFile);
                     savedata.snackReceived = true;
+                    bf.Serialize(stream, savedata);
+                    stream.Close();
+                    
                     Game.Transition<DiningRoomComplete>();
                     snackReceived=true;
                     break;

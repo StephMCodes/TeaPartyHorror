@@ -11,8 +11,8 @@ namespace TeaPartyHorror_Game
         [Serializable]
         public class SaveData
         {
-            
-            
+
+
             public string saveRoom;
             public bool snackReceived;
 
@@ -29,17 +29,23 @@ namespace TeaPartyHorror_Game
         static void Main(string[] args)
         {
 
-
             //const string SaveFile = "Save.txt";
             {
                 if (!File.Exists(SaveFile))
-                { File.CreateText(SaveFile); }
-                var bf = new BinaryFormatter();
-                savedata = new SaveData();
-                //bf.Serialize(File.OpenWrite(SaveFile), savedata); //save file
-                savedata = bf.Deserialize(File.OpenRead(SaveFile)) as SaveData; //load file
+                {
+                    File.CreateText(SaveFile);
+                    savedata = new SaveData();
+                }
+                else
+                {
+                    var bf = new BinaryFormatter();
+                    //bf.Serialize(File.OpenWrite(SaveFile), savedata); //save file
+                    FileStream stream = File.OpenRead(SaveFile);
+                    savedata = bf.Deserialize(stream) as SaveData; //load file
+                    stream.Close();
+                }
             }
-
+            Console.WriteLine($"Has snack = {savedata.snackReceived}");
 
             var game = new Game();
             game.Add(new Start());
