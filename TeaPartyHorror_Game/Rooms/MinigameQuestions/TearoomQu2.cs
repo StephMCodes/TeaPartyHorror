@@ -17,10 +17,11 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
         {
             Console.WriteLine("The voice of your rabbit distorts, beginning to sound almost like a fellow little girl, her accent reminding you of youraunt and uncle.'That necklace they gave you! It belongs to ME!'");
             
-            Console.WriteLine("The possessed plush casts a vicious red light that gives you a headache.");
+            Console.WriteLine("The possessed plush casts a vicious red light that gives you a splitting headache.");
             Game.IncreaseFear(2);
             Inventory.UseItem(GameItem.Amulet);
-            Console.WriteLine("The amulet's light fights back agaisnt the darkness.");
+            Console.WriteLine("The amulet's light fights back agaisnt the darkness, glowing powerfully, and you feel your fear diminish. Mr Bunny-Rabbit puts his paw out and destroys it with his magic, sending shards everywhere.");
+
             Game.DecreaseFear();
             Console.WriteLine("The rabbit attempts to puppet you with red strings that appear from its paws.");
             Console.WriteLine("You feel as though you are about to become only a guest in your body. The plushie continues its barrage: 'You are in MY PLACE!'");

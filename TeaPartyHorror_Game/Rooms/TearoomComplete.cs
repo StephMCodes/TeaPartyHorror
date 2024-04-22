@@ -9,7 +9,7 @@ namespace TeaPartyHorror_Game.Rooms
     internal class TearoomComplete : Room
     {
         internal override string CreateDescription() =>
-@"You are in the tearoom complete";
+@"";
         internal override void ReceiveChoice(string choice)
         {
             switch (choice)
@@ -18,6 +18,8 @@ namespace TeaPartyHorror_Game.Rooms
                     Console.WriteLine("You violently rip up your plushie, tears in your eyes. The plushie yells, 'NO! MY HOUSE, MY ROOM, MY-'");
                     Console.WriteLine("One final tear, and it stops moving. A cold draft passes through the room, destroying everything in sight..!");
                     Console.WriteLine("Finally, it ends, and you are left in a destroyed tearoom. The spirit is gone.");
+                    Console.WriteLine("You wonder about her, the young girl who just wanted to loved more than anything wreaking havoc beyond the grave.");
+                    Console.WriteLine("'You don't have to worry anymore', you express. 'Please rest peacefully now', kissing her cheek goodbye.");
                     Console.WriteLine("*");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("NEUTRAL ENDING - [Press enter to continue.]");
@@ -25,8 +27,8 @@ namespace TeaPartyHorror_Game.Rooms
                     break;
                 case "2":
                     Console.WriteLine("You take her in your arms, and feel the spirit's power begin to fade as she cries, magical tears falling from bead eyes.");
-                    Console.WriteLine("'They said I was going to be okay... But I was bedridden for weeks before...' she trails off admist the sobs. 'Im not ready to go... I want to play teahouse, one last time. Please.");
-                    Console.WriteLine("You spend half an hour playing with the spirit, until she calms down. 'Thank you... Take care of my family, of my... OUR Mama and Papa.'");
+                    Console.WriteLine("'They said I was going to be okay... But I was bedridden for weeks before...' she trails off admist the sobs. 'Im not   ready to go... I want to play teahouse, one last time. Please.");
+                    Console.WriteLine("You spend half an hour playing with the spirit, until she calms down. 'Thank you... Take care of my family, of my...OUR Mama and Papa.'");
                     Console.WriteLine("As you promise to give them a big hug for her, she promises to give yours one too in the sky. 'Take care, Sister!'");
                     Console.WriteLine("*");
                     Console.ForegroundColor = ConsoleColor.Magenta;
