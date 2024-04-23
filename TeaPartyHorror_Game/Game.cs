@@ -102,7 +102,7 @@ namespace TeaPartyHorror_Game
             fearLevel = savedata.fearLevel;
             bf.Serialize(stream, savedata);
             stream.Close();
-            Console.WriteLine($"Fear decreases. Current fear level: {fearLevel}.");
+            Console.WriteLine($"\nFear decreases. Current fear level: {fearLevel}.");
             Console.ForegroundColor = ConsoleColor.White;
         }
 

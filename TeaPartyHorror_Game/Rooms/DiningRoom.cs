@@ -23,22 +23,23 @@ namespace TeaPartyHorror_Game.Rooms
 
                 case "1":
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("The cook waves a hand and a porcelain plate, and cutlery float over to your place at the table! It smells divine...");
+                    Console.WriteLine("\nThe cook waves a hand and a porcelain plate, and cutlery float over to your place at the table!");
+                    Console.WriteLine("\nIt smells divine..."); 
                     Random randomValueForMeal = new Random();
                     int mealValue = randomValueForMeal.Next(1, 4);
                     if (mealValue==1)
                     {
-                        Console.WriteLine("Wow...You are presented with an omelet that seems incredibly delicious.");
+                        Console.WriteLine("\nWow...You are presented with an omelet that seems incredibly delicious.");
                     }
                     else if (mealValue == 2)
                     {
-                        Console.WriteLine("The chicken pie before you makes you feel like you're going to float.");
+                        Console.WriteLine("\nThe chicken pie before you makes you feel like you're going to float.");
                     }
                     else
                     {
-                        Console.WriteLine("The spaghetti seems like the most appetizing thing in the world.");
+                        Console.WriteLine("\nThe spaghetti seems like the most appetizing thing in the world.");
                     }
-                    Console.WriteLine("But when you bite into it... It tastes like bugs and dirt!");
+                    Console.WriteLine("\nBut when you bite into it... It tastes like bugs and dirt!");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to pretend to like\t\tPress 2 to spit it out");
                     Console.ForegroundColor = ConsoleColor.White;
@@ -47,11 +48,13 @@ namespace TeaPartyHorror_Game.Rooms
                     break;
 
                 default:
-            //Console.WriteLine("Invalid command.");
-            Console.WriteLine("You wander to the dining room, following the smell of sweets wafting in the air. " +
-                        "You are impressed by the very long     table that takes up most of the room, already set for two. " +
-                        "A woman in an apron with a strict face looks you up and down.'There's always food for hungry children here! Even at midnight.'" +
-                        "Her form glistens and fades... A ghost!");
+                    //Console.WriteLine("Invalid command.");
+                    Console.WriteLine("\nYou wander to the dining room, following the smell of sweets wafting in the air. ");
+                    Console.WriteLine("\nYou are impressed by the very long table that takes up most of the room, already set for two. ");
+                    Console.WriteLine("\nA woman in an apron with a strict face looks you up and down. ");
+                    Console.WriteLine("\n'There's always food for hungry children here! Even at midnight.'");
+                    Console.WriteLine("\nHer form glistens and fades... A ghost!");
+                    
                     Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("Press 1 to sit down ");
             Console.ForegroundColor = ConsoleColor.White;

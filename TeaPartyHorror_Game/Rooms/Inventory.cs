@@ -17,7 +17,7 @@ namespace TeaPartyHorror_Game
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
             items.Add(item);
-            Console.WriteLine($"{item} has been added to your inventory.  [Press enter to continue.]");
+            Console.WriteLine($"\n{item} has been added to your inventory.\n[Press enter to continue.]");
             Console.ForegroundColor = ConsoleColor.White;
         }
 
@@ -26,7 +26,7 @@ namespace TeaPartyHorror_Game
             Console.ForegroundColor = ConsoleColor.Magenta;
             if (items.Count == 0)
             {
-                Console.WriteLine("Your inventory is empty. [Press enter to continue.]");
+                Console.WriteLine("\nYour inventory is empty.\n[Press enter to continue.]");
                 return;
             }
 
@@ -35,7 +35,7 @@ namespace TeaPartyHorror_Game
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine("[Press enter to continue.]");
+            Console.WriteLine("\n[Press enter to continue.]");
             Console.ForegroundColor = ConsoleColor.White;
         }
         public static bool UseItem(GameItem item)
@@ -44,13 +44,13 @@ namespace TeaPartyHorror_Game
             if (items.Contains(item))
             {
                 items.Remove(item);
-                Console.WriteLine($"{item} has left the inventory.");
+                Console.WriteLine($"\n{item} has left the inventory.");
                 Console.ForegroundColor = ConsoleColor.White;
                 return true;
             }
             else
             {
-                Console.WriteLine("Item not found in inventory.");
+                Console.WriteLine("\nItem not found in inventory.");
                 Console.ForegroundColor = ConsoleColor.White;
                 return false;
             }

@@ -58,7 +58,7 @@ namespace TeaPartyHorror_Game
                     stream.Close();
                     if (File.Exists(Program.SaveFile))
                     {
-                        Console.WriteLine("Items from continued savefile:");
+                        Console.WriteLine("\nItems from continued savefile:");
                         if (savedata.snackReceived == true)
                         {
                             Inventory.AddItem(GameItem.Snack);
@@ -80,9 +80,9 @@ namespace TeaPartyHorror_Game
                             Bedroom.hasMrBunnyRabbit = true;
                         } 
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write("Current fear level:"); Console.WriteLine(savedata.fearLevel);
+                        Console.Write("\nCurrent fear level:"); Console.WriteLine(savedata.fearLevel);
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.Write("Current room location: "); Console.WriteLine(savedata.saveRoom);
+                        Console.Write("\nCurrent room location: "); Console.WriteLine(savedata.saveRoom);
 
                         
                         stream.Close();
@@ -129,7 +129,7 @@ namespace TeaPartyHorror_Game
 
                 while (!game.IsGameOver())
                 {
-                    Console.WriteLine("---");
+                    Console.WriteLine("-----");
                     Console.WriteLine(game.CurrentRoomDescription);
                     string choice = Console.ReadLine().ToLower() ?? "";
                     Console.Clear();
@@ -142,9 +142,9 @@ namespace TeaPartyHorror_Game
 
                         Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("The fear overwhelms you, leading to a game over.");
-                        Console.WriteLine("*");
-                        Console.WriteLine("BAD ENDING - [Press enter to quit.]");
+                        Console.WriteLine("\nThe fear overwhelms you, leading to a game over.");
+                        Console.WriteLine("\n*");
+                        Console.WriteLine("\nBAD ENDING - [Press enter to quit.]");
                         Game.Transition<End>();
 
 
