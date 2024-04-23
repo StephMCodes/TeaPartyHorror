@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace TeaPartyHorror_Game.Rooms
         internal override string CreateDescription()
         {
             File.Delete(Program.SaveFile); 
-            Game.Finish(); 
+            
 
             Console.ForegroundColor = ConsoleColor.Magenta;
             string[] creators = 
@@ -23,8 +23,10 @@ namespace TeaPartyHorror_Game.Rooms
             {
                 thankYouMessage += creator + "\n";
             }
-            Console.ResetColor(); 
+            //Console.ResetColor();
+            Game.Finish();
             return thankYouMessage;
+
         }
         internal override void ReceiveChoice(string choice)
         {

@@ -59,6 +59,10 @@ namespace TeaPartyHorror_Game.Rooms
                         Game.Transition<BurningHouse>();
                         break;
                     }
+                case "END":
+                    Game.Transition<End>();
+                    break;
+                
                 default:
                     Console.WriteLine("\nInvalid command.");
                     break;
