@@ -44,12 +44,12 @@ namespace TeaPartyHorror_Game
 
         internal static void Transition<T>() where T : Room
         {
-        //  var bf = new BinaryFormatter();
-       //   FileStream stream = File.OpenWrite(Program.SaveFile);
-            //savedata.saveRoom = typeof(T).Name;
-           nextRoom = typeof(T).Name;
-     //   bf.Serialize(stream, savedata);
-      //  stream.Close();
+          var bf = new BinaryFormatter();
+          FileStream stream = File.OpenWrite(Program.SaveFile);
+          savedata.saveRoom = typeof(T).Name;
+          nextRoom = typeof(T).Name;
+          bf.Serialize(stream, savedata);
+          stream.Close();
             
             
         }
@@ -67,10 +67,10 @@ namespace TeaPartyHorror_Game
             else
             {
                 var bf = new BinaryFormatter();
-                 FileStream stream = File.OpenWrite(Program.SaveFile);
+                FileStream stream = File.OpenWrite(Program.SaveFile);
                 savedata.saveRoom = choice.ToLower();
-                 bf.Serialize(stream, savedata);
-                 stream.Close();
+                bf.Serialize(stream, savedata);
+                stream.Close();
                 currentRoom?.ReceiveChoice(choice.ToLower());
                 CheckTransition();
             }
@@ -98,7 +98,7 @@ namespace TeaPartyHorror_Game
             Console.ForegroundColor = ConsoleColor.Red;
             var bf = new BinaryFormatter();
             FileStream stream = File.OpenWrite(Program.SaveFile);
-            savedata.fearLevel--;
+            if (savedata.fearLevel > 0) savedata.fearLevel--;
             fearLevel = savedata.fearLevel;
             bf.Serialize(stream, savedata);
             stream.Close();

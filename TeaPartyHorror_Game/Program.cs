@@ -40,20 +40,23 @@ namespace TeaPartyHorror_Game
                 {
                     File.CreateText(SaveFile);
                    savedata = new SaveData();
-
+                   
                 }
                 else
                 {
                     var bf = new BinaryFormatter();
                     //bf.Serialize(File.OpenWrite(SaveFile), savedata); //save file
                     FileStream stream = File.OpenRead(SaveFile);
+                    
                     if (stream.Length > 0)
                     {
                         savedata = bf.Deserialize(stream) as SaveData; //load file
+                        stream.Close();
                     }
                     else
                     {
                         savedata = new SaveData();
+                        stream.Close();
                     }
                     stream.Close();
                     if (File.Exists(Program.SaveFile))
@@ -88,9 +91,7 @@ namespace TeaPartyHorror_Game
                         stream.Close();
                     }
                     stream.Close();
-                    stream.Close();
-                    stream.Close();
-                    stream.Close();
+                    
                 } 
                 
                 
