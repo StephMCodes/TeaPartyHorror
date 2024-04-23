@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace TeaPartyHorror_Game.Rooms
 {
+
     internal class End : Room
     {
+
         internal override string CreateDescription()
         {
             File.Delete(Program.SaveFile); 
-            
-
             Console.ForegroundColor = ConsoleColor.Magenta;
             string[] creators = 
                 { "BELLA PEREZ", "STEPHANIE MICHIU" };
@@ -30,7 +30,7 @@ namespace TeaPartyHorror_Game.Rooms
         }
         internal override void ReceiveChoice(string choice)
         {
-           
+            
         }
     }
 }

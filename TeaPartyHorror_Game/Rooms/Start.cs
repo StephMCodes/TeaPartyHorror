@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using TeaPartyHorror_Game.Rooms.MinigameQuestions;
 using static TeaPartyHorror_Game.Program;
 using System.Diagnostics.Eventing.Reader;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace TeaPartyHorror_Game.Rooms
 {
@@ -48,20 +49,28 @@ namespace TeaPartyHorror_Game.Rooms
                         //    Game.Transition<Hallway>();
                         //    break;
                         //}
+                        if (savedata.hasMrBunnyRabbit == true)
+                        {
+                            Game.Transition<BedroomAwake>();
+                        }
+                        else
+                        {
 
+                            Console.WriteLine("\nYou jump out your bed, startled by the smell of smoke. ");
+                            Console.WriteLine("\nThe door handle is warm to the touch, but you need to warn your parents. ");
+                            Console.ForegroundColor = ConsoleColor.Magenta;
+                            Console.WriteLine("Press 1 to run inside and look for your parents\t\tPress 2 to climb out your window");
+                            Console.ForegroundColor = ConsoleColor.White;
 
-                        Console.WriteLine("\nYou jump out your bed, startled by the smell of smoke. ");
-                        Console.WriteLine("\nThe door handle is warm to the touch, but you need to warn your parents. ");
-                        Console.ForegroundColor = ConsoleColor.Magenta;
-                        Console.WriteLine("Press 1 to run inside and look for your parents\t\tPress 2 to climb out your window");
-                        Console.ForegroundColor = ConsoleColor.White;
-
-                        Game.Transition<BurningHouse>();
-                        break;
+                            Game.Transition<BurningHouse>();
+                        }
                     }
-                case "END":
-                    Game.Transition<End>();
+                        break;
+                    
+                case"DIE":
+                        Game.IncreaseFear(10);
                     break;
+                
                 
                 default:
                     Console.WriteLine("\nInvalid command.");

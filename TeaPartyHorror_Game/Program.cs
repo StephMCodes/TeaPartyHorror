@@ -20,6 +20,7 @@ namespace TeaPartyHorror_Game
             public bool hasFlowers;
             public bool hasMrBunnyRabbit;
             public int fearLevel;
+            //public Room lastRoom;
 
 
             //public SaveData(int numberToSave, string stringToSave, string saveRoom bool boolToSave)
@@ -85,9 +86,9 @@ namespace TeaPartyHorror_Game
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("\nCurrent fear level:"); Console.WriteLine(savedata.fearLevel);
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.Write("\nCurrent room location: "); Console.WriteLine(savedata.saveRoom);
-
-                        
+                        Console.Write("\nLatest room location: "); Console.WriteLine(savedata.saveRoom);
+                        Console.WriteLine("You wake up from your nap in your bedroom again...");
+                        //Game.Transition<BedroomAwake>();
                         stream.Close();
                     }
                     stream.Close();
@@ -135,6 +136,11 @@ namespace TeaPartyHorror_Game
                     string choice = Console.ReadLine().ToLower() ?? "";
                     Console.Clear();
                     game.ReceiveChoice(choice);
+                    var bf = new BinaryFormatter();
+                    FileStream stream = File.OpenWrite(Program.SaveFile);
+                    savedata.saveRoom = choice;
+                    bf.Serialize(stream, savedata);
+                    stream.Close();
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("\nCheck out your current [inventory]! ");
                     Console.ForegroundColor = ConsoleColor.White;
@@ -143,9 +149,10 @@ namespace TeaPartyHorror_Game
 
                         Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("\nThe fear overwhelms you, leading to a game over.");
-                        Console.WriteLine("\n*");
-                        Console.WriteLine("\nBAD ENDING - [Press enter to quit.]");
+                        Console.WriteLine("The fear overwhelms you, leading to a game over.");
+                        Console.WriteLine("*");
+                        Console.WriteLine("BAD ENDING - [Press enter to quit.]");
+                        File.Delete(SaveFile);
                         Game.Transition<End>();
 
 
@@ -154,15 +161,16 @@ namespace TeaPartyHorror_Game
 
                 }
 
-                //Console.Clear();
-                //Console.ForegroundColor = ConsoleColor.Red;
-                //Console.WriteLine("The fear overwhelms you, leading to a game over.");
-                //Console.WriteLine("*");
-                //Console.WriteLine("BAD ENDING - [Press enter to quit.]");
-                //Game.Transition<End>();
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("The fear overwhelms you, leading to a game over.");
+                Console.WriteLine("*");
+                Console.WriteLine("BAD ENDING - [Press enter to quit.]");
+                File.Delete(SaveFile);
+                Game.Transition<End>();
 
                 //Console.Clear();
-                Console.ReadLine();
+                //Console.ReadLine(); //
                 //const string SaveFile = "Save.txt";
                 //if (!File.Exists(SaveFile))
                 //{ File.CreateText(SaveFile); }
