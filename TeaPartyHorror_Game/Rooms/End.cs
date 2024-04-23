@@ -11,19 +11,26 @@ namespace TeaPartyHorror_Game.Rooms
     {
         internal override string CreateDescription()
         {
-            File.Delete(Program.SaveFile); //correct spot
-            Game.Finish();
+            File.Delete(Program.SaveFile); 
+            Game.Finish(); 
+
             Console.ForegroundColor = ConsoleColor.Magenta;
-            return "\nTHANK YOU FOR PLAYING TEA PARTY HORROR\nCreators:\nBELLA PEREZ\nSTEPHANIE MICHIU";
+            string[] creators = 
+                { "BELLA PEREZ", "STEPHANIE MICHIU" };
+            string thankYouMessage = "\nTHANK YOU FOR PLAYING TEA PARTY HORROR\nCreators:\n";
 
-
+            foreach (var creator in creators)
+            {
+                thankYouMessage += creator + "\n";
+            }
+            Console.ResetColor(); 
+            return thankYouMessage;
         }
-        
-       
         internal override void ReceiveChoice(string choice)
         {
-            
-            
+           
         }
     }
 }
+
+
