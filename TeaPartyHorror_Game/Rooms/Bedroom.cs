@@ -56,16 +56,24 @@ namespace TeaPartyHorror_Game.Rooms
                     Console.Clear();
                     Console.WriteLine("This new house is so scary. You can't sleep...");
                     Console.WriteLine();
+                    Console.ReadLine();
                     Console.WriteLine("You're hungry...");
+                    Console.ReadLine();
                     Console.WriteLine();
                     Console.WriteLine("You're so cold...");
                     Console.WriteLine();
+                    Console.ReadLine();
                     Console.WriteLine("You smell smoke...But you can't move!");
                     Console.WriteLine();
+                    Console.ReadLine();
                     Console.WriteLine("The fire inches closer and closer...");
 
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Write("\tWAKE UP"); Console.Write("\tWAKE UP"); Console.Write("\tWAKE UP"); Console.Write("\tWAKE UP"); Console.WriteLine("");
+                    Console.Write("\tWAKE UP");
+                    Console.ReadLine(); Console.Write("\t\tWAKE UP");
+                    Console.ReadLine(); Console.Write("\t\t\tWAKE UP");
+                    Console.ReadLine(); Console.Write("\t\t\t\tWAKE UP");
+                    Console.ReadLine();Console.WriteLine("");
 
                     Console.ForegroundColor = ConsoleColor.White;
                     //clear somehow

@@ -103,7 +103,7 @@ namespace TeaPartyHorror_Game
                         Console.Write("\nCurrent fear level:"); Console.WriteLine(savedata.fearLevel);
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("\nLatest room location: "); Console.WriteLine(savedata.saveRoom);
-                        Console.WriteLine("You wake up from your nap in your bedroom again...");
+                        //Console.WriteLine("You wake up from your nap in your bedroom again...");
                         //Game.Transition<BedroomAwake>();
                         stream.Close();
                     }
