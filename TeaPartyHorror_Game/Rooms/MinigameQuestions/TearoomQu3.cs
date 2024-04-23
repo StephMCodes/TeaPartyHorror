@@ -32,20 +32,23 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 
 
                 case "1":
-                    Console.WriteLine("You try to push and tear through the strings while the teatime guests all laugh at you in sync.");
+                    Console.WriteLine("\nYou try to push and tear through the strings while the teatime guests all laugh at you in sync.");
                     if (GardenRabbitInteraction.Poisoned == true)
                     {
-                        Console.WriteLine("You feel as if though you are about to faint...");
-                        Console.WriteLine("Your plushie laughs maniacally, but there is a hint of bitterness. 'Oleanders! Poisonous! I did not know, either. Else I would reduced to this!'");
+                        Console.WriteLine("\nYou feel as if though you are about to faint...");
+                        Console.WriteLine("\nYour plushie laughs maniacally, but there is a hint of bitterness.");
+                        Console.WriteLine("\n'Oleanders! Poisonous! I did not know, either. Else I would reduced to this!'");
                         Game.IncreaseFear(2);
                     }
                     else
                     {
-                        Console.WriteLine("You succeed, finding strength within.");
-                        Console.WriteLine("Your plushie laughs maniacally, but there is a hint of bitterness. 'Oleanders! Poisonous! Shame you did not fall for it like I did. Reduced to this..!'");
+                        Console.WriteLine("\nYou succeed, finding strength within.");
+                        Console.WriteLine("\nYour plushie laughs maniacally, but there is a hint of bitterness. ");
+                        Console.WriteLine("\n'Oleanders! Poisonous! Shame you did not fall for it like I did. Reduced to this..!'");
+                        
                     }
-                    Console.WriteLine("You recall a past child of this family that died of sickness... Ophelia.");
-                    Console.WriteLine("When you call her by that name, the spirit loses focus. Now is your chance!");
+                    Console.WriteLine("\nYou recall a past child of this family that died of sickness... Ophelia. ");
+                    Console.WriteLine("\nWhen you call her by that name, the spirit loses focus. Now is your chance! ");
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to tear your plushie up \t\tPress 2 to hug her and tell her everything is going to be okay");
                     Console.ForegroundColor = ConsoleColor.White;
@@ -53,14 +56,15 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     break;
 
                 default:
-                    Console.WriteLine("The voice of your rabbit distorts, beginning to sound almost like a fellow little girl, her accent reminding you of youraunt and uncle.'That necklace they gave you! It belongs to ME!'");
+                    Console.WriteLine("\nThe voice of your rabbit distorts, beginning to sound almost like a fellow little girl, her accent reminding you of youraunt and uncle.");
+                    Console.WriteLine("\n'That necklace they gave you! It belongs to ME!' ");
+                    Console.WriteLine("\nThe possessed plush casts a vicious red light that gives you a headache.");
+                    Console.WriteLine("\nThe rabbit attempts to puppet you with red strings that appear from its paws.");
+                    Console.WriteLine("\nYou feel as though you are about to become only a guest in your body. ");
+                    Console.WriteLine("\nThe plushie continues its barrage: 'You are in MY PLACE!' ");
 
-                    Console.WriteLine("The possessed plush casts a vicious red light that gives you a headache.");
-                   
-                    Console.WriteLine("The rabbit attempts to puppet you with red strings that appear from its paws.");
-                    Console.WriteLine("You feel as though you are about to become only a guest in your body. The plushie continues its barrage: 'You are in MY PLACE!'");
-                    
-                    if (GardenRabbitInteraction.Poisoned == true) { Console.WriteLine("You feel weak... Your stomach..."); }
+
+                    if (GardenRabbitInteraction.Poisoned == true) { Console.WriteLine("\nYou feel weak... Your stomach..."); }
 
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to fight for control");

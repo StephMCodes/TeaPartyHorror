@@ -33,9 +33,10 @@ namespace TeaPartyHorror_Game.Rooms
 
             }
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("You jolt awake, shivering under your white duvet set.");
-            Console.WriteLine("Your plushie, Mr.Bunny-Rabbit, surprisingly, begins to speak! 'Are you okay? Don't worry, I'm here. Go back to sleep.'");
-            Console.WriteLine("But sleep eludes you... You feel fearful in this new environment.");
+            Console.WriteLine("\nYou jolt awake, shivering under your white duvet set.");
+            Console.WriteLine("\nYour plushie, Mr.Bunny-Rabbit, surprisingly, begins to speak! ");
+            Console.WriteLine("\n'Are you okay? Don't worry, I'm here. Go back to sleep.' ");
+            Console.WriteLine("\nBut sleep eludes you... You feel fearful in this new environment.");
             Console.WriteLine(""); Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("Press 1 to clutch onto Mr.Bunny-Rabbit\t\tPress 2 to force yourself to sleep");
             Console.ForegroundColor = ConsoleColor.White;
@@ -44,7 +45,7 @@ namespace TeaPartyHorror_Game.Rooms
                 case "1":
 
                     Console.Clear();
-                    Console.WriteLine("Your friend reassures you: 'Everything will be okay.'");
+                    Console.WriteLine("\nYour friend reassures you: 'Everything will be okay.'");
                     Game.DecreaseFear();
                     Console.WriteLine(""); Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("Press 1 to clutch onto Mr.Bunny-Rabbit\t\tPress 2 to force yourself to sleep");
@@ -64,14 +65,16 @@ namespace TeaPartyHorror_Game.Rooms
                     Console.WriteLine("The fire inches closer and closer...");
 
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Write("WAKE UP"); Console.Write("WAKE UP"); Console.Write("WAKE UP"); Console.Write("WAKE UP"); Console.WriteLine("");
+                    Console.Write("\tWAKE UP"); Console.Write("\tWAKE UP"); Console.Write("\tWAKE UP"); Console.Write("\tWAKE UP"); Console.WriteLine("");
 
                     Console.ForegroundColor = ConsoleColor.White;
                     //clear somehow
                     Console.WriteLine();
-                    Console.WriteLine("You wake up...again. You pinch yourself. OW!");
+                    Console.WriteLine("You wake up...again. You pinch yourself. OW! ");
                     Console.WriteLine();
-                    Console.WriteLine("Your plushie friend pats your back. 'Another nightmare? C'mon, cheer up, you must be hungry, let's grab a snack in the  dining room. And maybe a dance in the ballroom will warm you up!'");
+                    Console.WriteLine("\nYour plushie friend pats your back. 'Another nightmare? ");
+                    Console.WriteLine("\nC'mon, cheer up, you must be hungry, let's grab a snack in the  dining room. ");
+                    Console.WriteLine("\nAnd maybe a dance in the ballroom will warm you up!'"); 
                     Game.Transition<BedroomAwake>();
                     break;
             }

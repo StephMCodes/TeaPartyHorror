@@ -16,15 +16,13 @@ namespace TeaPartyHorror_Game.Rooms
 
         internal override string CreateDescription()
         {
-            Console.ForegroundColor= ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.Magenta;
             return "\nWELCOME TO TEA PARTY HORROR" +
                 "\r\n\r\nYou are an orphaned young girl, adopted recently by your wealthy aunt and uncle." +
                 "\r\nThey have no other children in the mansion, so you must make your own entertainment and play by yourself." +
-                "\r\nThankfully, the house is full of spirits only you seem to notice..." + 
-                "\r\n\r\nWRITE START TO BEGIN"; 
+                "\r\nThankfully, the house is full of spirits only you seem to notice..." +
+                "\r\n\r\nWRITE START TO BEGIN";
         }
-       
-
         internal override void ReceiveChoice(string choice)
         {
             // Display current Foreground color 
@@ -33,15 +31,13 @@ namespace TeaPartyHorror_Game.Rooms
             // Set the Foreground color to blue 
             //Console.ForegroundColor
             // = ConsoleColor.Blue; 
-
-            
             Console.ForegroundColor = ConsoleColor.White;
-            
+
             switch (choice.ToUpper())
             {
                 case "START":
                     {
-                       
+
                         //if (Program.savedata.saveRoom == "Bedroom")
                         //{
                         //    Game.Transition<BedroomAwake>();
@@ -53,19 +49,18 @@ namespace TeaPartyHorror_Game.Rooms
                         //    break;
                         //}
 
-                        
-                        Console.WriteLine("You jump out your bed, startled by the smell of smoke.\n\nThe door handle is warm to the touch, but you need to warn your parents.\n\n");
-                            Console.ForegroundColor = ConsoleColor.Magenta;
-                            Console.WriteLine("Press 1 to run inside and look for your parents\t\tPress 2 to climb out your window");
-                            Console.ForegroundColor = ConsoleColor.White;
 
-                            Game.Transition<BurningHouse>();
-                            break;
-                        
+                        Console.WriteLine("\nYou jump out your bed, startled by the smell of smoke. ");
+                        Console.WriteLine("\nThe door handle is warm to the touch, but you need to warn your parents. ");
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.WriteLine("Press 1 to run inside and look for your parents\t\tPress 2 to climb out your window");
+                        Console.ForegroundColor = ConsoleColor.White;
+
+                        Game.Transition<BurningHouse>();
+                        break;
                     }
-             
                 default:
-                    Console.WriteLine("Invalid command.");
+                    Console.WriteLine("\nInvalid command.");
                     break;
             }
         }

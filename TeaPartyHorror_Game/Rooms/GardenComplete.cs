@@ -16,10 +16,10 @@ namespace TeaPartyHorror_Game.Rooms
         {
             if (Hallway.ownsInvitation == false && BallroomQu4.hasDanced == true && DiningRoomQu3.snackReceived == true)
             {
-                Console.WriteLine("'CAW, CAW!'");
-                Console.WriteLine("You are about to scream when a crow appears out of nowhere, heading straight for you.");
-                Console.WriteLine("Your plushie jumps to hug you and calms you down. 'Dont worry, he is a friend!'");
-                Console.WriteLine("The bird gently alights on your shoulder, claws careful not to poke you. There is a letter in his beak!");
+                Console.WriteLine("\n'CAW, CAW!'");
+                Console.WriteLine("\nYou are about to scream when a crow appears out of nowhere, heading straight for you.");
+                Console.WriteLine("\nYour plushie jumps to hug you and calms you down. 'Dont worry, he is a friend!'");
+                Console.WriteLine("\nThe bird gently alights on your shoulder, claws careful not to poke you. There is a letter in his beak!");
                 Inventory.AddItem(GameItem.Invitation);
                 Hallway.ownsInvitation = true;
 
@@ -27,7 +27,7 @@ namespace TeaPartyHorror_Game.Rooms
             switch (choice)
             {
                 case "ballroom":
-                    Console.WriteLine("You make your way to the ballroom, the one-two-three rhythm still playing in your head.");
+                    Console.WriteLine("\nYou make your way to the ballroom, the one-two-three rhythm still playing in your head.");
                     Game.Transition<Ballroom>();
                     break;
                 

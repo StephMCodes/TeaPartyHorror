@@ -19,15 +19,18 @@ namespace TeaPartyHorror_Game.Rooms
             switch (choice.ToLower())
             {
                 case "1":
-                    Console.WriteLine("You carefully approach your snack towards the bed, and the monster immediately swipes it with surprising speed. You hearchewing noises, grumbling, and finally, a loud belch.");
-                    Console.WriteLine("Mr Bunny-Rabbit makes a face. 'And now what do we say..?'");
-                    Console.WriteLine("'Excuse me.' The monster pokes his head from under his hiding place, and you can discern a smile from the darkness.     'Thaaaaank youuuuu... I promise only to eat your bad dreams from now on.");
+                    Console.WriteLine("\nYou carefully approach your snack towards the bed, and the monster immediately swipes it with surprising speed." );
+                    Console.WriteLine("\nYou hearchewing noises, grumbling, and finally, a loud belch.");
+                    Console.WriteLine("\nMr Bunny-Rabbit makes a face. 'And now what do we say..?'");
+                    Console.WriteLine("\n'Excuse me.' The monster pokes his head from under his hiding place, and you can discern a smile from the darkness.");
+                    Console.WriteLine("\n'Thaaaaank youuuuu... I promise only to eat your bad dreams from now on."); 
                     isMonsterFriend = true;
                     Inventory.UseItem(GameItem.Snack);
                     Game.Transition<BedroomAwake>();
                     break;
                 case "2":
-                    Console.WriteLine("You back away, clutching your snack close to your chest. No one shall take it from you!");
+                    Console.WriteLine("\nYou back away, clutching your snack close to your chest. ");
+                    Console.WriteLine("\nNo one shall take it from you!"); 
                     Game.Transition<BedroomAwake>();
                     break;
                 

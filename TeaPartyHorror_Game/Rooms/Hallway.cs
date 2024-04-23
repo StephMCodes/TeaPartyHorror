@@ -11,7 +11,7 @@ namespace TeaPartyHorror_Game.Rooms
     internal class Hallway : Room
     {
         internal static bool ownsInvitation;
-        
+
 
         internal override string CreateDescription() =>
        @"The dim hallway is long and filled with many picture frames of rich fellows.
@@ -23,10 +23,11 @@ You can also return to your [bedroom].";
         {
             if (ownsInvitation == false && BallroomQu4.hasDanced == true && DiningRoomQu3.snackReceived == true)
             {
-                Console.WriteLine("'CAW, CAW!'");
-                Console.WriteLine("You are about to scream when a crow appears out of nowhere, heading straight for you.");
-                Console.WriteLine("Your plushie jumps to hug you and calms you down. 'Dont worry, he is a friend!'");
-                Console.WriteLine("The bird gently alights on your shoulder, claws careful not to poke you. There is a letter in his beak!");
+                Console.WriteLine("\n'CAW, CAW!'");
+                Console.WriteLine("\nYou are about to scream when a crow appears out of nowhere, heading straight for you.");
+                Console.WriteLine("\nYour plushie jumps to hug you and calms you down. 'Dont worry, he is a friend!'");
+                Console.WriteLine("\nThe bird gently alights on your shoulder, claws careful not to poke you. ");
+                Console.WriteLine("\nThere is a letter in his beak!");
                 Inventory.AddItem(GameItem.Invitation);
                 ownsInvitation = true;
 
@@ -34,9 +35,9 @@ You can also return to your [bedroom].";
 
             switch (choice.ToLower())
             {
-                
+
                 case "bedroom":
-                    Console.WriteLine("You return to the bedroom your aunt and uncle gave you.");
+                    Console.WriteLine("\nYou return to the bedroom your aunt and uncle gave you.");
                     Game.Transition<BedroomAwake>();
 
                     break;
@@ -44,10 +45,11 @@ You can also return to your [bedroom].";
                     if (DiningRoomQu3.snackReceived == false)
                     {
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("You wander to the dining room, following the smell of sweets wafting in the air. " +
-                        "You are impressed by the very long     table that takes up most of the room, already set for two. " +
-                        "A woman in an apron with a strict face looks you up and down.'There's always food for hungry children here! Even at midnight.'" +
-                        "Her form glistens and fades... A ghost!"); //text fixed, do not change
+                        Console.WriteLine("\nYou wander to the dining room, following the smell of sweets wafting in the air. ");
+                        Console.WriteLine("\nYou are impressed by the very long table that takes up most of the room, already set for two. ");
+                        Console.WriteLine("\nA woman in an apron with a strict face looks you up and down. ");
+                        Console.WriteLine("\n'There's always food for hungry children here! Even at midnight.' ");
+                        Console.WriteLine("\nHer form glistens and fades... A ghost!"); //text fixed, do not change
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("Press 1 to sit down");
 
@@ -56,7 +58,7 @@ You can also return to your [bedroom].";
                     }
                     else
                     {
-                        Console.WriteLine("You wander to the dining room.");
+                        Console.WriteLine("\nYou wander to the dining room.");
                         Game.Transition<DiningRoomComplete>();
                     }
                     break;
@@ -64,10 +66,10 @@ You can also return to your [bedroom].";
                 case "ballroom":
                     if (BallroomQu4.hasDanced == false)
                     {
-                        Console.WriteLine("You make your way to the ballroom, following the sound of classical music.");
-                        Console.Write("Ghostly figures dance together in the grandiose, open ballroom. ");
-                        Console.Write("The curtains hung low as the ghosts frolicked in pairs, except for one older woman.");
-                        Console.WriteLine(" Her face was sullen as loneliness befell her."); //text fixed, do not change
+                        Console.WriteLine("\nYou make your way to the ballroom, following the sound of classical music.");
+                        Console.Write("\nGhostly figures dance together in the grandiose, open ballroom. ");
+                        Console.Write("\nThe curtains hung low as the ghosts frolicked in pairs, except for one older woman.");
+                        Console.WriteLine("\nHer face was sullen as loneliness befell her."); //text fixed, do not change
                         Console.ForegroundColor = ConsoleColor.Magenta;
 
                         Console.WriteLine("Press 1 to invite her to dance");
@@ -76,7 +78,7 @@ You can also return to your [bedroom].";
                     }
                     else
                     {
-                        Console.WriteLine("You make your way to the ballroom, the one-two-three rhythm still playing in your head.");
+                        Console.WriteLine("\nYou make your way to the ballroom, the one-two-three rhythm still playing in your head.");
                         Game.Transition<Ballroom>();
                     }
                     break;
@@ -85,10 +87,10 @@ You can also return to your [bedroom].";
 
                     if (ownsInvitation == true)
                     {
-                        Console.WriteLine("The butler lets you in.");
-                        Console.WriteLine("When you enter the room, the table is set for you. " +
-                            "There are only two seats empty, the rest occupied by teddy bears and dolls " +
-                            "that all turn to look at you in sync and invite you. ");
+                        Console.WriteLine("\nThe butler lets you in.");
+                        Console.WriteLine("\nWhen you enter the room, the table is set for you. ");
+                        Console.WriteLine("\nThere are only two seats empty, the rest occupied by teddy bears and dolls. ");
+                        Console.WriteLine("\nThey all turn to look at you in sync and invite you. ");
                         Console.ForegroundColor = ConsoleColor.Magenta;
 
                         Console.WriteLine("Press 1 to place Mr Bunny-Rabbit down on a seat and sit down yourself");
@@ -96,16 +98,16 @@ You can also return to your [bedroom].";
                         Game.Transition<TearoomQu1>();
                         break;
                     }
-                    else { Console.WriteLine("The butler stops you. It seems an invitation is necessary..."); }
+                    else { Console.WriteLine("\nThe butler stops you. It seems an invitation is necessary..."); }
                     break;
 
-                //case "fear":
-                //    Console.WriteLine($"Current fear level: {Game.fearLevel}.");
+                    //case "fear":
+                    //    Console.WriteLine($"Current fear level: {Game.fearLevel}.");
 
-                //    break;
-                //default:
-                //    Console.WriteLine("Invalid command.");
-                //    break;
+                    //    break;
+                    //default:
+                    //    Console.WriteLine("Invalid command.");
+                    //    break;
             }
         }
 
