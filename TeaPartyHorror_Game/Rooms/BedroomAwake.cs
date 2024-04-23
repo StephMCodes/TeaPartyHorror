@@ -11,7 +11,7 @@ namespace TeaPartyHorror_Game.Rooms
     {
 
         internal override string CreateDescription() =>
-       @"From your new bedroom, there is the [hallway] that leads to the rest of the mansion, and you hear strange noises under  your [bed].";
+       @"From your new bedroom, there is the [hallway] that leads to the rest of the mansion, and you hear strange noises under  your [bed]. This location is your safe space.";
         internal override void ReceiveChoice(string choice)
         {
             switch (choice.ToLower())

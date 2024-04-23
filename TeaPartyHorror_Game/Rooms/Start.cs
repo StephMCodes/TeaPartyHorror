@@ -39,11 +39,6 @@ namespace TeaPartyHorror_Game.Rooms
                 case "START":
                     {
 
-                        //if (Program.savedata.saveRoom == "Bedroom")
-                        //{
-                        //    Game.Transition<BedroomAwake>();
-                        //    break;
-                        //}
                         //if (Program.savedata.saveRoom == "Hallway")
                         //{
                         //    Game.Transition<Hallway>();
