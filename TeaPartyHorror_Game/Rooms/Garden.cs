@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using TeaPartyHorror_Game.Rooms.MinigameQuestions;
+using static TeaPartyHorror_Game.Program;
 
 namespace TeaPartyHorror_Game.Rooms
 {
@@ -35,7 +38,11 @@ namespace TeaPartyHorror_Game.Rooms
                     Console.WriteLine("\nShe will know my love persists, even if I am not there beside her.' ");
                     hasFlowers = true;
                     Inventory.AddItem(GameItem.Flowers);
-
+                    var bf = new BinaryFormatter();
+                    FileStream stream = File.OpenWrite(Program.SaveFile);
+                    savedata.hasFlowers = true;
+                    bf.Serialize(stream, savedata);
+                    stream.Close();
                     Game.Transition<GardenRabbitInteraction>();
                     break;
                 case "2":

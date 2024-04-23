@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using TeaPartyHorror_Game.Rooms.MinigameQuestions;
+using static TeaPartyHorror_Game.Program;
 
 namespace TeaPartyHorror_Game.Rooms
 {
@@ -30,6 +33,11 @@ You can also return to your [bedroom].";
                 Console.WriteLine("\nThere is a letter in his beak!");
                 Inventory.AddItem(GameItem.Invitation);
                 ownsInvitation = true;
+                var bf = new BinaryFormatter();
+                FileStream stream = File.OpenWrite(Program.SaveFile);
+                savedata.ownsInvitation = true;
+                bf.Serialize(stream, savedata);
+                stream.Close();
 
             }
 

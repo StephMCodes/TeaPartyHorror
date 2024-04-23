@@ -71,7 +71,6 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     }
                     Game.Transition<TearoomQu2>();
 
-
                     break;
 
 

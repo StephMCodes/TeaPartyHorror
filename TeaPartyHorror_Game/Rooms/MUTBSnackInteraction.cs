@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using TeaPartyHorror_Game.Rooms.MinigameQuestions;
+using static TeaPartyHorror_Game.Program;
 
 namespace TeaPartyHorror_Game.Rooms
 {
@@ -26,6 +29,11 @@ namespace TeaPartyHorror_Game.Rooms
                     Console.WriteLine("\n'Thaaaaank youuuuu... I promise only to eat your bad dreams from now on."); 
                     isMonsterFriend = true;
                     Inventory.UseItem(GameItem.Snack);
+                    var bf = new BinaryFormatter();
+                    FileStream stream = File.OpenWrite(Program.SaveFile);
+                    savedata.isMUTBfriend = true;
+                    bf.Serialize(stream, savedata);
+                    stream.Close();
                     Game.Transition<BedroomAwake>();
                     break;
                 case "2":

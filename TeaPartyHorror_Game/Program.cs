@@ -20,6 +20,9 @@ namespace TeaPartyHorror_Game
             public bool hasFlowers;
             public bool hasMrBunnyRabbit;
             public int fearLevel;
+            public bool isMUTBfriend;
+            public bool ownsInvitation;
+            public bool isPoisoned;
             //public Room lastRoom;
 
 
@@ -63,9 +66,13 @@ namespace TeaPartyHorror_Game
                     if (File.Exists(Program.SaveFile))
                     {
                         Console.WriteLine("\nItems from continued savefile:");
-                        if (savedata.snackReceived == true)
+                        if (savedata.snackReceived == true && savedata.isMUTBfriend==false)
                         {
                             Inventory.AddItem(GameItem.Snack);
+                            DiningRoomQu3.snackReceived = true;
+                        }
+                        if (savedata.snackReceived == true && savedata.isMUTBfriend == true)
+                        {
                             DiningRoomQu3.snackReceived = true;
                         }
                         if (savedata.hasDanced == true)
@@ -82,7 +89,16 @@ namespace TeaPartyHorror_Game
                         {
                             Inventory.AddItem(GameItem.MrBunnyRabbit);
                             Bedroom.hasMrBunnyRabbit = true;
-                        } 
+                        }
+                        if (savedata.ownsInvitation == true)
+                        {
+                            Inventory.AddItem(GameItem.Invitation);
+                            Hallway.ownsInvitation = true;
+                        }
+                        if (savedata.isPoisoned == true)
+                        {
+                            GardenRabbitInteraction.Poisoned = true;
+                        }
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("\nCurrent fear level:"); Console.WriteLine(savedata.fearLevel);
                         Console.ForegroundColor = ConsoleColor.White;
