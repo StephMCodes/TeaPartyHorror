@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using TeaPartyHorror_Game.Rooms;
+using static TeaPartyHorror_Game.Program;
 
 namespace TeaPartyHorror_Game
 {
@@ -18,8 +21,8 @@ namespace TeaPartyHorror_Game
     
     internal class Game
     {
-        List<Room> rooms = new List<Room>();
-        Room currentRoom;
+        List<Room> rooms = new List<Room>(); 
+  public Room currentRoom; //static?
         internal bool IsGameOver() => isFinished;
         static bool isFinished;
         static string nextRoom = "";
@@ -28,7 +31,7 @@ namespace TeaPartyHorror_Game
         {
 
         }
-        internal static int fearLevel = 0; 
+        internal static int fearLevel; 
 
         internal void Add(Room room)
         {
@@ -41,7 +44,14 @@ namespace TeaPartyHorror_Game
 
         internal static void Transition<T>() where T : Room
         {
-            nextRoom = typeof(T).Name;
+        //  var bf = new BinaryFormatter();
+       //   FileStream stream = File.OpenWrite(Program.SaveFile);
+            //savedata.saveRoom = typeof(T).Name;
+           nextRoom = typeof(T).Name;
+     //   bf.Serialize(stream, savedata);
+      //  stream.Close();
+            
+            
         }
 
 
@@ -56,24 +66,28 @@ namespace TeaPartyHorror_Game
             }
             else
             {
-                currentRoom?.ReceiveChoice(choice);
+                var bf = new BinaryFormatter();
+                 FileStream stream = File.OpenWrite(Program.SaveFile);
+                savedata.saveRoom = choice.ToLower();
+                 bf.Serialize(stream, savedata);
+                 stream.Close();
+                currentRoom?.ReceiveChoice(choice.ToLower());
                 CheckTransition();
             }
         }
 
         internal static void IncreaseFear(int num)
         {
-            Console.ForegroundColor = ConsoleColor.Red; 
             fearLevel += num;
+            Console.ForegroundColor = ConsoleColor.Red; 
+          var bf = new BinaryFormatter();
+            FileStream stream = File.OpenWrite(Program.SaveFile);
+            savedata.fearLevel += num;
+            fearLevel=savedata.fearLevel;
+            bf.Serialize(stream, savedata);
+            stream.Close();
             Console.WriteLine($"\nFear increases. Current fear level: {fearLevel}/10");
-            if (fearLevel >= 10)
-            {
-                Console.WriteLine("The fear overwhelms you, leading to a game over.");
-                Console.WriteLine("*");
-                Console.WriteLine("BAD ENDING - [Press enter to quit.]");
-                Game.Finish();
-
-            }
+            
             Console.ForegroundColor = ConsoleColor.White;
         }
 
@@ -81,6 +95,13 @@ namespace TeaPartyHorror_Game
         {
             Console.ForegroundColor= ConsoleColor.Red;
             if (fearLevel > 0) fearLevel--;
+            Console.ForegroundColor = ConsoleColor.Red;
+            var bf = new BinaryFormatter();
+            FileStream stream = File.OpenWrite(Program.SaveFile);
+            savedata.fearLevel--;
+            fearLevel = savedata.fearLevel;
+            bf.Serialize(stream, savedata);
+            stream.Close();
             Console.WriteLine($"Fear decreases. Current fear level: {fearLevel}.");
             Console.ForegroundColor = ConsoleColor.White;
         }
@@ -93,6 +114,7 @@ namespace TeaPartyHorror_Game
                 {
                     nextRoom = "";
                     currentRoom = room;
+                    
                     break;
                 }
             }

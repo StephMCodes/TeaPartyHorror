@@ -1,9 +1,12 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TeaPartyHorror_Game.Rooms.MinigameQuestions;
+using static TeaPartyHorror_Game.Program;
+using System.Diagnostics.Eventing.Reader;
 
 namespace TeaPartyHorror_Game.Rooms
 {
@@ -30,21 +33,37 @@ namespace TeaPartyHorror_Game.Rooms
             // Set the Foreground color to blue 
             //Console.ForegroundColor
             // = ConsoleColor.Blue; 
+
+            
             Console.ForegroundColor = ConsoleColor.White;
             
             switch (choice.ToUpper())
             {
                 case "START":
                     {
+                       
+                        //if (Program.savedata.saveRoom == "Bedroom")
+                        //{
+                        //    Game.Transition<BedroomAwake>();
+                        //    break;
+                        //}
+                        //if (Program.savedata.saveRoom == "Hallway")
+                        //{
+                        //    Game.Transition<Hallway>();
+                        //    break;
+                        //}
+
                         
                         Console.WriteLine("You jump out your bed, startled by the smell of smoke.\n\nThe door handle is warm to the touch, but you need to warn your parents.\n\n");
-                        Console.ForegroundColor = ConsoleColor.Magenta;
-                        Console.WriteLine("Press 1 to run inside and look for your parents\t\tPress 2 to climb out your window");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Game.Transition<BurningHouse>();
-                        break;
+                            Console.ForegroundColor = ConsoleColor.Magenta;
+                            Console.WriteLine("Press 1 to run inside and look for your parents\t\tPress 2 to climb out your window");
+                            Console.ForegroundColor = ConsoleColor.White;
+
+                            Game.Transition<BurningHouse>();
+                            break;
+                        
                     }
-                
+             
                 default:
                     Console.WriteLine("Invalid command.");
                     break;

@@ -33,6 +33,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 
                 case "1":
                     Console.WriteLine("Once you are both seated, a chill spreads into the room, Mr Bunny-Rabbit's bead eyes gaining a malevolent glint.");
+                    Inventory.UseItem(GameItem.MrBunnyRabbit);
                     Console.WriteLine("'Finally...' he begins, the ghost butler locking the door behind you. 'This family will know the price of replacing me!'");
                     Console.WriteLine("You cannot move! Forced to watch your plush float into the stale air, weaving a nightmare upon you by force...");
                     Console.WriteLine("The world becomes dark, you feel yourself losing consciousness... ");

@@ -8,7 +8,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 {
     internal class BallroomQu1 : Room
     {
-        public static bool HasFlowers;
+        public static bool hasFlowers;
         internal override string CreateDescription() => @"A pathway down it's balcony leads to the [garden] and you can also return to the [hallway].";
         internal override void ReceiveChoice(string choice)
         {
@@ -16,7 +16,7 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
             switch (choice.ToLower())
             {
                 case "1":
-                    if (Garden.HasFlowers == true)
+                    if (Garden.hasFlowers == true)
                     {
                         Inventory.UseItem(GameItem.Flowers);
                         Console.WriteLine("The ghost happily takes your hand along with the flowers. 'How I love these oleanders, as deadly as they are beautiful!'");

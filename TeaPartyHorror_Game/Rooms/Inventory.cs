@@ -44,7 +44,7 @@ namespace TeaPartyHorror_Game
             if (items.Contains(item))
             {
                 items.Remove(item);
-                Console.WriteLine($"{item} has been used.");
+                Console.WriteLine($"{item} has left the inventory.");
                 Console.ForegroundColor = ConsoleColor.White;
                 return true;
             }

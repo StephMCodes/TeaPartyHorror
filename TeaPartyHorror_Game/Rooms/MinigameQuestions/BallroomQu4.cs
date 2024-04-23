@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Deployment.Internal;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using static TeaPartyHorror_Game.Program;
 
 namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
 {
@@ -27,6 +30,12 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
                     
                     Inventory.AddItem(GameItem.Amulet);
                     hasDanced = true;
+                    var bf = new BinaryFormatter();
+                    FileStream stream = File.OpenWrite(Program.SaveFile);
+                    savedata.hasDanced = true;
+                    bf.Serialize(stream, savedata);
+                    stream.Close();
+                    
                     Game.Transition<Ballroom>();
 
                     break;

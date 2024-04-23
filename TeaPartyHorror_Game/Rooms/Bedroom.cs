@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using static TeaPartyHorror_Game.Program;
 
 namespace TeaPartyHorror_Game.Rooms
 {
     internal class Bedroom : Room
     {
-        private int fearLevel = 0;
-        private int addMrBunnyRabbit = 0;
+        
+        internal static bool hasMrBunnyRabbit;
 
 
         internal override string CreateDescription() =>
@@ -18,10 +21,16 @@ namespace TeaPartyHorror_Game.Rooms
 
         internal override void ReceiveChoice(string choice)
         {
-            if(addMrBunnyRabbit == 0 )
+            if (hasMrBunnyRabbit == false)
             {
                 Inventory.AddItem(GameItem.MrBunnyRabbit);
-                addMrBunnyRabbit++;
+                hasMrBunnyRabbit = true;
+                var bf = new BinaryFormatter();
+                FileStream stream = File.OpenWrite(Program.SaveFile);
+                savedata.hasMrBunnyRabbit = true;
+                bf.Serialize(stream, savedata);
+                stream.Close();
+
             }
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("You jolt awake, shivering under your white duvet set.");

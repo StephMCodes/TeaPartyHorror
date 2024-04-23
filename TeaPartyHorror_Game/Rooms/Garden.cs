@@ -9,7 +9,7 @@ namespace TeaPartyHorror_Game.Rooms
 {
     internal class Garden : Room
     {
-        internal static bool HasFlowers;
+        internal static bool hasFlowers;
         
         internal override string CreateDescription() =>
        @"You can go back to the [ballroom] from here.";
@@ -34,8 +34,9 @@ namespace TeaPartyHorror_Game.Rooms
                         "Please, take good care in bringing her these." +
                         " She will know my   love persists, even if I am not there beside her.'");
                     
-                    HasFlowers = true;
+                    hasFlowers = true;
                     Inventory.AddItem(GameItem.Flowers);
+
                     Game.Transition<GardenRabbitInteraction>();
                     break;
                 case "2":
@@ -49,7 +50,7 @@ namespace TeaPartyHorror_Game.Rooms
                         " She will know I love her still, even if I am not there.'");
                     
                     Inventory.AddItem(GameItem.Flowers);
-                    HasFlowers = true;
+                    hasFlowers = true;
                     Game.Transition<GardenRabbitInteraction>();
                     break;
                 default:

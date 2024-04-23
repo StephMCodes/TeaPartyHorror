@@ -28,17 +28,17 @@ namespace TeaPartyHorror_Game.Rooms.MinigameQuestions
             {
                 case "1":
                     Console.WriteLine("'No problem, dearie,' replies the dining room's ghost.");
-                    
+                    snackReceived = true;
                     Inventory.AddItem(GameItem.Snack);
                     var bf = new BinaryFormatter();
                     FileStream stream = File.OpenWrite(Program.SaveFile);
                     savedata.snackReceived = true;
+                    
                     bf.Serialize(stream, savedata);
                     stream.Close();
-                    
                     Game.Transition<DiningRoomComplete>();
-                    snackReceived=true;
                     break;
+
                 case "2":
                     Console.WriteLine("The dining room's ghost regards you angrily, moving a finger.Before you know it, a knife wooshes past you, narrowly     missing your face.");
                     Game.IncreaseFear(1);
