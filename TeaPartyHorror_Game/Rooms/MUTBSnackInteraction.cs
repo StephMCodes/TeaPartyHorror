@@ -23,7 +23,7 @@ namespace TeaPartyHorror_Game.Rooms
             {
                 case "1":
                     Console.WriteLine("\nYou carefully approach your snack towards the bed, and the monster immediately swipes it with surprising speed." );
-                    Console.WriteLine("\nYou hearchewing noises, grumbling, and finally, a loud belch.");
+                    Console.WriteLine("\nYou hear chewing noises, grumbling, and finally, a loud belch.");
                     Console.WriteLine("\nMr Bunny-Rabbit makes a face. 'And now what do we say..?'");
                     Console.WriteLine("\n'Excuse me.' The monster pokes his head from under his hiding place, and you can discern a smile from the darkness.");
                     Console.WriteLine("\n'Thaaaaank youuuuu... I promise only to eat your bad dreams from now on."); 
